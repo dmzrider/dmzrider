@@ -35,11 +35,11 @@
   <!-- Typography Content -->
   <g transform="translate(50, 85)">
     <!-- Title Name -->
-    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" fill="url(#textGrad)" filter="url(#glow)" letter-spacing="2">Najwan</text>
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="48" font-weight="900" fill="url(#textGrad)" filter="url(#glow)" letter-spacing="2">Manu</text>
     <!-- Tagline Roles -->
-    <text x="0" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" fill="#e2e8f0" letter-spacing="1">Backend Engineer &amp; Systems Developer</text>
+    <text x="0" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" fill="#e2e8f0" letter-spacing="1">Discord Bot Developer &amp; Systems Builder</text>
     <!-- Secondary Tags / Details -->
-    <text x="0" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#94a3b8" letter-spacing="1.5">🚀 DISCORD SYSTEMS • CYBERSECURITY ASPIRANT</text>
+    <text x="0" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#94a3b8" letter-spacing="1.5">🚀 SA-MP PAWN DEVELOPER • SECURITY &amp; DDOS ALERTS</text>
     <!-- Location badge -->
     <text x="0" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6366f1" letter-spacing="2">📍 KERALA, INDIA</text>
   </g>
@@ -47,45 +47,41 @@
 
 <br/>
 
-### 📁 About Me
+### 📁 Profile
 
-> I am a **backend & systems developer** focused on building highly reliable server-side ecosystems, automation tools, and infrastructure-aware applications. I enjoy low-level architecture, network security, and creating high-performance Discord integrations.
+> I am a **Discord bot developer** and **SA-MP Pawn scripter** focused on building secure server environments, custom database tracking systems, and automated DDoS alert triggers. I also work as a freelance developer helping new and upcoming startups build custom tools and integrations.
+
+---
+
+### 🛡️ Core Expertise
+
+> [!NOTE]
+> **What I Work On:**
+> *   **Discord Development & Security:** Custom bot automation, role synchronization, secure permission setups, and rate-limit mitigation.
+> *   **SA-MP Scripting (Pawn):** Custom gamemodes, database integration, and high-performance server scripts.
+> *   **Tracking & Security Systems:** Custom activity trackers, real-time logging, and automated DDoS detection/alerts.
+> *   **Freelance Development:** Creating tailored tools and backend workflows for new startups.
 
 ---
 
 ### 💻 Technical Stack & Skill Grid
 
 #### 🔧 Languages & Core Engines
-[![Languages](https://skillicons.dev/icons?i=js,ts,py,c,cpp,rust,bash)](https://skillicons.dev)
+*   **SA-MP Pawn** (Game Server Scripting)
+[![Languages](https://skillicons.dev/icons?i=js,ts,bash)](https://skillicons.dev)
 
-#### 🌐 Backend, Servers & APIs
-[![Backend](https://skillicons.dev/icons?i=nodejs,express,fastapi,django,nginx)](https://skillicons.dev)
-
-#### 🗄️ Database & Cache Engines
-[![Databases](https://skillicons.dev/icons?i=sqlite,mysql,postgres,mongodb,redis)](https://skillicons.dev)
-
-#### 🛠️ Infrastructure, Security & Workflows
-[![DevOps](https://skillicons.dev/icons?i=linux,ubuntu,docker,cloudflare,githubactions,aws,git,vscode)](https://skillicons.dev)
+#### 🌐 Servers, Databases & Workflows
+[![DevOps](https://skillicons.dev/icons?i=nodejs,express,sqlite,mysql,linux,docker,cloudflare,git,vscode)](https://skillicons.dev)
 
 ---
 
-### 🛡️ Core Competencies & Focus Areas
-
-> [!NOTE]
-> **Systems & Security:**
-> *   **Security-aware Backend Design:** Implementing stateful packet filtering, rate limiting, and traffic control.
-> *   **Network Engineering:** Service isolation, port hardening, and Netfilter (iptables/nftables) configurations.
-> *   **Automation Scripting:** Building reliable system backup pipelines, monitoring loops, and resource optimization modules.
-
----
-
-### 📊 GitHub Insights & Activity
+### 📊 GitHub Activity & Metrics
 
 <div align="center">
   <table border="0">
     <tr>
       <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=dmzrider&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="180px" alt="Najwan Stats" />
+        <img src="https://github-readme-stats.vercel.app/api?username=dmzrider&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="180px" alt="Manu Stats" />
       </td>
       <td>
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dmzrider&layout=compact&theme=tokyonight&hide_border=true" height="180px" alt="Languages Card" />
