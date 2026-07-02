@@ -1,16 +1,95 @@
-# ⚡ Welcome to my profile! I'm echo__dev (dmzrider) 🚀
+<!-- RESPONSIVE VECTOR HEADER BANNER -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 240" width="100%" style="border-radius: 12px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b0f19;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#111827;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:1" />
+    </linearGradient>
+    <!-- Text Highlight Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background Card -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" rx="12" />
+  
+  <!-- Decorative Glowing Waves -->
+  <path d="M 0 170 C 200 130, 350 240, 550 160 C 720 100, 780 200, 850 130 L 850 240 L 0 240 Z" fill="#4f46e5" opacity="0.15" />
+  <path d="M 0 195 C 180 160, 280 220, 480 180 C 680 140, 720 190, 850 155 L 850 240 L 0 240 Z" fill="#8b5cf6" opacity="0.12" />
+  
+  <!-- Code Icon Symbol Graphic -->
+  <g transform="translate(680, 60)" stroke="url(#textGrad)" stroke-width="3" fill="none" opacity="0.3">
+    <path d="M 20 20 L 5 40 L 20 60" />
+    <path d="M 30 15 L 20 65" />
+    <path d="M 40 20 L 55 40 L 40 60" />
+  </g>
 
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Outfit&size=22&duration=3000&pause=1000&color=9C27B0&center=true&vCenter=true&width=435&lines=Discord+Bot+Developer;JavaScript+%2F+Node.js+Enthusiast;Building+Premium+Custom+Utilities" alt="Typing SVG" />
-</div>
+  <!-- Typography Content -->
+  <g transform="translate(50, 85)">
+    <!-- Title Name -->
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" fill="url(#textGrad)" filter="url(#glow)" letter-spacing="2">Najwan</text>
+    <!-- Tagline Roles -->
+    <text x="0" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600" fill="#e2e8f0" letter-spacing="1">Backend Engineer &amp; Systems Developer</text>
+    <!-- Secondary Tags / Details -->
+    <text x="0" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#94a3b8" letter-spacing="1.5">🚀 DISCORD SYSTEMS • CYBERSECURITY ASPIRANT</text>
+    <!-- Location badge -->
+    <text x="0" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#6366f1" letter-spacing="2">📍 KERALA, INDIA</text>
+  </g>
+</svg>
+
+<br/>
+
+### 📁 About Me
+
+> I am a **backend & systems developer** focused on building highly reliable server-side ecosystems, automation tools, and infrastructure-aware applications. I enjoy low-level architecture, network security, and creating high-performance Discord integrations.
 
 ---
 
-### 👤 About Me
-```text
-┌────────────────────────────────────────────────────────────────────────┐
-│ 💻 I am a passionate Developer specializing in Discord bot development │
-│    and modular backend systems using Node.js.                          │
-│ 🛡️ Developer of the AKRP Event Manager V6 ecosystem.                  │
-│ 🚀 Focused on clean code, responsive integrations, and premium UI/UX. │
-└────────────────────────────────────────────────────────────────────────┘
+### 💻 Technical Stack & Skill Grid
+
+#### 🔧 Languages & Core Engines
+[![Languages](https://skillicons.dev/icons?i=js,ts,py,c,cpp,rust,bash)](https://skillicons.dev)
+
+#### 🌐 Backend, Servers & APIs
+[![Backend](https://skillicons.dev/icons?i=nodejs,express,fastapi,django,nginx)](https://skillicons.dev)
+
+#### 🗄️ Database & Cache Engines
+[![Databases](https://skillicons.dev/icons?i=sqlite,mysql,postgres,mongodb,redis)](https://skillicons.dev)
+
+#### 🛠️ Infrastructure, Security & Workflows
+[![DevOps](https://skillicons.dev/icons?i=linux,ubuntu,docker,cloudflare,githubactions,aws,git,vscode)](https://skillicons.dev)
+
+---
+
+### 🛡️ Core Competencies & Focus Areas
+
+> [!NOTE]
+> **Systems & Security:**
+> *   **Security-aware Backend Design:** Implementing stateful packet filtering, rate limiting, and traffic control.
+> *   **Network Engineering:** Service isolation, port hardening, and Netfilter (iptables/nftables) configurations.
+> *   **Automation Scripting:** Building reliable system backup pipelines, monitoring loops, and resource optimization modules.
+
+---
+
+### 📊 GitHub Insights & Activity
+
+<div align="center">
+  <table border="0">
+    <tr>
+      <td>
+        <img src="https://github-readme-stats.vercel.app/api?username=dmzrider&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="180px" alt="Najwan Stats" />
+      </td>
+      <td>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dmzrider&layout=compact&theme=tokyonight&hide_border=true" height="180px" alt="Languages Card" />
+      </td>
+    </tr>
+  </table>
+</div>
