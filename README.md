@@ -59,6 +59,13 @@
   <img src="https://img.shields.io/github/stars/dmzrider?style=flat-square&color=FFD700&label=TOTAL+STARS" alt="Total Stars" />
 </div>
 
+<!-- 🏆 DYNAMIC TROPHY SHOWCASE (Level Up Your Profile) -->
+<div align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=dmzrider&theme=tokyonight&no-bg=true&no-frame=true&margin-w=15" alt="github trophy" />
+  </a>
+</div>
+
 <br/>
 
 ---
@@ -80,16 +87,30 @@
 
 ---
 
-### 📊 GitHub Analytics
+### 📊 GitHub Analytics & Diagnostics
+
+#### ⚙️ Performance & Language Metrics
+<div align="center">
+  <table border="0">
+    <tr>
+      <td>
+        <img src="https://github-readme-stats.vercel.app/api?username=dmzrider&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="190px" alt="Manu Stats" />
+      </td>
+      <td>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dmzrider&layout=compact&theme=tokyonight&hide_border=true" height="190px" alt="Languages Card" />
+      </td>
+    </tr>
+  </table>
+</div>
 
 #### 🔥 Contribution Streak
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=dmzrider&theme=tokyonight&hide_border=true" alt="Contribution Streak" />
 </div>
 
-#### 📈 Contribution Activity Graph
+#### 📈 Daily Contribution & Activity Growth (Last 30 Days)
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=dmzrider&theme=react-dark&custom_title=Contribution+Graph&hide_border=true" width="100%" alt="Contribution Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=dmzrider&theme=react-dark&custom_title=Daily+Activity+Graph&hide_border=true" width="100%" alt="Daily Activity Graph" />
 </div>
 
 <br/>
