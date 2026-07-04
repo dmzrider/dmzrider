@@ -19,6 +19,19 @@
 
 <br/>
 
+<!-- 🤝 SOCIAL LINKS -->
+<div align="center">
+  <a href="https://discord.com">
+    <img src="https://img.shields.io/badge/Discord-echo__dev-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/dmzrider">
+    <img src="https://img.shields.io/badge/GitHub-dmzrider-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+</div>
+
+<br/>
+
 ---
 
 ### 📁 Profile
@@ -62,6 +75,23 @@
 #### 📈 Daily Contribution & Activity Growth (Last 30 Days)
 <div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=dmzrider&theme=react-dark&custom_title=Daily+Activity+Graph&hide_border=true" width="100%" alt="Daily Activity Graph" />
+</div>
+
+<br/>
+
+<!-- 🐍 ARCADE SNAKE CONTRIBUTION GAME (Updated every 12 hours) -->
+<div align="center">
+  <h4>🎮 Contribution Arcade Snake Game</h4>
+  <img src="https://raw.githubusercontent.com/dmzrider/dmzrider/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake Grid" />
+</div>
+
+<br/>
+
+---
+
+### 💡 Quotes of the Day
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Developer Quote" />
 </div>
 
 <br/>
