@@ -29,31 +29,50 @@
 
 ---
 
-### 📂 Profile Console
+### 👾 About Me
 
-<div align="left">
-  <img src="https://img.shields.io/badge/Console-dmzrider%40github-00F0FF?style=flat-square&logo=gnuterminal&logoColor=00F0FF" alt="Terminal" />
-  <pre>
-<code class="language-json">{
-  "author": "Manu",
-  "origin": "Kerala, India 📍",
-  "roles": [
-    "Discord Bot Developer",
-    "SA-MP Pawn Scripter",
-    "Systems Security Enthusiast"
-  ],
-  "focus": [
-    "Building secure backend environments,",
-    "high-frequency network tickers, and",
-    "DDoS alert integrations."
-  ],
-  "freelance": [
-    "Helping startups build custom APIs,",
-    "automate workflows, and manage operations."
-  ]
-}</code>
-  </pre>
-</div>
+<table>
+<tr>
+<td width="55%" valign="top">
+
+**`> whoami`**
+
+```yaml
+Name        : Manu Krishna Sunil Kumar
+Handle      : dmzrider / echo__dev
+Location    : Kerala, India 🌏
+Status      : Building 24/7 🚀
+```
+
+**`> cat roles.txt`**
+
+```diff
++ Discord Bot Developer
++ SA-MP Pawn Scripter
++ Systems Security Engineer
++ Freelance Startup Developer
+```
+
+</td>
+<td width="45%" valign="top">
+
+**`> cat skills.sh`**
+
+```bash
+#!/bin/bash
+# Current Focus Areas
+
+echo "🤖 Bot Automation & Pipelines"
+echo "🎮 SA-MP Pawn Custom Gamemodes"
+echo "🛡️ DDoS Detection & Alert Systems"
+echo "📡 High-Frequency Network Tickers"
+echo "🏗️ Startup API & Dashboard Tools"
+```
+
+</td>
+</tr>
+</table>
+
 
 ---
 
