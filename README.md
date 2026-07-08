@@ -224,12 +224,71 @@ echo "🏗️ Startup API & Dashboard Tools"
 ### 📌 Pinned Project Showcase
 
 <div align="center">
-  <a href="https://github.com/dmzrider/dmzrider">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=dmzrider&repo=dmzrider&theme=tokyonight&bg_color=070a13&hide_border=true&title_color=00f0ff&icon_color=a855f7&text_color=e2e8f0" alt="dmzrider profile repo" />
-  </a>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 210" width="100%">
+  <defs>
+    <linearGradient id="pjbg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#060c1a"/><stop offset="100%" stop-color="#0a0f20"/></linearGradient>
+    <linearGradient id="card1g" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#0a0f1e"/></linearGradient>
+    <filter id="pjGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="860" height="210" rx="13" fill="url(#pjbg)" stroke="#1e2d52" stroke-width="1"/>
+  <text x="430" y="28" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="bold" fill="#00f0ff" letter-spacing="3" opacity="0.85">// PROJECTS</text>
+
+  <!-- Card 1: Discord Bot -->
+  <rect x="16" y="42" width="262" height="152" rx="10" fill="url(#card1g)" stroke="#00f0ff" stroke-width="1.2"/>
+  <rect x="16" y="42" width="262" height="152" rx="10" fill="none" stroke="#00f0ff" stroke-width="1">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <text x="30" y="68" font-family="Arial,sans-serif" font-size="18">🤖</text>
+  <text x="58" y="68" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#00f0ff">discord-security-bot</text>
+  <line x1="30" y1="78" x2="262" y2="78" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="30" y="100" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Advanced Discord bot with DDoS</text>
+  <text x="30" y="116" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">alert hooks, moderation engine</text>
+  <text x="30" y="132" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">and webhook pipeline support.</text>
+  <rect x="30" y="148" width="60" height="18" rx="4" fill="#1c3a1c"/>
+  <text x="60" y="161" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#4ade80">JavaScript</text>
+  <text x="108" y="162" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">⭐ Private</text>
+  <rect x="30" y="172" width="90" height="16" rx="4" fill="#0c1a2e" stroke="#00f0ff" stroke-width="0.8"/>
+  <text x="75" y="183" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#00f0ff">In Development</text>
+
+  <!-- Card 2: SA-MP -->
+  <rect x="299" y="42" width="262" height="152" rx="10" fill="url(#card1g)" stroke="#a855f7" stroke-width="1.2"/>
+  <rect x="299" y="42" width="262" height="152" rx="10" fill="none" stroke="#a855f7" stroke-width="1">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="313" y="68" font-family="Arial,sans-serif" font-size="18">🎮</text>
+  <text x="341" y="68" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#a855f7">samp-rp-gamemode</text>
+  <line x1="313" y1="78" x2="545" y2="78" stroke="#2d1b4e" stroke-width="1"/>
+  <text x="313" y="100" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Full SA-MP Roleplay gamemode</text>
+  <text x="313" y="116" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">with MySQL threading, economy</text>
+  <text x="313" y="132" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">system and y_less libraries.</text>
+  <rect x="313" y="148" width="50" height="18" rx="4" fill="#2d1a00"/>
+  <text x="338" y="161" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#fb923c">Pawn</text>
+  <text x="378" y="162" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">⭐ Private</text>
+  <rect x="313" y="172" width="90" height="16" rx="4" fill="#1a0e2e" stroke="#a855f7" stroke-width="0.8"/>
+  <text x="358" y="183" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#a855f7">In Development</text>
+
+  <!-- Card 3: DDoS Alert -->
+  <rect x="582" y="42" width="262" height="152" rx="10" fill="url(#card1g)" stroke="#ff007f" stroke-width="1.2"/>
+  <rect x="582" y="42" width="262" height="152" rx="10" fill="none" stroke="#ff007f" stroke-width="1">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="596" y="68" font-family="Arial,sans-serif" font-size="18">🛡️</text>
+  <text x="624" y="68" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#ff007f">ddos-alert-system</text>
+  <line x1="596" y1="78" x2="828" y2="78" stroke="#3b0a1f" stroke-width="1"/>
+  <text x="596" y="100" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Bash + Discord webhook alerts</text>
+  <text x="596" y="116" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">for real-time DDoS detection,</text>
+  <text x="596" y="132" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">log analysis and port shielding.</text>
+  <rect x="596" y="148" width="40" height="18" rx="4" fill="#1c1a0a"/>
+  <text x="616" y="161" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#facc15">Bash</text>
+  <text x="650" y="162" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">⭐ Private</text>
+  <rect x="596" y="172" width="90" height="16" rx="4" fill="#1f0a16" stroke="#ff007f" stroke-width="0.8"/>
+  <text x="641" y="183" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#ff007f">In Development</text>
+</svg>
+
 </div>
 
-> 💡 *More projects coming soon — actively building in private repos!*
+> 💡 *All projects are currently in private repos — public releases coming soon!*
 
 ---
 
@@ -555,13 +614,82 @@ echo "🏗️ Startup API & Dashboard Tools"
 
 ---
 
-### 🌍 Visitor World Map
+### 🌍 Global Reach
 
 <div align="center">
 
-[![Visitor Map](https://clustrmaps.com/map_v2.png?cl=080e1c&w=860&t=tt&d=your-map-id&co=0d1117&ct=00f0ff)](https://clustrmaps.com)
-
-> 🗺️ *[Set up your free visitor map at clustrmaps.com — replace the map ID above with yours]*
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 220" width="100%">
+  <defs>
+    <linearGradient id="globebg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#04060f"/><stop offset="100%" stop-color="#080d1c"/></linearGradient>
+    <radialGradient id="glowCenter" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#00f0ff" stop-opacity="0.08"/><stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/></radialGradient>
+    <filter id="dotGlow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="bigGlobe"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="860" height="220" rx="13" fill="url(#globebg)" stroke="#1e2d52" stroke-width="1"/>
+  <rect width="860" height="220" rx="13" fill="none" stroke="#4f46e5" stroke-width="1">
+    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Title -->
+  <text x="430" y="28" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="bold" fill="#00f0ff" letter-spacing="3" opacity="0.85">// GLOBAL_REACH</text>
+  <!-- Globe circle -->
+  <circle cx="430" cy="125" r="82" fill="none" stroke="#1e3a5f" stroke-width="1" opacity="0.6"/>
+  <circle cx="430" cy="125" r="82" fill="url(#glowCenter)"/>
+  <!-- Latitude lines -->
+  <ellipse cx="430" cy="125" rx="82" ry="20" fill="none" stroke="#1e3a5f" stroke-width="0.7" opacity="0.5"/>
+  <ellipse cx="430" cy="95" rx="70" ry="17" fill="none" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
+  <ellipse cx="430" cy="155" rx="70" ry="17" fill="none" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
+  <!-- Vertical line -->
+  <line x1="430" y1="43" x2="430" y2="207" stroke="#1e3a5f" stroke-width="0.7" opacity="0.5"/>
+  <line x1="348" y1="125" x2="512" y2="125" stroke="#1e3a5f" stroke-width="0.7" opacity="0.5"/>
+  <!-- Connection lines to dots -->
+  <line x1="430" y1="125" x2="178" y2="125" stroke="#00f0ff" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
+  <line x1="430" y1="125" x2="310" y2="78" stroke="#a855f7" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
+  <line x1="430" y1="125" x2="580" y2="90" stroke="#ff007f" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
+  <line x1="430" y1="125" x2="720" y2="108" stroke="#fbbf24" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
+  <line x1="430" y1="125" x2="520" y2="165" stroke="#22c55e" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
+  <!-- Location dots with labels -->
+  <!-- India (home) -->
+  <circle cx="430" cy="125" r="8" fill="#00f0ff" filter="url(#dotGlow)">
+    <animate attributeName="r" values="7;11;7" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="430" cy="125" r="3" fill="#ffffff"/>
+  <text x="430" y="148" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#00f0ff">🏠 Kerala, India</text>
+  <!-- USA -->
+  <circle cx="178" cy="125" r="5" fill="#a855f7" filter="url(#dotGlow)">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="178" y="143" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#a855f7">USA</text>
+  <!-- Europe -->
+  <circle cx="310" cy="78" r="5" fill="#ff007f" filter="url(#dotGlow)">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="310" y="70" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#ff007f">Europe</text>
+  <!-- SE Asia -->
+  <circle cx="580" cy="90" r="5" fill="#fbbf24" filter="url(#dotGlow)">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="580" y="82" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#fbbf24">SE Asia</text>
+  <!-- Middle East -->
+  <circle cx="520" cy="165" r="5" fill="#22c55e" filter="url(#dotGlow)">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="520" y="182" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#22c55e">Middle East</text>
+  <!-- Australia -->
+  <circle cx="720" cy="108" r="5" fill="#38bdf8" filter="url(#dotGlow)">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <text x="720" y="100" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#38bdf8">Australia</text>
+  <!-- Stats row -->
+  <text x="90" y="200" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">Profile Visitors</text>
+  <text x="90" y="214" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="13" fill="#00f0ff" font-weight="bold">🌐 Global</text>
+  <text x="270" y="200" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">Regions Reached</text>
+  <text x="270" y="214" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="13" fill="#a855f7" font-weight="bold">6+ Regions</text>
+  <text x="590" y="200" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">Based In</text>
+  <text x="590" y="214" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="13" fill="#fbbf24" font-weight="bold">🇮🇳 Kerala, India</text>
+  <text x="770" y="200" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">Availability</text>
+  <text x="770" y="214" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="13" fill="#22c55e" font-weight="bold">🟢 Open</text>
+</svg>
 
 </div>
 
