@@ -38,7 +38,7 @@
 **`> whoami`**
 
 ```yaml
-Name        : Manu Krishna Sunil Kumar
+Name        : Manu
 Handle      : dmzrider / echo__dev
 Location    : Kerala, India 🌏
 Status      : Building 24/7 🚀
