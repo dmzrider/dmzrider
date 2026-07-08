@@ -15,18 +15,13 @@
   <img src="https://img.shields.io/github/followers/dmzrider?style=flat-square&color=a855f7&label=FOLLOWERS" alt="Followers" />
   &nbsp;&nbsp;
   <img src="https://img.shields.io/github/stars/dmzrider?style=flat-square&color=ff007f&label=TOTAL+STARS" alt="Total Stars" />
-</div>
-
-<br/>
-
-<!-- 🤝 SOCIAL LINKS -->
-<div align="center">
+  &nbsp;&nbsp;
   <a href="https://discord.com">
-    <img src="https://img.shields.io/badge/Discord-echo__dev-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
+    <img src="https://img.shields.io/badge/Discord-echo__dev-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord" />
   </a>
   &nbsp;&nbsp;
   <a href="https://github.com/dmzrider">
-    <img src="https://img.shields.io/badge/GitHub-dmzrider-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GitHub-dmzrider-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
   </a>
 </div>
 
@@ -47,8 +42,15 @@
     "SA-MP Pawn Scripter",
     "Systems Security Enthusiast"
   ],
-  "focus": "Building secure backend environments, high-frequency network tickers, and DDoS alert integration.",
-  "freelance": "Helping startups construct custom API dashboards, automate systems, and manage active operations."
+  "focus": [
+    "Building secure backend environments,",
+    "high-frequency network tickers, and",
+    "DDoS alert integrations."
+  ],
+  "freelance": [
+    "Helping startups build custom APIs,",
+    "automate workflows, and manage operations."
+  ]
 }</code>
   </pre>
 </div>
@@ -58,7 +60,11 @@
 ### 🏆 Achievements & Milestones
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=dmzrider&theme=tokyonight&no-frame=true&margin-w=15&no-bg=true" alt="GitHub Profile Trophies" />
+  <img src="https://img.shields.io/badge/Experience-3+%20Years-00F0FF?style=for-the-badge&logo=visualstudiocode&logoColor=00F0FF&labelColor=0d1117" alt="Experience" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Completed%20Projects-15+-a855f7?style=for-the-badge&logo=github&logoColor=a855f7&labelColor=0d1117" alt="Completed Projects" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Uptime%20Secured-99.9%25-ff007f?style=for-the-badge&logo=cloudflare&logoColor=ff007f&labelColor=0d1117" alt="Uptime Secured" />
 </div>
 
 ---
@@ -111,10 +117,10 @@
   <table border="0">
     <tr>
       <td align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api?username=dmzrider&show_icons=true&title_color=00f0ff&icon_color=ff007f&text_color=e2e8f0&bg_color=070a13&hide_border=true&count_private=true" height="195px" alt="GitHub Stats" />
+        <img src="https://github-stats-extended.vercel.app/api?username=dmzrider&show_icons=true&title_color=00f0ff&icon_color=ff007f&text_color=e2e8f0&bg_color=070a13&hide_border=true&count_private=true" height="195px" alt="GitHub Stats" />
       </td>
       <td align="center" valign="top">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dmzrider&layout=compact&title_color=ff007f&icon_color=00f0ff&text_color=e2e8f0&bg_color=070a13&hide_border=true" height="195px" alt="Top Languages" />
+        <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=dmzrider&layout=compact&title_color=ff007f&icon_color=00f0ff&text_color=e2e8f0&bg_color=070a13&hide_border=true" height="195px" alt="Top Languages" />
       </td>
     </tr>
   </table>
@@ -123,7 +129,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dmzrider&theme=tokyonight&hide_border=true&background=070a13&ring=00f0ff&fire=ff007f&currStreakLabel=00f0ff&sideNums=e2e8f0&sideLabels=94a3b8" alt="GitHub Streak Stats" />
+  <img src="https://streak-stats.demolab.com/?user=dmzrider&theme=tokyonight&hide_border=true&background=070a13&ring=00f0ff&fire=ff007f&currStreakLabel=00f0ff&sideNums=e2e8f0&sideLabels=94a3b8" alt="GitHub Streak Stats" />
 </div>
 
 <br/>
