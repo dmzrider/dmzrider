@@ -8,6 +8,37 @@
   <img src="https://readme-typing-svg.demolab.com?font=Outfit&size=24&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=800&lines=Discord+Bot+Developer;SA-MP+Pawn+Scripting;Custom+Activity+Trackers;DDoS+Alert+Systems;Freelance+Startup+Developer" alt="Typing SVG" />
 </div>
 
+<!-- 🟢 FREELANCE AVAILABILITY BADGE -->
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 54" width="520">
+  <defs>
+    <linearGradient id="avbg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0d1f3c"/>
+    </linearGradient>
+    <filter id="avGlow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="520" height="54" rx="10" fill="url(#avbg)" stroke="#1a4a2e" stroke-width="1.5"/>
+  <rect width="520" height="54" rx="10" fill="none" stroke="#22c55e" stroke-width="1">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Pulsing dot -->
+  <circle cx="28" cy="27" r="7" fill="#22c55e" filter="url(#avGlow)">
+    <animate attributeName="r" values="6;9;6" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="28" cy="27" r="3.5" fill="#ffffff"/>
+  <!-- Status text -->
+  <text x="48" y="20" font-family="'Courier New',Courier,monospace" font-size="10" fill="#22c55e" font-weight="bold" letter-spacing="2">AVAILABILITY STATUS</text>
+  <text x="48" y="38" font-family="Arial,sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">🟢 Open for Freelance &amp; Bot Dev Projects</text>
+  <!-- Right tag -->
+  <rect x="380" y="14" width="126" height="26" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+  <text x="443" y="32" font-family="'Courier New',Courier,monospace" font-size="10" fill="#4ade80" text-anchor="middle" font-weight="bold">DM TO COLLABORATE</text>
+</svg>
+
+</div>
+
 <!-- 📊 DYNAMIC LIVE COUNTERS & BADGES -->
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=dmzrider&style=flat-square&color=00F0FF&label=PROFILE+VIEWS" alt="Profile Views" />
@@ -74,6 +105,60 @@ echo "🏗️ Startup API & Dashboard Tools"
 </table>
 
 
+<!-- 🏗️ CURRENTLY BUILDING -->
+
+---
+
+### 🏗️ Currently Building
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 110" width="100%">
+  <defs>
+    <linearGradient id="cbbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060c1a"/>
+      <stop offset="100%" stop-color="#0c0e22"/>
+    </linearGradient>
+    <filter id="cbGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="860" height="110" rx="12" fill="url(#cbbg)" stroke="#1e2d52" stroke-width="1.2"/>
+  <rect width="860" height="110" rx="12" fill="none" stroke="#fbbf24" stroke-width="1">
+    <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Terminal bar -->
+  <rect x="0" y="0" width="860" height="28" rx="12" fill="#0b1526"/>
+  <rect x="0" y="14" width="860" height="14" fill="#0b1526"/>
+  <circle cx="20" cy="14" r="4.5" fill="#ff5f57"/>
+  <circle cx="36" cy="14" r="4.5" fill="#febc2e"/>
+  <circle cx="52" cy="14" r="4.5" fill="#28c840"/>
+  <text x="430" y="19" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b">build.log — dmzrider</text>
+  <!-- Blinking build indicator -->
+  <circle cx="820" cy="14" r="5" fill="#fbbf24" filter="url(#cbGlow)">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <text x="830" y="19" font-family="'Courier New',Courier,monospace" font-size="8" fill="#fbbf24">LIVE</text>
+  <!-- Content -->
+  <text x="24" y="52" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#6366f1">$</tspan>
+    <tspan fill="#94a3b8"> git log --oneline --current</tspan>
+  </text>
+  <text x="24" y="72" font-family="'Courier New',Courier,monospace" font-size="12">
+    <tspan fill="#fbbf24" font-weight="bold">▶</tspan>
+    <tspan fill="#f1f5f9" dx="6">Discord Security Bot v2.0</tspan>
+    <tspan fill="#64748b" dx="8">— Advanced moderation + DDoS alert hooks</tspan>
+  </text>
+  <text x="24" y="92" font-family="'Courier New',Courier,monospace" font-size="12">
+    <tspan fill="#22c55e" font-weight="bold">▶</tspan>
+    <tspan fill="#f1f5f9" dx="6">SA-MP Roleplay Gamemode v3</tspan>
+    <tspan fill="#64748b" dx="8">— Tick-optimized MySQL threaded economy system</tspan>
+  </text>
+  <!-- ETA badge -->
+  <rect x="730" y="56" width="110" height="22" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+  <text x="785" y="72" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#a5b4fc" font-weight="bold">ETA: THIS WEEK 🚀</text>
+</svg>
+
+</div>
+
 ---
 
 ### 🏆 Achievements & Milestones
@@ -136,6 +221,18 @@ echo "🏗️ Startup API & Dashboard Tools"
 
 ---
 
+### 📌 Pinned Project Showcase
+
+<div align="center">
+  <a href="https://github.com/dmzrider/dmzrider">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=dmzrider&repo=dmzrider&theme=tokyonight&bg_color=070a13&hide_border=true&title_color=00f0ff&icon_color=a855f7&text_color=e2e8f0" alt="dmzrider profile repo" />
+  </a>
+</div>
+
+> 💡 *More projects coming soon — actively building in private repos!*
+
+---
+
 ### 📊 GitHub Analytics & Diagnostics
 
 <div align="center">
@@ -149,6 +246,13 @@ echo "🏗️ Startup API & Dashboard Tools"
       </td>
     </tr>
   </table>
+</div>
+
+<br/>
+
+<!-- ⚡ WAKATIME CODING STATS -->
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=dmzrider&theme=tokyonight&bg_color=070a13&hide_border=true&title_color=a855f7&text_color=e2e8f0&icon_color=ff007f&layout=compact&langs_count=6" alt="WakaTime Stats" />
 </div>
 
 <br/>
@@ -442,6 +546,25 @@ echo "🏗️ Startup API & Dashboard Tools"
 
 <br/>
 
+<!-- 😂 RANDOM DEV JOKE -->
+<div align="center">
+  <img src="https://readme-jokes.vercel.app/api?hideBorder&theme=tokyonight&bgColor=%23070a13&textColor=%23e2e8f0&aColor=%2300f0ff&qColor=%23a855f7" alt="Dev Joke of the Day" />
+</div>
+
+<br/>
+
+---
+
+### 🌍 Visitor World Map
+
+<div align="center">
+
+[![Visitor Map](https://clustrmaps.com/map_v2.png?cl=080e1c&w=860&t=tt&d=your-map-id&co=0d1117&ct=00f0ff)](https://clustrmaps.com)
+
+> 🗺️ *[Set up your free visitor map at clustrmaps.com — replace the map ID above with yours]*
+
+</div>
+
 ---
 
 ### 🛠️ Specialties & Focus Areas
@@ -480,3 +603,87 @@ echo "🏗️ Startup API & Dashboard Tools"
 - **Custom APIs**: Developing lightweight microservices using Express or Fastify.
 - **Operations Dashboard**: Tailored scripts that display vital server metrics, user counts, and system runtimes.
 </details>
+
+---
+
+### 📬 Connect With Me
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 130" width="100%">
+  <defs>
+    <linearGradient id="connbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060c1a"/>
+      <stop offset="100%" stop-color="#0e0a24"/>
+    </linearGradient>
+    <filter id="connGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="860" height="130" rx="14" fill="url(#connbg)" stroke="#1e2d52" stroke-width="1.2"/>
+  <rect width="860" height="130" rx="14" fill="none" stroke="#6366f1" stroke-width="1">
+    <animate attributeName="stroke" values="#6366f1;#00f0ff;#a855f7;#6366f1" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="430" y="30" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="bold" fill="#00f0ff" letter-spacing="3" opacity="0.85">// FIND ME ON</text>
+  <!-- GitHub -->
+  <rect x="30" y="48" width="168" height="62" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="114" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="22">🐙</text>
+  <text x="114" y="94" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#e2e8f0" font-weight="bold">GitHub</text>
+  <text x="114" y="106" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b">@dmzrider</text>
+  <!-- Discord -->
+  <rect x="220" y="48" width="168" height="62" rx="10" fill="#0d1117" stroke="#5865f2" stroke-width="1"/>
+  <text x="304" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="22">💬</text>
+  <text x="304" y="94" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#7289da" font-weight="bold">Discord</text>
+  <text x="304" y="106" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b">echo__dev</text>
+  <!-- Email -->
+  <rect x="410" y="48" width="168" height="62" rx="10" fill="#0d1117" stroke="#ff007f" stroke-width="1"/>
+  <text x="494" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="22">📧</text>
+  <text x="494" y="94" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#ff007f" font-weight="bold">Email</text>
+  <text x="494" y="106" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b">DM for contact</text>
+  <!-- Availability -->
+  <rect x="600" y="48" width="228" height="62" rx="10" fill="#0d1117" stroke="#22c55e" stroke-width="1"/>
+  <circle cx="626" cy="79" r="6" fill="#22c55e" filter="url(#connGlow)">
+    <animate attributeName="r" values="5;8;5" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="714" y="72" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#f1f5f9" font-weight="bold">Available for Work</text>
+  <text x="714" y="90" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#4ade80">Freelance &amp; Collaboration</text>
+  <text x="714" y="106" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b">Kerala, India 🇮🇳</text>
+</svg>
+
+</div>
+
+<br/>
+
+---
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 60" width="100%">
+  <defs>
+    <linearGradient id="footbg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#070a13"/>
+      <stop offset="50%"  stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#070a13"/>
+    </linearGradient>
+    <linearGradient id="footLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#00f0ff" stop-opacity="0.6"/>
+      <stop offset="50%"  stop-color="#a855f7" stop-opacity="0.8"/>
+      <stop offset="70%"  stop-color="#ff007f" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="60" fill="url(#footbg)" rx="8"/>
+  <rect x="0" y="0" width="860" height="1.5" fill="url(#footLine)"/>
+  <text x="430" y="26" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#94a3b8">Thanks for visiting! If you find my work useful,</text>
+  <text x="430" y="46" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#64748b">drop a </tspan>
+    <tspan fill="#fbbf24">⭐</tspan>
+    <tspan fill="#64748b"> on any repo — it means a lot!  Built with </tspan>
+    <tspan fill="#ff007f">♥</tspan>
+    <tspan fill="#64748b"> by </tspan>
+    <tspan fill="#00f0ff" font-weight="bold">dmzrider</tspan>
+  </text>
+</svg>
+
+</div>
