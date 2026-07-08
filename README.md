@@ -59,13 +59,19 @@
 
 ### 🏆 Achievements & Milestones
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Experience-3+%20Years-00F0FF?style=for-the-badge&logo=visualstudiocode&logoColor=00F0FF&labelColor=0d1117" alt="Experience" />
+<p align="center">
+  <a href="https://github.com/dmzrider">
+    <img src="https://img.shields.io/badge/Experience-3+%20Years-00F0FF?style=for-the-badge&logo=visualstudiocode&logoColor=00F0FF&labelColor=0d1117" alt="Experience" />
+  </a>
   &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Completed%20Projects-15+-a855f7?style=for-the-badge&logo=github&logoColor=a855f7&labelColor=0d1117" alt="Completed Projects" />
+  <a href="https://github.com/dmzrider">
+    <img src="https://img.shields.io/badge/Completed%20Projects-15+-a855f7?style=for-the-badge&logo=github&logoColor=a855f7&labelColor=0d1117" alt="Completed Projects" />
+  </a>
   &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/Uptime%20Secured-99.9%25-ff007f?style=for-the-badge&logo=cloudflare&logoColor=ff007f&labelColor=0d1117" alt="Uptime Secured" />
-</div>
+  <a href="https://github.com/dmzrider">
+    <img src="https://img.shields.io/badge/Uptime%20Secured-99.9%25-ff007f?style=for-the-badge&logo=cloudflare&logoColor=ff007f&labelColor=0d1117" alt="Uptime Secured" />
+  </a>
+</p>
 
 ---
 
@@ -129,7 +135,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com/?user=dmzrider&theme=tokyonight&hide_border=true&background=070a13&ring=00f0ff&fire=ff007f&currStreakLabel=00f0ff&sideNums=e2e8f0&sideLabels=94a3b8" alt="GitHub Streak Stats" />
+  <img src="https://raw.githubusercontent.com/dmzrider/dmzrider/output/profile-streak-stats.svg" alt="GitHub Streak Stats" />
 </div>
 
 <br/>
