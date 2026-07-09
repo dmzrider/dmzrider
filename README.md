@@ -409,7 +409,7 @@ echo "🏗️ Startup API & Dashboard Tools"
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=dmzrider&theme=react-dark&custom_title=Daily+Activity+Graph&hide_border=true&bg_color=070a13&color=00f0ff&line=a855f7&point=ff007f" width="100%" alt="Activity Graph" />
+  <img src="activity-graph.svg" width="100%" alt="Activity Graph" />
 </div>
 
 <br/>
