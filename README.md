@@ -409,7 +409,7 @@ echo "🏗️ Startup API & Dashboard Tools"
 <br/>
 
 <div align="center">
-  <img src="activity-graph.svg" width="100%" alt="Activity Graph" />
+  <img src="activity-graph-v2.svg" width="100%" alt="Activity Graph" />
 </div>
 
 <br/>
@@ -419,13 +419,13 @@ echo "🏗️ Startup API & Dashboard Tools"
 ### 📡 Contribution Activity Overview
 
 <div align="center">
-  <img src="activity-radar.svg" width="100%" alt="Contribution Activity Overview" />
+  <img src="activity-radar-v2.svg" width="100%" alt="Contribution Activity Overview" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="diagnostics.svg" width="100%" alt="Diagnostics and Productive Time Overview" />
+  <img src="diagnostics-v2.svg" width="100%" alt="Diagnostics and Productive Time Overview" />
 </div>
 
 
