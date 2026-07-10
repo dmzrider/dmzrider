@@ -129,7 +129,7 @@ def fetch_stats():
     }
 
 def update_activity_graph(stats):
-    filepath = "activity-graph.svg"
+    filepath = "activity-graph-v2.svg"
     if not os.path.exists(filepath):
         return
 
@@ -247,27 +247,45 @@ def update_activity_graph(stats):
         svg_content
     )
 
-    # Update Peak Value HUD Label and coordinates
-    # Translate the peak label group exactly above the peak data point coordinate
-    peak_val = max(daily_data)
-    # Target: <g transform="translate(430, 60)" opacity="0.95">
+    # 4. Generate Dynamic Glowing Data Point Circles
+    circles = []
+    for i in range(total_days):
+        count = daily_data[i]
+        if count > 0:
+            color = "#ff007f" if count == max_activity else "#00f0ff"
+            circles.append(
+                f'<circle cx="{x_coords[i]:.1f}" cy="{y_coords[i]:.1f}" r="4.5" fill="{color}" filter="url(#pointGlow)">\n'
+                f'      <animate attributeName="r" values="3.5;5.5;3.5" dur="2s" repeatCount="indefinite"/>\n'
+                f'    </circle>'
+            )
+    points_str = "\n    ".join(circles)
+    
+    # Inject circles into the placeholder group
     svg_content = re.sub(
-        r'<g transform="translate\([^)]+\)" opacity="0\.95">(\s*)<rect([^>]*)/>(\s*)<text x="41" y="10"([^>]*?)>PEAK:? \d*?A?C?T?</text>',
-        f'<g transform="translate({int(peak_x - 41)}, {int(peak_y - 25)})" opacity="0.95">\\1<rect\\2/>\\3<text x="41" y="10"\\4>PEAK: {peak_val} ACT</text>',
+        r'<g id="dynamicPoints"></g>',
+        f'<g id="dynamicPoints">\n    {points_str}\n    </g>',
+        svg_content
+    )
+
+    # Update Peak Value HUD Label coordinates and text
+    peak_val = max(daily_data)
+    svg_content = re.sub(
+        r'<g id="peakHUD" transform="translate\([^)]+\)"',
+        f'<g id="peakHUD" transform="translate({int(peak_x - 41)}, {int(peak_y - 25)})"',
         svg_content
     )
     svg_content = re.sub(
-        r'<g transform="translate\([^)]+\)" opacity="0\.95">(\s*)<rect([^>]*)/>(\s*)<text x="41" y="10"([^>]*?) font-weight="bold" fill="#ff007f" text-anchor="middle">[^<]+</text>',
-        f'<g transform="translate({int(peak_x - 41)}, {int(peak_y - 25)})" opacity="0.95">\\1<rect\\2/>\\3<text x="41" y="10"\\4 font-weight="bold" fill="#ff007f" text-anchor="middle">PEAK: {peak_val} ACT</text>',
+        r'<text id="peakHUDText"([^>]*?)>[^<]+</text>',
+        f'<text id="peakHUDText"\\1>PEAK: {peak_val} ACT</text>',
         svg_content
     )
 
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(svg_content)
-    print("Updated activity-graph.svg successfully.")
+    print("Updated activity-graph-v2.svg successfully.")
 
 def update_diagnostics(stats):
-    filepath = "diagnostics.svg"
+    filepath = "diagnostics-v2.svg"
     if not os.path.exists(filepath):
         return
 
@@ -344,10 +362,10 @@ def update_diagnostics(stats):
 
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(svg_content)
-    print("Updated diagnostics.svg successfully.")
+    print("Updated diagnostics-v2.svg successfully.")
 
 def update_activity_radar(stats):
-    filepath = "activity-radar.svg"
+    filepath = "activity-radar-v2.svg"
     if not os.path.exists(filepath):
         return
 
@@ -499,7 +517,7 @@ def update_activity_radar(stats):
 
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(svg_content)
-    print("Updated activity-radar.svg successfully.")
+    print("Updated activity-radar-v2.svg successfully.")
 
 if __name__ == "__main__":
     try:
