@@ -139,9 +139,9 @@ def update_activity_graph(stats):
     import re
 
     # 1. Calculate main wave path coordinates (Catmull-Rom spline)
-    # Chart width: x=220 to x=830 (610 pixels total). Height: baseline y=205, max y=55 (150px span)
+    # Chart width: x=50 to x=810 (760 pixels total). Height: baseline y=155, max y=55 (100px span)
     total_days = 30
-    x_coords = [220 + i * (610 / (total_days - 1)) for i in range(total_days)]
+    x_coords = [50 + i * (760 / (total_days - 1)) for i in range(total_days)]
     
     daily_data = stats["daily_activity"]
     max_activity = max(daily_data) if max(daily_data) > 0 else 1
@@ -150,12 +150,17 @@ def update_activity_graph(stats):
     y_coords = []
     for count in daily_data:
         normalized = count / max_activity
-        y = 205 - (normalized * 135) # leave 15px top margin (from 55 to 205 is 150px)
+        y = 155 - (normalized * 85) # leave 15px top margin (from 55 to 155 is 100px)
         y_coords.append(y)
 
     # Catmull-Rom Spline path generation
-    dx = 610 / (total_days - 1)
+    dx = 760 / (total_days - 1)
     path_segments = [f"M {x_coords[0]:.1f} {y_coords[0]:.1f}"]
+    
+    # Find peak index to float the HUD label over it
+    peak_idx = daily_data.index(max(daily_data))
+    peak_x = x_coords[peak_idx]
+    peak_y = y_coords[peak_idx]
     
     for i in range(total_days - 1):
         x1, y1 = x_coords[i], y_coords[i]
@@ -172,15 +177,15 @@ def update_activity_graph(stats):
         cp2y = y2 - (y_next2 - y1) / 6.0
         
         # Bound control points to keep within chart area
-        cp1y = max(50, min(210, cp1y))
-        cp2y = max(50, min(210, cp2y))
+        cp1y = max(50, min(160, cp1y))
+        cp2y = max(50, min(160, cp2y))
         
         path_segments.append(f"C {cp1x:.1f} {cp1y:.1f}, {cp2x:.1f} {cp2y:.1f}, {x2:.1f} {y2:.1f}")
 
     path_d = " ".join(path_segments)
     
-    # Area path: closes the wave path at the baseline corners (830,205) and (220,205)
-    area_d = path_d + " L 830,205 L 220,205 Z"
+    # Area path: closes the wave path at the baseline corners (810,155) and (50,155)
+    area_d = path_d + " L 810,155 L 50,155 Z"
 
     # 2. Calculate 5-Day Moving Average (Trendline)
     ma_data = []
@@ -189,7 +194,7 @@ def update_activity_graph(stats):
         ma_data.append(sum(window) / len(window))
         
     max_ma = max(ma_data) if max(ma_data) > 0 else 1
-    y_coords_ma = [205 - (val / max_ma * 125) for val in ma_data]
+    y_coords_ma = [155 - (val / max_ma * 75) for val in ma_data]
     
     path_segments_ma = [f"M {x_coords[0]:.1f} {y_coords_ma[0]:.1f}"]
     for i in range(total_days - 1):
@@ -204,19 +209,16 @@ def update_activity_graph(stats):
         cp2x = x2 - dx / 3.0
         cp2y = y2 - (y_next2 - y1) / 6.0
         
-        cp1y = max(50, min(210, cp1y))
-        cp2y = max(50, min(210, cp2y))
+        cp1y = max(50, min(160, cp1y))
+        cp2y = max(50, min(160, cp2y))
         
         path_segments_ma.append(f"C {cp1x:.1f} {cp1y:.1f}, {cp2x:.1f} {cp2y:.1f}, {x2:.1f} {y2:.1f}")
         
     trend_d = " ".join(path_segments_ma)
 
     # 3. Calculate Telemetry Goal Ring Progress
-    # Goal target: 40 commits in 30 days
     total_commits_30d = sum(daily_data)
     goal_pct = min(round((total_commits_30d / 40.0) * 100), 100) if total_commits_30d > 0 else 0
-    # Ring circumference = 2 * PI * r (r=42) = 263.89
-    dashoffset = int(264 * (100 - goal_pct) / 100)
 
     # Replace SVG contents
     # Area Fill
@@ -238,36 +240,25 @@ def update_activity_graph(stats):
         f'<path d="{trend_d}" fill="none" stroke="#ff007f"\\1/>',
         svg_content
     )
-    # Goal Ring Progress Percentage Circle
+    # Goal Text Indicator
     svg_content = re.sub(
-        r'(<circle cx="0" cy="0" r="42" fill="none" stroke="url\(#dialGrad\)" stroke-width="6" \s*stroke-dasharray="264" )stroke-dashoffset="\d+"',
-        f'\\1stroke-dashoffset="{dashoffset}"',
-        svg_content
-    )
-    # Goal Text
-    svg_content = re.sub(
-        r'(<text x="0" y="5"[^>]*>)\d+%(</text>)',
-        f'\\1{goal_pct}%\\2',
-        svg_content
-    )
-    # Goal Run Rate Stats block
-    svg_content = re.sub(
-        r'<text x="0" y="28"><tspan fill="#64748b">RATE :</tspan> [^<]+</text>',
-        f'<text x="0" y="28"><tspan fill="#64748b">RATE :</tspan> {total_commits_30d / 30.0:.1f} ACT/D</text>',
+        r'GOAL RATE: <tspan fill="#a855f7">\d+%</tspan>',
+        f'GOAL RATE: <tspan fill="#a855f7">{goal_pct}%</tspan>',
         svg_content
     )
 
-    # Update Peak Value HUD Label
+    # Update Peak Value HUD Label and coordinates
+    # Translate the peak label group exactly above the peak data point coordinate
     peak_val = max(daily_data)
+    # Target: <g transform="translate(430, 60)" opacity="0.95">
     svg_content = re.sub(
-        r'<text x="41" y="10"([^>]+)>PEAK RUNTIME</text>',
-        f'<text x="41" y="10"\\1>PEAK: {peak_val} ACT</text>',
+        r'<g transform="translate\([^)]+\)" opacity="0\.95">(\s*)<rect([^>]*)/>(\s*)<text x="41" y="10"([^>]*?)>PEAK:? \d*?A?C?T?</text>',
+        f'<g transform="translate({int(peak_x - 41)}, {int(peak_y - 25)})" opacity="0.95">\\1<rect\\2/>\\3<text x="41" y="10"\\4>PEAK: {peak_val} ACT</text>',
         svg_content
     )
-    # Support also peak label in other tags
     svg_content = re.sub(
-        r'<text x="41" y="10"([^>]+)>PEAK: \d+ ACT</text>',
-        f'<text x="41" y="10"\\1>PEAK: {peak_val} ACT</text>',
+        r'<g transform="translate\([^)]+\)" opacity="0\.95">(\s*)<rect([^>]*)/>(\s*)<text x="41" y="10"([^>]*?) font-weight="bold" fill="#ff007f" text-anchor="middle">[^<]+</text>',
+        f'<g transform="translate({int(peak_x - 41)}, {int(peak_y - 25)})" opacity="0.95">\\1<rect\\2/>\\3<text x="41" y="10"\\4 font-weight="bold" fill="#ff007f" text-anchor="middle">PEAK: {peak_val} ACT</text>',
         svg_content
     )
 
