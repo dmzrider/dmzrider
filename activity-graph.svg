@@ -1,28 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 220" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 260" width="100%">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="agbg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060c1a"/>
-      <stop offset="100%" stop-color="#0d1117"/>
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="100%" stop-color="#0a0f24"/>
     </linearGradient>
 
     <!-- Path Line Gradient -->
     <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00f0ff"/>
-      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="40%" stop-color="#a855f7"/>
       <stop offset="100%" stop-color="#ff007f"/>
     </linearGradient>
 
     <!-- Area Gradient (glowing fill below line) -->
     <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.25"/>
-      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.08"/>
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#a855f7" stop-opacity="0.06"/>
       <stop offset="100%" stop-color="#ff007f" stop-opacity="0"/>
     </linearGradient>
 
+    <!-- Telemetry Dial Gradient -->
+    <linearGradient id="dialGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/><stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Grid Dots Pattern -->
+    <pattern id="dotPattern" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#1e2d52" opacity="0.4"/>
+    </pattern>
+
     <!-- Filters for glows -->
     <filter id="agGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feGaussianBlur stdDeviation="4.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -30,109 +40,120 @@
     </filter>
     <filter id="pointGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
   <!-- Outer Card Container -->
-  <rect width="860" height="220" rx="14" fill="url(#agbg)" stroke="#1a2540" stroke-width="1.2"/>
-  <rect width="860" height="220" rx="14" fill="none" stroke="#4f46e5" stroke-width="1.5" opacity="0.3">
+  <rect width="860" height="260" rx="14" fill="url(#agbg)" stroke="#1a2540" stroke-width="1.2"/>
+  <rect width="860" height="260" rx="14" fill="none" stroke="#4f46e5" stroke-width="1.5" opacity="0.3">
     <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite"/>
     <animate attributeName="stroke" values="#4f46e5;#00f0ff;#a855f7;#ff007f;#4f46e5" dur="10s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Title / Telemetry Header -->
-  <text x="30" y="32" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="bold" fill="#00f0ff" letter-spacing="1.5">// DAILY_ACTIVITY_DIAGNOSTICS (30D)</text>
-  <text x="830" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" text-anchor="end">STATUS: RECONSTRUCTED</text>
-  <line x1="30" y1="38" x2="830" y2="38" stroke="#1e3a5f" stroke-width="0.8" opacity="0.5"/>
+  <!-- Header Section -->
+  <text x="30" y="32" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="bold" fill="#00f0ff" letter-spacing="2">// PROFILE_ACTIVITY_TELEMETRY</text>
+  <text x="830" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" text-anchor="end">SYSTEM: OPERATIONAL</text>
+  <line x1="30" y1="38" x2="830" y2="38" stroke="#1e3a5f" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Left/Right Panel Splitter -->
+  <line x1="200" y1="50" x2="200" y2="240" stroke="#1e2d52" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+  <!-- ================= LEFT TELEMETRY PANEL ================= -->
+  <!-- Circular Progress Ring (Goal: 85%) -->
+  <g transform="translate(100, 110)">
+    <!-- Base track -->
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#111827" stroke-width="6"/>
+    <!-- Glowing progress (stroke-dasharray = 2 * PI * r = 263.8) -->
+    <!-- 85% of 263.8 = 224.2 -->
+    <circle cx="0" cy="0" r="42" fill="none" stroke="url(#dialGrad)" stroke-width="6" 
+            stroke-dasharray="264" stroke-dashoffset="40" stroke-linecap="round" filter="url(#agGlow)" transform="rotate(-90)">
+      <animateTransform attributeName="transform" type="rotate" from="-90" to="270" dur="2s" fill="freeze" additive="sum"/>
+    </circle>
+    <!-- Center text -->
+    <text x="0" y="5" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#f1f5f9" text-anchor="middle">85%</text>
+    <text x="0" y="18" font-family="'Courier New',Courier,monospace" font-size="7" fill="#64748b" text-anchor="middle">RUN RATE</text>
+  </g>
+
+  <!-- Diagnostics Stats block -->
+  <g transform="translate(30, 180)" font-family="'Courier New',Courier,monospace" font-size="9" fill="#94a3b8">
+    <text x="0" y="0"><tspan fill="#64748b">CORE :</tspan> ACTIVE</text>
+    <text x="0" y="14"><tspan fill="#64748b">MODE :</tspan> DEV_MODE</text>
+    <text x="0" y="28"><tspan fill="#64748b">RATE :</tspan> 4.8 ACT/D</text>
+    <text x="0" y="42"><tspan fill="#64748b">UNIT :</tspan> COMMITS</text>
+  </g>
+
+  <!-- ================= RIGHT CHART PANEL ================= -->
+  <!-- Grid dots pattern fill -->
+  <rect x="220" y="55" width="610" height="150" fill="url(#dotPattern)"/>
 
   <!-- Chart Grid Lines -->
-  <g stroke="#1a2540" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.7">
+  <g stroke="#1e2d52" stroke-width="0.5" opacity="0.4">
     <!-- Horizontal Levels -->
-    <line x1="60" y1="70"  x2="810" y2="70"/>
-    <text x="50" y="74" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" text-anchor="end">High</text>
+    <line x1="220" y1="55"  x2="830" y2="55"/>
+    <text x="212" y="58" font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" text-anchor="end">MAX</text>
 
-    <line x1="60" y1="115" x2="810" y2="115"/>
-    <text x="50" y="119" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" text-anchor="end">Med</text>
+    <line x1="220" y1="130" x2="830" y2="130"/>
+    <text x="212" y="133" font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" text-anchor="end">MID</text>
 
-    <line x1="60" y1="160" x2="810" y2="160"/>
-    <text x="50" y="164" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" text-anchor="end">Low</text>
+    <line x1="220" y1="205" x2="830" y2="205"/>
+    <text x="212" y="208" font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" text-anchor="end">MIN</text>
 
     <!-- Vertical Time Slots -->
-    <line x1="185" y1="50" x2="185" y2="175"/>
-    <line x1="310" y1="50" x2="310" y2="175"/>
-    <line x1="435" y1="50" x2="435" y2="175"/>
-    <line x1="560" y1="50" x2="560" y2="175"/>
-    <line x1="685" y1="50" x2="685" y2="175"/>
+    <line x1="321.6" y1="55" x2="321.6" y2="205"/>
+    <line x1="423.2" y1="55" x2="423.2" y2="205"/>
+    <line x1="524.8" y1="55" x2="524.8" y2="205"/>
+    <line x1="626.4" y1="55" x2="626.4" y2="205"/>
+    <line x1="728.0" y1="55" x2="728.0" y2="205"/>
   </g>
 
-  <!-- Baseline -->
-  <line x1="60" y1="175" x2="810" y2="175" stroke="#1e2d52" stroke-width="1.2"/>
+  <!-- Chart Area Clipping Path to keep area fill clean -->
+  <clipPath id="chartClip">
+    <rect x="220" y="50" width="610" height="160"/>
+  </clipPath>
 
-  <!-- Wavy Path Generation (representing 30 days) -->
-  <!-- Start (60, 160) -> (110, 140) -> (160, 165) -> (210, 90) -> (260, 150) -> (310, 110) -> (360, 80) -> (410, 140) -> (460, 65) -> (510, 120) -> (560, 150) -> (610, 85) -> (660, 105) -> (710, 160) -> (760, 75) -> (810, 110) -->
+  <!-- Dynamic Area Fill (Under wave) -->
+  <path d="M 220 205 L 830 205 Z" fill="url(#areaGrad)" clip-path="url(#chartClip)"/>
 
-  <!-- Filled Area Under Chart -->
-  <path d="M 60,175 L 60.0,175.0 L 85.9,175.0 L 111.7,175.0 L 137.6,175.0 L 163.4,175.0 L 189.3,175.0 L 215.2,175.0 L 241.0,175.0 L 266.9,175.0 L 292.8,175.0 L 318.6,175.0 L 344.5,175.0 L 370.3,175.0 L 396.2,175.0 L 422.1,175.0 L 447.9,175.0 L 473.8,175.0 L 499.7,175.0 L 525.5,175.0 L 551.4,175.0 L 577.2,175.0 L 603.1,120.0 L 629.0,110.8 L 654.8,138.3 L 680.7,175.0 L 706.6,175.0 L 732.4,175.0 L 758.3,65.0 L 784.1,120.0 L 810.0,165.8 L 810,175 Z" fill="url(#areaGrad)"/>
-
-  <!-- Activity Curve (glowing neon line) -->
-  <path d="M 60.0,175.0 L 85.9,175.0 L 111.7,175.0 L 137.6,175.0 L 163.4,175.0 L 189.3,175.0 L 215.2,175.0 L 241.0,175.0 L 266.9,175.0 L 292.8,175.0 L 318.6,175.0 L 344.5,175.0 L 370.3,175.0 L 396.2,175.0 L 422.1,175.0 L 447.9,175.0 L 473.8,175.0 L 499.7,175.0 L 525.5,175.0 L 551.4,175.0 L 577.2,175.0 L 603.1,120.0 L 629.0,110.8 L 654.8,138.3 L 680.7,175.0 L 706.6,175.0 L 732.4,175.0 L 758.3,65.0 L 784.1,120.0 L 810.0,165.8"
-        fill="none" stroke="url(#lineGrad)" stroke-width="3" filter="url(#agGlow)" stroke-linecap="round" stroke-linejoin="round">
-    <animate attributeName="stroke-dasharray" values="0,1000;1000,0" dur="2s" fill="freeze"/>
+  <!-- Dynamic Activity Wave (Cubic Spline Path) -->
+  <path d="M 220 205" fill="none" stroke="url(#lineGrad)" stroke-width="3" filter="url(#agGlow)" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#chartClip)">
+    <animate attributeName="stroke-dasharray" values="0,2000;2000,0" dur="2s" fill="freeze"/>
   </path>
 
-  <!-- Glowing Data Point Markers -->
-  <circle cx="210" cy="90" r="4.5" fill="#00f0ff" filter="url(#pointGlow)">
-    <animate attributeName="r" values="3.5;5.5;3.5" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="360" cy="80" r="4.5" fill="#a855f7" filter="url(#pointGlow)">
-    <animate attributeName="r" values="3.5;5.5;3.5" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="460" cy="65" r="5" fill="#ff007f" filter="url(#pointGlow)">
-    <animate attributeName="r" values="4;6.5;4" dur="1.8s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="610" cy="85" r="4.5" fill="#00f0ff" filter="url(#pointGlow)">
-    <animate attributeName="r" values="3.5;5.5;3.5" dur="2.2s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="760" cy="75" r="4.5" fill="#ff007f" filter="url(#pointGlow)">
-    <animate attributeName="r" values="3.5;5.5;3.5" dur="2.4s" repeatCount="indefinite"/>
-  </circle>
+  <!-- Dynamic Trendline (Moving Average / Dotted) -->
+  <path d="M 220 205" fill="none" stroke="#ff007f" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.6" clip-path="url(#chartClip)"/>
 
-  <!-- Curve Endpoints -->
-  <circle cx="60" cy="175" r="3.5" fill="#00f0ff"/>
-  <circle cx="810" cy="110" r="3.5" fill="#ff007f"/>
-
-  <!-- Horizontal Labels (X-Axis Timeline) -->
-  <g font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" text-anchor="middle">
-    <text x="60"  y="192">30 Days Ago</text>
-    <text x="185" y="192">Wk 1</text>
-    <text x="310" y="192">Wk 2</text>
-    <text x="435" y="192">Wk 3</text>
-    <text x="560" y="192">Wk 4</text>
-    <text x="685" y="192">Wk 5</text>
-    <text x="810" y="192">Today</text>
+  <!-- X-Axis Labels (Days timeline) -->
+  <g font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" text-anchor="middle">
+    <text x="220"   y="222">30D AGO</text>
+    <text x="321.6" y="222">WEEK 1</text>
+    <text x="423.2" y="222">WEEK 2</text>
+    <text x="524.8" y="222">WEEK 3</text>
+    <text x="626.4" y="222">WEEK 4</text>
+    <text x="728"   y="222">WEEK 5</text>
+    <text x="830"   y="222">TODAY</text>
   </g>
 
-  <!-- Graph Legend / Indicators -->
-  <g transform="translate(60, 208)" font-family="Arial,sans-serif" font-size="9" fill="#64748b">
-    <circle cx="0" cy="-3" r="3.5" fill="#00f0ff"/>
-    <text x="8" y="0">Commits</text>
+  <!-- Telemetry indicators at the bottom -->
+  <g transform="translate(220, 240)" font-family="Arial,sans-serif" font-size="9" fill="#64748b">
+    <rect x="0" y="-7" width="8" height="8" rx="2" fill="#00f0ff"/>
+    <text x="14" y="1">Commits</text>
     
-    <circle cx="75" cy="-3" r="3.5" fill="#a855f7"/>
-    <text x="83" y="0">Pull Requests</text>
+    <rect x="90" y="-7" width="8" height="8" rx="2" fill="#a855f7"/>
+    <text x="104" y="1">Pull Requests</text>
 
-    <circle cx="170" cy="-3" r="3.5" fill="#ff007f"/>
-    <text x="178" y="0">Code Reviews</text>
+    <rect x="195" y="-7" width="8" height="8" rx="2" fill="#ff007f"/>
+    <text x="209" y="1">Reviews</text>
 
-    <path d="M275 -3 L290 -3" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="2 2"/>
-    <text x="295" y="0">Trend Spike</text>
+    <line x1="290" y1="-3" x2="305" y2="-3" stroke="#ff007f" stroke-width="1.5" stroke-dasharray="2 2"/>
+    <text x="312" y="1">Trend Velocity</text>
   </g>
 
-  <!-- Interactive Activity Details/Peak label -->
-  <rect x="420" y="44" width="80" height="15" rx="3" fill="#1e1b4b" stroke="#ff007f" stroke-width="0.8"/>
-  <text x="460" y="54" font-family="'Courier New',Courier,monospace" font-size="8" font-weight="bold" fill="#ff007f" text-anchor="middle">PEAK: 12 ACT</text>
+  <!-- Floating HUD labels -->
+  <!-- Peak marker -->
+  <g transform="translate(500, 60)" opacity="0.95">
+    <rect x="0" y="0" width="82" height="15" rx="3" fill="#1e1b4b" stroke="#ff007f" stroke-width="0.8"/>
+    <text x="41" y="10" font-family="'Courier New',Courier,monospace" font-size="7" font-weight="bold" fill="#ff007f" text-anchor="middle">PEAK RUNTIME</text>
+  </g>
 
 </svg>

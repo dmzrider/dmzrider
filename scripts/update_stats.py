@@ -136,49 +136,138 @@ def update_activity_graph(stats):
     with open(filepath, "r", encoding="utf-8") as f:
         svg_content = f.read()
 
-    # Generate path and area points
-    # Chart area: width from x=60 to x=810 (750 pixels). Height baseline y=175. Max height y=65.
-    x_coords = [60 + i * (750 / 29) for i in range(30)]
-    max_activity = max(stats["daily_activity"]) if max(stats["daily_activity"]) > 0 else 1
+    import re
+
+    # 1. Calculate main wave path coordinates (Catmull-Rom spline)
+    # Chart width: x=220 to x=830 (610 pixels total). Height: baseline y=205, max y=55 (150px span)
+    total_days = 30
+    x_coords = [220 + i * (610 / (total_days - 1)) for i in range(total_days)]
     
-    # Map activity count to y coordinate (higher activity -> lower y value)
+    daily_data = stats["daily_activity"]
+    max_activity = max(daily_data) if max(daily_data) > 0 else 1
+    
+    # Map data to y coordinates
     y_coords = []
-    for count in stats["daily_activity"]:
+    for count in daily_data:
         normalized = count / max_activity
-        y = 175 - (normalized * 110) # max height change is 110px (brings y from 175 to 65)
+        y = 205 - (normalized * 135) # leave 15px top margin (from 55 to 205 is 150px)
         y_coords.append(y)
 
-    # Construct the path string (straight segments)
-    path_points = [f"{x_coords[i]:.1f},{y_coords[i]:.1f}" for i in range(30)]
-    path_d = "M " + " L ".join(path_points)
+    # Catmull-Rom Spline path generation
+    dx = 610 / (total_days - 1)
+    path_segments = [f"M {x_coords[0]:.1f} {y_coords[0]:.1f}"]
     
-    # Area path (closes at baseline corners)
-    area_d = f"M 60,175 L " + " L ".join(path_points) + " L 810,175 Z"
+    for i in range(total_days - 1):
+        x1, y1 = x_coords[i], y_coords[i]
+        x2, y2 = x_coords[i+1], y_coords[i+1]
+        
+        # Tangents calculation
+        y_prev = y_coords[i-1] if i > 0 else y_coords[0]
+        y_next2 = y_coords[i+2] if i+2 < total_days else y_coords[total_days - 1]
+        
+        cp1x = x1 + dx / 3.0
+        cp1y = y1 + (y2 - y_prev) / 6.0
+        
+        cp2x = x2 - dx / 3.0
+        cp2y = y2 - (y_next2 - y1) / 6.0
+        
+        # Bound control points to keep within chart area
+        cp1y = max(50, min(210, cp1y))
+        cp2y = max(50, min(210, cp2y))
+        
+        path_segments.append(f"C {cp1x:.1f} {cp1y:.1f}, {cp2x:.1f} {cp2y:.1f}, {x2:.1f} {y2:.1f}")
 
-    # Replace path definitions in SVG
-    # Look for the path declarations and replace their d="..."
-    # We will locate the comment guides we left in the SVG:
-    # <path d="..." fill="url(#areaGrad)"/>
-    # <path d="..." fill="none" stroke="url(#lineGrad)" ... />
+    path_d = " ".join(path_segments)
     
-    # Since XML parsing can be strict, simple string replacement works safely here
-    import re
+    # Area path: closes the wave path at the baseline corners (830,205) and (220,205)
+    area_d = path_d + " L 830,205 L 220,205 Z"
+
+    # 2. Calculate 5-Day Moving Average (Trendline)
+    ma_data = []
+    for i in range(total_days):
+        window = daily_data[max(0, i-4):i+1]
+        ma_data.append(sum(window) / len(window))
+        
+    max_ma = max(ma_data) if max(ma_data) > 0 else 1
+    y_coords_ma = [205 - (val / max_ma * 125) for val in ma_data]
+    
+    path_segments_ma = [f"M {x_coords[0]:.1f} {y_coords_ma[0]:.1f}"]
+    for i in range(total_days - 1):
+        x1, y1 = x_coords[i], y_coords_ma[i]
+        x2, y2 = x_coords[i+1], y_coords_ma[i+1]
+        
+        y_prev = y_coords_ma[i-1] if i > 0 else y_coords_ma[0]
+        y_next2 = y_coords_ma[i+2] if i+2 < total_days else y_coords_ma[total_days - 1]
+        
+        cp1x = x1 + dx / 3.0
+        cp1y = y1 + (y2 - y_prev) / 6.0
+        cp2x = x2 - dx / 3.0
+        cp2y = y2 - (y_next2 - y1) / 6.0
+        
+        cp1y = max(50, min(210, cp1y))
+        cp2y = max(50, min(210, cp2y))
+        
+        path_segments_ma.append(f"C {cp1x:.1f} {cp1y:.1f}, {cp2x:.1f} {cp2y:.1f}, {x2:.1f} {y2:.1f}")
+        
+    trend_d = " ".join(path_segments_ma)
+
+    # 3. Calculate Telemetry Goal Ring Progress
+    # Goal target: 40 commits in 30 days
+    total_commits_30d = sum(daily_data)
+    goal_pct = min(round((total_commits_30d / 40.0) * 100), 100) if total_commits_30d > 0 else 0
+    # Ring circumference = 2 * PI * r (r=42) = 263.89
+    dashoffset = int(264 * (100 - goal_pct) / 100)
+
+    # Replace SVG contents
+    # Area Fill
     svg_content = re.sub(
-        r'<path d="[^"]+" fill="url\(#areaGrad\)"',
-        f'<path d="{area_d}" fill="url(#areaGrad)"',
+        r'<path d="[^"]+" fill="url\(#areaGrad\)"([^>]*)/>',
+        f'<path d="{area_d}" fill="url(#areaGrad)"\\1/>',
         svg_content
     )
+    # Wave Line
     svg_content = re.sub(
-        r'<path d="[^"]+"(\s+)fill="none"(\s+)stroke="url\(#lineGrad\)"',
-        f'<path d="{path_d}"\\1fill="none"\\2stroke="url(#lineGrad)"',
+        r'<path d="[^"]+" fill="none" stroke="url\(#lineGrad\)"([^>]*)>(.*?)<\/path>',
+        f'<path d="{path_d}" fill="none" stroke="url(#lineGrad)"\\1>\\2</path>',
+        svg_content,
+        flags=re.DOTALL
+    )
+    # Trend Line
+    svg_content = re.sub(
+        r'<path d="[^"]+" fill="none" stroke="#ff007f"([^>]*)/>',
+        f'<path d="{trend_d}" fill="none" stroke="#ff007f"\\1/>',
+        svg_content
+    )
+    # Goal Ring Progress Percentage Circle
+    svg_content = re.sub(
+        r'(<circle cx="0" cy="0" r="42" fill="none" stroke="url\(#dialGrad\)" stroke-width="6" \s*stroke-dasharray="264" )stroke-dashoffset="\d+"',
+        f'\\1stroke-dashoffset="{dashoffset}"',
+        svg_content
+    )
+    # Goal Text
+    svg_content = re.sub(
+        r'(<text x="0" y="5"[^>]*>)\d+%(</text>)',
+        f'\\1{goal_pct}%\\2',
+        svg_content
+    )
+    # Goal Run Rate Stats block
+    svg_content = re.sub(
+        r'<text x="0" y="28"><tspan fill="#64748b">RATE :</tspan> [^<]+</text>',
+        f'<text x="0" y="28"><tspan fill="#64748b">RATE :</tspan> {total_commits_30d / 30.0:.1f} ACT/D</text>',
         svg_content
     )
 
-    # Update Peak Label
-    peak_val = max(stats["daily_activity"])
+    # Update Peak Value HUD Label
+    peak_val = max(daily_data)
     svg_content = re.sub(
-        r'<text x="460" y="54"([^>]+)>PEAK RUNTIME</text>',
-        f'<text x="460" y="54"\\1>PEAK: {peak_val} ACT</text>',
+        r'<text x="41" y="10"([^>]+)>PEAK RUNTIME</text>',
+        f'<text x="41" y="10"\\1>PEAK: {peak_val} ACT</text>',
+        svg_content
+    )
+    # Support also peak label in other tags
+    svg_content = re.sub(
+        r'<text x="41" y="10"([^>]+)>PEAK: \d+ ACT</text>',
+        f'<text x="41" y="10"\\1>PEAK: {peak_val} ACT</text>',
         svg_content
     )
 
