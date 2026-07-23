@@ -224,68 +224,7 @@ echo "🏗️ Startup API & Dashboard Tools"
 ### 📌 Pinned Project Showcase
 
 <div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 210" width="100%">
-  <defs>
-    <linearGradient id="pjbg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#060c1a"/><stop offset="100%" stop-color="#0a0f20"/></linearGradient>
-    <linearGradient id="card1g" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#0a0f1e"/></linearGradient>
-    <filter id="pjGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  </defs>
-  <rect width="860" height="210" rx="13" fill="url(#pjbg)" stroke="#1e2d52" stroke-width="1"/>
-  <text x="430" y="28" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="bold" fill="#00f0ff" letter-spacing="3" opacity="0.85">// PROJECTS</text>
-
-  <!-- Card 1: Discord Bot -->
-  <rect x="16" y="42" width="262" height="152" rx="10" fill="url(#card1g)" stroke="#00f0ff" stroke-width="1.2"/>
-  <rect x="16" y="42" width="262" height="152" rx="10" fill="none" stroke="#00f0ff" stroke-width="1">
-    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
-  </rect>
-  <text x="30" y="68" font-family="Arial,sans-serif" font-size="18">🤖</text>
-  <text x="58" y="68" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#00f0ff">discord-security-bot</text>
-  <line x1="30" y1="78" x2="262" y2="78" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="30" y="100" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Advanced Discord bot with DDoS</text>
-  <text x="30" y="116" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">alert hooks, moderation engine</text>
-  <text x="30" y="132" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">and webhook pipeline support.</text>
-  <rect x="30" y="148" width="60" height="18" rx="4" fill="#1c3a1c"/>
-  <text x="60" y="161" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#4ade80">JavaScript</text>
-  <text x="108" y="162" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">⭐ Private</text>
-  <rect x="30" y="172" width="90" height="16" rx="4" fill="#0c1a2e" stroke="#00f0ff" stroke-width="0.8"/>
-  <text x="75" y="183" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#00f0ff">In Development</text>
-
-  <!-- Card 2: SA-MP -->
-  <rect x="299" y="42" width="262" height="152" rx="10" fill="url(#card1g)" stroke="#a855f7" stroke-width="1.2"/>
-  <rect x="299" y="42" width="262" height="152" rx="10" fill="none" stroke="#a855f7" stroke-width="1">
-    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="4s" repeatCount="indefinite"/>
-  </rect>
-  <text x="313" y="68" font-family="Arial,sans-serif" font-size="18">🎮</text>
-  <text x="341" y="68" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#a855f7">samp-rp-gamemode</text>
-  <line x1="313" y1="78" x2="545" y2="78" stroke="#2d1b4e" stroke-width="1"/>
-  <text x="313" y="100" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Full SA-MP Roleplay gamemode</text>
-  <text x="313" y="116" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">with MySQL threading, economy</text>
-  <text x="313" y="132" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">system and y_less libraries.</text>
-  <rect x="313" y="148" width="50" height="18" rx="4" fill="#2d1a00"/>
-  <text x="338" y="161" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#fb923c">Pawn</text>
-  <text x="378" y="162" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">⭐ Private</text>
-  <rect x="313" y="172" width="90" height="16" rx="4" fill="#1a0e2e" stroke="#a855f7" stroke-width="0.8"/>
-  <text x="358" y="183" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#a855f7">In Development</text>
-
-  <!-- Card 3: DDoS Alert -->
-  <rect x="582" y="42" width="262" height="152" rx="10" fill="url(#card1g)" stroke="#ff007f" stroke-width="1.2"/>
-  <rect x="582" y="42" width="262" height="152" rx="10" fill="none" stroke="#ff007f" stroke-width="1">
-    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="5s" repeatCount="indefinite"/>
-  </rect>
-  <text x="596" y="68" font-family="Arial,sans-serif" font-size="18">🛡️</text>
-  <text x="624" y="68" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#ff007f">ddos-alert-system</text>
-  <line x1="596" y1="78" x2="828" y2="78" stroke="#3b0a1f" stroke-width="1"/>
-  <text x="596" y="100" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Bash + Discord webhook alerts</text>
-  <text x="596" y="116" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">for real-time DDoS detection,</text>
-  <text x="596" y="132" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">log analysis and port shielding.</text>
-  <rect x="596" y="148" width="40" height="18" rx="4" fill="#1c1a0a"/>
-  <text x="616" y="161" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#facc15">Bash</text>
-  <text x="650" y="162" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">⭐ Private</text>
-  <rect x="596" y="172" width="90" height="16" rx="4" fill="#1f0a16" stroke="#ff007f" stroke-width="0.8"/>
-  <text x="641" y="183" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#ff007f">In Development</text>
-</svg>
-
+  <img src="arcade-projects-v2.svg" width="100%" alt="Arcade Project Showcase" />
 </div>
 
 > 💡 *All projects are currently in private repos — public releases coming soon!*
