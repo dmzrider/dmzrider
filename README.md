@@ -403,7 +403,7 @@ echo "🏗️ Startup API & Dashboard Tools"
 <br/>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/dmzrider/dmzrider/output/profile-streak-stats.svg" alt="GitHub Streak Stats" />
+  <img src="profile-streak-stats-v2.svg" alt="GitHub Streak Stats" />
 </div>
 
 <br/>
@@ -434,7 +434,11 @@ echo "🏗️ Startup API & Dashboard Tools"
 <!-- 🐍 ARCADE SNAKE CONTRIBUTION GAME (Updated every 12 hours) -->
 <div align="center">
   <h4>🎮 Contribution Arcade Snake Game</h4>
-  <img src="https://raw.githubusercontent.com/dmzrider/dmzrider/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake Grid" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="github-contribution-grid-snake-dark-v2.svg">
+    <source media="(prefers-color-scheme: light)" srcset="github-contribution-grid-snake-v2.svg">
+    <img alt="GitHub Contribution Snake Grid" src="github-contribution-grid-snake-v2.svg" />
+  </picture>
 </div>
 
 

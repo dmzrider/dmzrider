@@ -17,6 +17,32 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      # 1. Generate Snake Game SVG
+      - name: Generate github-contribution-grid-snake-v2.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            github-contribution-grid-snake-v2.svg?color_snake=#00f0ff&color_dots=#161b22,#1d1c3a,#4f46e5,#a855f7,#ff007f
+            github-contribution-grid-snake-dark-v2.svg?color_snake=#00f0ff&color_dots=#070a13,#1d1c3a,#4f46e5,#a855f7,#ff007f
+
+      # 2. Generate Streak Stats SVG
+      - name: Generate streak stats
+        uses: be-next/github-streak-stats-action@v1
+        with:
+          username: ${{ github.repository_owner }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          output-path: profile-streak-stats-v2.svg
+          theme: tokyonight
+          hide-border: true
+          background: 070a13
+          ring: 00f0ff
+          fire: ff007f
+          currStreakLabel: 00f0ff
+          sideNums: e2e8f0
+          sideLabels: 94a3b8
+
+      # 3. Python setup and updates for activity graphs/diagnostics
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -30,15 +56,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/update_stats.py
 
+      # 4. Commit and push all SVGs back to main
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add activity-graph-v2.svg diagnostics-v2.svg activity-radar-v2.svg
+          git add activity-graph-v2.svg diagnostics-v2.svg activity-radar-v2.svg github-contribution-grid-snake-v2.svg github-contribution-grid-snake-dark-v2.svg profile-streak-stats-v2.svg
           # Only commit if there are changes
           if git diff --staged --quiet; then
             echo "No changes in SVG files detected."
           else
-            git commit -m "auto(stats): update profile activity and diagnostics SVGs"
+            git commit -m "auto(stats): update profile activity, snake game, streak, and diagnostics SVGs"
             git push origin main
           fi
+
