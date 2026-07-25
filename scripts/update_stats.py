@@ -280,6 +280,23 @@ def update_activity_graph(stats):
         svg_content
     )
 
+    # Update professional crosshair lines and pointer circle
+    svg_content = re.sub(
+        r'<line id="peakVLine" x1="[^"]+" y1="[^"]+" x2="[^"]+" y2="[^"]+"',
+        f'<line id="peakVLine" x1="{peak_x:.1f}" y1="{peak_y:.1f}" x2="{peak_x:.1f}" y2="155.0"',
+        svg_content
+    )
+    svg_content = re.sub(
+        r'<line id="peakHLine" x1="[^"]+" y1="[^"]+" x2="[^"]+" y2="[^"]+"',
+        f'<line id="peakHLine" x1="50.0" y1="{peak_y:.1f}" x2="{peak_x:.1f}" y2="{peak_y:.1f}"',
+        svg_content
+    )
+    svg_content = re.sub(
+        r'<circle id="peakCircle" cx="[^"]+" cy="[^"]+"',
+        f'<circle id="peakCircle" cx="{peak_x:.1f}" cy="{peak_y:.1f}"',
+        svg_content
+    )
+
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(svg_content)
     print("Updated activity-graph-v2.svg successfully.")

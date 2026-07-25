@@ -2,8 +2,8 @@
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="agbg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060c1a"/>
-      <stop offset="100%" stop-color="#0a1020"/>
+      <stop offset="0%" stop-color="#050a18"/>
+      <stop offset="100%" stop-color="#090e1c"/>
     </linearGradient>
 
     <!-- Path Line Gradient -->
@@ -15,19 +15,19 @@
 
     <!-- Area Gradient (glowing fill below line) -->
     <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.22"/>
-      <stop offset="60%" stop-color="#a855f7" stop-opacity="0.06"/>
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#a855f7" stop-opacity="0.08"/>
       <stop offset="100%" stop-color="#ff007f" stop-opacity="0"/>
     </linearGradient>
 
     <!-- Grid Dots Pattern -->
     <pattern id="dotPattern" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="0.8" fill="#1e2d52" opacity="0.4"/>
+      <circle cx="2" cy="2" r="0.8" fill="#1e3a6f" opacity="0.3"/>
     </pattern>
 
     <!-- Filters for glows -->
     <filter id="agGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4.5" result="blur"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -40,7 +40,7 @@
   </defs>
 
   <!-- Outer Card Container -->
-  <rect width="860" height="200" rx="14" fill="url(#agbg)" stroke="#1a2540" stroke-width="1.2"/>
+  <rect width="860" height="200" rx="14" fill="url(#agbg)" stroke="#1a2b54" stroke-width="1.2"/>
   <rect width="860" height="200" rx="14" fill="none" stroke="#4f46e5" stroke-width="1.5" opacity="0.3">
     <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite"/>
     <animate attributeName="stroke" values="#4f46e5;#00f0ff;#a855f7;#ff007f;#4f46e5" dur="10s" repeatCount="indefinite"/>
@@ -54,16 +54,23 @@
   <!-- Chart Grid Lines -->
   <rect x="50" y="55" width="760" height="100" fill="url(#dotPattern)"/>
 
-  <g stroke="#1e2d52" stroke-width="0.5" opacity="0.4">
-    <!-- Horizontal Levels -->
+  <!-- Fine Telemetry Y-Axis Gridlines & Ticks -->
+  <g stroke="#1e3a6f" stroke-width="0.5" opacity="0.35">
+    <!-- Horizontal Grid Levels -->
     <line x1="50" y1="55"  x2="810" y2="55"/>
-    <text x="42" y="58" font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" text-anchor="end">HIGH</text>
+    <text x="42" y="58" font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" stroke="none" text-anchor="end">12 ACT</text>
+
+    <line x1="50" y1="80"  x2="810" y2="80"/>
+    <text x="42" y="83" font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" stroke="none" text-anchor="end">9 ACT</text>
 
     <line x1="50" y1="105" x2="810" y2="105"/>
-    <text x="42" y="108" font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" text-anchor="end">MED</text>
+    <text x="42" y="108" font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" stroke="none" text-anchor="end">6 ACT</text>
+
+    <line x1="50" y1="130" x2="810" y2="130"/>
+    <text x="42" y="133" font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" stroke="none" text-anchor="end">3 ACT</text>
 
     <line x1="50" y1="155" x2="810" y2="155"/>
-    <text x="42" y="158" font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" text-anchor="end">LOW</text>
+    <text x="42" y="158" font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" stroke="none" text-anchor="end">0 ACT</text>
 
     <!-- Vertical Time Slots (6 weeks slots) -->
     <line x1="176.6" y1="55" x2="176.6" y2="155"/>
@@ -74,7 +81,7 @@
   </g>
 
   <!-- Baseline -->
-  <line x1="50" y1="155" x2="810" y2="155" stroke="#1e2d52" stroke-width="1.2"/>
+  <line x1="50" y1="155" x2="810" y2="155" stroke="#1e3a6f" stroke-width="1.2"/>
 
   <!-- Chart Area Clipping Path -->
   <clipPath id="chartClip">
@@ -91,6 +98,11 @@
 
   <!-- Dynamic Trendline (Moving Average / Dotted) -->
   <path d="M 50.0 155.0 C 58.7 155.0, 67.5 155.0, 76.2 155.0 C 84.9 155.0, 93.7 155.0, 102.4 155.0 C 111.1 155.0, 119.9 155.0, 128.6 155.0 C 137.4 155.0, 146.1 155.0, 154.8 155.0 C 163.6 155.0, 172.3 158.3, 181.0 155.0 C 189.8 151.7, 198.5 142.5, 207.2 135.4 C 216.0 128.4, 224.7 118.6, 233.4 112.6 C 242.2 106.6, 250.9 101.7, 259.7 99.6 C 268.4 97.4, 277.1 99.6, 285.9 99.6 C 294.6 99.6, 303.3 96.3, 312.1 99.6 C 320.8 102.8, 329.5 118.6, 338.3 119.1 C 347.0 119.7, 355.7 106.6, 364.5 102.8 C 373.2 99.0, 382.0 100.1, 390.7 96.3 C 399.4 92.5, 408.2 82.7, 416.9 80.0 C 425.6 77.3, 434.4 80.0, 443.1 80.0 C 451.8 80.0, 460.6 73.5, 469.3 80.0 C 478.0 86.5, 486.8 109.3, 495.5 119.1 C 504.3 128.9, 513.0 132.7, 521.7 138.7 C 530.5 144.7, 539.2 152.3, 547.9 155.0 C 556.7 157.7, 565.4 155.0, 574.1 155.0 C 582.9 155.0, 591.6 155.0, 600.3 155.0 C 609.1 155.0, 617.8 155.0, 626.6 155.0 C 635.3 155.0, 644.0 155.0, 652.8 155.0 C 661.5 155.0, 670.2 155.0, 679.0 155.0 C 687.7 155.0, 696.4 155.0, 705.2 155.0 C 713.9 155.0, 722.6 156.1, 731.4 155.0 C 740.1 153.9, 748.9 149.6, 757.6 148.5 C 766.3 147.4, 775.1 149.6, 783.8 148.5 C 792.5 147.4, 801.3 143.0, 810.0 142.0" fill="none" stroke="#ff007f" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.6" clip-path="url(#chartClip)"/>
+
+  <!-- ================= PROFESSIONAL HUD CROSSHAIRS ================= -->
+  <line id="peakVLine" x1="364.5" y1="70.0" x2="364.5" y2="155.0" stroke="#ff007f" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.6" clip-path="url(#chartClip)"/>
+  <line id="peakHLine" x1="50.0" y1="70.0" x2="364.5" y2="70.0" stroke="#ff007f" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.6" clip-path="url(#chartClip)"/>
+  <circle id="peakCircle" cx="364.5" cy="70.0" r="5" fill="none" stroke="#ff007f" stroke-width="1.5" filter="url(#pointGlow)"/>
 
   <!-- X-Axis Labels (Days timeline) -->
   <g font-family="'Courier New',Courier,monospace" font-size="8" fill="#64748b" text-anchor="middle">
@@ -123,25 +135,7 @@
 
   <!-- Dynamic Data Point Markers (Generated by Script) -->
   <g id="dynamicPoints">
-    <circle cx="600.3" cy="112.5" r="4.5" fill="#00f0ff" filter="url(#pointGlow)">
-      <animate attributeName="r" values="3.5;5.5;3.5" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="626.6" cy="105.4" r="4.5" fill="#00f0ff" filter="url(#pointGlow)">
-      <animate attributeName="r" values="3.5;5.5;3.5" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="652.8" cy="126.7" r="4.5" fill="#00f0ff" filter="url(#pointGlow)">
-      <animate attributeName="r" values="3.5;5.5;3.5" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="757.6" cy="70.0" r="4.5" fill="#ff007f" filter="url(#pointGlow)">
-      <animate attributeName="r" values="3.5;5.5;3.5" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="783.8" cy="112.5" r="4.5" fill="#00f0ff" filter="url(#pointGlow)">
-      <animate attributeName="r" values="3.5;5.5;3.5" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="810.0" cy="119.6" r="4.5" fill="#00f0ff" filter="url(#pointGlow)">
-      <animate attributeName="r" values="3.5;5.5;3.5" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    </g>
+  </g>
 
   <!-- Floating HUD Peak marker -->
   <g id="peakHUD" transform="translate(323, 45)" opacity="0.95">
