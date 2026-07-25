@@ -224,7 +224,7 @@ echo "🏗️ Startup API & Dashboard Tools"
 ### 📌 Pinned Project Showcase
 
 <div align="center">
-  <img src="arcade-projects-v2.svg" width="100%" alt="Arcade Project Showcase" />
+  <img src="arcade-projects-v3.svg" width="100%" alt="Arcade Project Showcase" />
 </div>
 
 > 💡 *All projects are currently in private repos — public releases coming soon!*
