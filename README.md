@@ -200,19 +200,19 @@
     <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3b82f6">3.6 MB</text>
     <rect x="160" y="3" width="220" height="9" rx="4.5" fill="#161b22"/>
     <rect x="160" y="3" width="0" height="9" rx="4.5" fill="url(#barPawnSAMP)">
-      <animate attributeName="width" values="0;195;195" dur="1.5s" fill="freeze" begin="0.2s"/>
+      <animate attributeName="width" values="0;193;193" dur="1.5s" fill="freeze" begin="0.2s"/>
     </rect>
-    <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3b82f6">89%</text>
+    <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3b82f6">88%</text>
   </g>
   <!-- JavaScript -->
   <g transform="translate(30, 76)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">JavaScript</text>
-    <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">214 KB</text>
+    <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">235 KB</text>
     <rect x="160" y="3" width="220" height="9" rx="4.5" fill="#161b22"/>
     <rect x="160" y="3" width="0" height="9" rx="4.5" fill="url(#barJavaScript)">
-      <animate attributeName="width" values="0;11;11" dur="1.5s" fill="freeze" begin="0.4s"/>
+      <animate attributeName="width" values="0;13;13" dur="1.5s" fill="freeze" begin="0.4s"/>
     </rect>
-    <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">5%</text>
+    <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">6%</text>
   </g>
   <!-- TypeScript -->
   <g transform="translate(30, 104)">
