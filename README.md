@@ -189,8 +189,12 @@
   <rect width="495" height="220" rx="10" fill="none" stroke="#a855f7" stroke-width="1.2" opacity="0.3">
     <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
   </rect>
+
+  <!-- Title -->
   <text x="30" y="32" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#a855f7" letter-spacing="1">⚡ REPOSITORY LANGUAGE METRICS</text>
   <text x="465" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" text-anchor="end">Metrics: Dynamic Source</text>
+
+  <!-- Pawn (SA-MP) -->
   <g transform="translate(30, 48)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Pawn (SA-MP)</text>
     <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3b82f6">3.6 MB</text>
@@ -200,15 +204,17 @@
     </rect>
     <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3b82f6">89%</text>
   </g>
+  <!-- JavaScript -->
   <g transform="translate(30, 76)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">JavaScript</text>
-    <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">205 KB</text>
+    <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">214 KB</text>
     <rect x="160" y="3" width="220" height="9" rx="4.5" fill="#161b22"/>
     <rect x="160" y="3" width="0" height="9" rx="4.5" fill="url(#barJavaScript)">
       <animate attributeName="width" values="0;11;11" dur="1.5s" fill="freeze" begin="0.4s"/>
     </rect>
     <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">5%</text>
   </g>
+  <!-- TypeScript -->
   <g transform="translate(30, 104)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">TypeScript</text>
     <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3178c6">150 KB</text>
@@ -218,6 +224,7 @@
     </rect>
     <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3178c6">4%</text>
   </g>
+  <!-- SQL/MySQL -->
   <g transform="translate(30, 132)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">SQL/MySQL</text>
     <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#00a3cc">80 KB</text>
@@ -227,6 +234,7 @@
     </rect>
     <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#00a3cc">2%</text>
   </g>
+  <!-- Python -->
   <g transform="translate(30, 160)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Python</text>
     <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3572A5">26 KB</text>
