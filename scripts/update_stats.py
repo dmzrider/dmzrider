@@ -151,6 +151,14 @@ def fetch_stats():
                     name = "Pawn (SA-MP)"
                 languages[name] = languages.get(name, 0) + size
 
+    # Inject flagship private project language metrics (AKRP-V5-MAIN and local type configurations)
+    if "Pawn (SA-MP)" not in languages:
+        languages["Pawn (SA-MP)"] = 3775917  # 3.7 MB Pawn gamemode
+    if "TypeScript" not in languages:
+        languages["TypeScript"] = 154000      # 154 KB Types files
+    if "SQL/MySQL" not in languages:
+        languages["SQL/MySQL"] = 82000       # 82 KB MySQL database
+
     return {
         "commits": contribs["totalCommitContributions"],
         "prs": contribs["totalPullRequestContributions"],
