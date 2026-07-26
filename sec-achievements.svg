@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 50" width="860">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#03050d"/>
-      <stop offset="50%" stop-color="#06091a"/>
+      <stop offset="0%"   stop-color="#03050d"/>
+      <stop offset="50%"  stop-color="#06091a"/>
       <stop offset="100%" stop-color="#03050d"/>
     </linearGradient>
     <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -17,20 +17,13 @@
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
-  <!-- Background -->
   <rect width="860" height="50" rx="9" fill="url(#bg)" stroke="#0d1e3a" stroke-width="1.2"/>
-  <!-- Animated border glow -->
   <rect width="860" height="50" rx="9" fill="none" stroke="#ff007f" stroke-width="0.8">
     <animate attributeName="opacity" values="0.1;0.4;0.1" dur="4s" repeatCount="indefinite"/>
   </rect>
-  <!-- Left accent bar -->
   <rect x="0" y="0" width="5" height="50" rx="3" fill="#ff007f" opacity="0.9"/>
-  <!-- Corner decoration top-left -->
   <text x="15" y="15" font-family="'Courier New',Courier,monospace" font-size="7" fill="#ff007f" opacity="0.4" letter-spacing="2">// SECTION</text>
-  <!-- Main label -->
-  <text x="15" y="36" font-family="'Courier New',Courier,monospace" font-size="15" font-weight="bold" fill="#ff007f" letter-spacing="1" filter="url(#glow)">🏆  ACHIEVEMENTS & MILESTONES</text>
-  <!-- Right tag decoration -->
+  <text x="15" y="36" font-family="'Courier New',Courier,monospace" font-size="15" font-weight="bold" fill="#ff007f" letter-spacing="1" filter="url(#glow)">🏆  ACHIEVEMENTS &amp; MILESTONES</text>
   <text x="848" y="34" font-family="'Courier New',Courier,monospace" font-size="13" fill="#152040" text-anchor="end">{ metrics }</text>
-  <!-- Bottom gradient underline -->
   <rect x="0" y="48" width="860" height="2" rx="1" fill="url(#line)"/>
 </svg>

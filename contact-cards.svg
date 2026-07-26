@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 168" width="860">
+  <defs>
+    <linearGradient id="connbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060c1a"/>
+      <stop offset="100%" stop-color="#0e0a24"/>
+    </linearGradient>
+    <linearGradient id="connBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#6366f1"/>
+      <stop offset="50%"  stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="connTopLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#6366f1" stop-opacity="0.8"/>
+      <stop offset="50%"  stop-color="#00f0ff" stop-opacity="1"/>
+      <stop offset="70%"  stop-color="#a855f7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="connGlow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="connGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0a1830" stroke-width="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="860" height="168" rx="14" fill="url(#connbg)" stroke="#1e2d52" stroke-width="1.2"/>
+  <rect width="860" height="168" rx="14" fill="url(#connGrid)" opacity="0.4"/>
+  <rect x="0" y="0" width="860" height="2.5" fill="url(#connTopLine)" rx="2"/>
+  <rect width="860" height="168" rx="14" fill="none" stroke="url(#connBorderGrad)" stroke-width="1.5">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Heading -->
+  <text x="430" y="34" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="bold" fill="#00f0ff" letter-spacing="3" opacity="0.85">// FIND ME ON</text>
+
+  <!-- GitHub card -->
+  <rect x="18" y="52" width="188" height="100" rx="11" fill="#060a14" stroke="#30363d" stroke-width="1.3"/>
+  <rect x="18" y="52" width="188" height="4" rx="3" fill="#30363d" opacity="0.5"/>
+  <text x="112" y="96" text-anchor="middle" font-family="Arial" font-size="28">&#128025;</text>
+  <text x="112" y="120" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" fill="#e2e8f0" font-weight="bold">GitHub</text>
+  <text x="112" y="138" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#475569">@dmzrider</text>
+
+  <!-- Discord card -->
+  <rect x="222" y="52" width="188" height="100" rx="11" fill="#060a14" stroke="#5865f2" stroke-width="1.3"/>
+  <rect x="222" y="52" width="188" height="4" rx="3" fill="#5865f2" opacity="0.5"/>
+  <text x="316" y="96" text-anchor="middle" font-family="Arial" font-size="28">&#128172;</text>
+  <text x="316" y="120" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" fill="#7289da" font-weight="bold">Discord</text>
+  <text x="316" y="138" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#475569">echo__dev</text>
+
+  <!-- Email card -->
+  <rect x="426" y="52" width="188" height="100" rx="11" fill="#060a14" stroke="#ff007f" stroke-width="1.3"/>
+  <rect x="426" y="52" width="188" height="4" rx="3" fill="#ff007f" opacity="0.5"/>
+  <text x="520" y="96" text-anchor="middle" font-family="Arial" font-size="28">&#128231;</text>
+  <text x="520" y="120" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" fill="#ff007f" font-weight="bold">Email</text>
+  <text x="520" y="138" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#475569">DM for contact</text>
+
+  <!-- Availability card (wider) -->
+  <rect x="630" y="52" width="212" height="100" rx="11" fill="#060a14" stroke="#22c55e" stroke-width="1.3"/>
+  <rect x="630" y="52" width="212" height="4" rx="3" fill="#22c55e" opacity="0.5"/>
+  <rect x="630" y="52" width="212" height="100" rx="11" fill="none" stroke="#22c55e" stroke-width="1">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="660" cy="102" r="7" fill="#22c55e" filter="url(#connGlow)">
+    <animate attributeName="r" values="5;9;5" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="736" y="92" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="bold">Available for Work</text>
+  <text x="736" y="112" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#4ade80">Freelance &amp; Collaboration</text>
+  <text x="736" y="130" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#475569">Kerala, India</text>
+</svg>

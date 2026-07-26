@@ -61,64 +61,7 @@
 <br/>
 
 <div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 155" width="100%">
-  <defs>
-    <linearGradient id="cbbg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060c1a"/>
-      <stop offset="100%" stop-color="#0c0e22"/>
-    </linearGradient>
-    <filter id="cbGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <pattern id="cbGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0a1830" stroke-width="0.4"/>
-    </pattern>
-  </defs>
-  <rect width="860" height="155" rx="12" fill="url(#cbbg)" stroke="#1e2d52" stroke-width="1.2"/>
-  <rect width="860" height="155" rx="12" fill="url(#cbGrid)" opacity="0.5"/>
-  <rect width="860" height="155" rx="12" fill="none" stroke="#fbbf24" stroke-width="1">
-    <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite"/>
-  </rect>
-  <!-- Terminal bar -->
-  <rect x="0" y="0" width="860" height="30" rx="12" fill="#0b1526"/>
-  <rect x="0" y="15" width="860" height="15" fill="#0b1526"/>
-  <circle cx="20" cy="15" r="4.5" fill="#ff5f57"/>
-  <circle cx="36" cy="15" r="4.5" fill="#febc2e"/>
-  <circle cx="52" cy="15" r="4.5" fill="#28c840"/>
-  <text x="430" y="20" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#3a4a6a">build.log — dmzrider — active projects</text>
-  <circle cx="826" cy="15" r="5" fill="#fbbf24" filter="url(#cbGlow)">
-    <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
-  </circle>
-  <text x="836" y="19" font-family="'Courier New',Courier,monospace" font-size="8" fill="#fbbf24">LIVE</text>
-  <!-- Prompt -->
-  <text x="24" y="54" font-family="'Courier New',Courier,monospace" font-size="11">
-    <tspan fill="#6366f1">$</tspan><tspan fill="#64748b"> git log --oneline --all --current</tspan>
-  </text>
-  <!-- Project 1: Discord Security Bot -->
-  <text x="24" y="79" font-family="'Courier New',Courier,monospace" font-size="12">
-    <tspan fill="#fbbf24" font-weight="bold">▶</tspan>
-    <tspan fill="#f1f5f9" dx="6">Discord Security Bot v2.0</tspan>
-    <tspan fill="#475569" font-size="10" dx="8">— Advanced moderation + DDoS alert hooks</tspan>
-  </text>
-  <rect x="786" y="66" width="62" height="18" rx="5" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8"/>
-  <text x="817" y="79" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#a5b4fc">BUILDING</text>
-  <!-- Project 2: AKRP-V5 -->
-  <text x="24" y="105" font-family="'Courier New',Courier,monospace" font-size="12">
-    <tspan fill="#22c55e" font-weight="bold">▶</tspan>
-    <tspan fill="#f1f5f9" dx="6">AKRP-V5-MAIN — All Kerala Roleplay Open.MP</tspan>
-    <tspan fill="#475569" font-size="10" dx="8">— Modular Pawn gamemode, 3.6 MB codebase</tspan>
-  </text>
-  <rect x="786" y="92" width="62" height="18" rx="5" fill="#0f2000" stroke="#22c55e" stroke-width="0.8"/>
-  <text x="817" y="105" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#4ade80">ACTIVE</text>
-  <!-- Project 3: NovaShield -->
-  <text x="24" y="131" font-family="'Courier New',Courier,monospace" font-size="12">
-    <tspan fill="#a855f7" font-weight="bold">▶</tspan>
-    <tspan fill="#f1f5f9" dx="6">NovaShield — Packet Defense Engine</tspan>
-    <tspan fill="#475569" font-size="10" dx="8">— Real-time DDoS mitigation &amp; firewall filtering (JS / Node)</tspan>
-  </text>
-  <rect x="786" y="118" width="62" height="18" rx="5" fill="#1a002e" stroke="#a855f7" stroke-width="0.8"/>
-  <text x="817" y="131" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#c084fc">PUBLIC</text>
-</svg>
-
+  <img src="build-log.svg" width="100%" alt="Currently Building Log" />
 </div>
 
 <br/>
@@ -171,7 +114,7 @@
       <td align="center">
         <img src="https://skillicons.dev/icons?i=cloudflare,bash,git,vscode" alt="Security Tools" />
       </td>
-      <td>Network traffic shielding, DDoS alert automation via bash script triggers, Cloudflare proxying.</td>
+      <td>Network traffic shielding, DDoS alert automation via bash triggers, Cloudflare proxying.</td>
     </tr>
   </table>
 </div>
@@ -246,12 +189,8 @@
   <rect width="495" height="220" rx="10" fill="none" stroke="#a855f7" stroke-width="1.2" opacity="0.3">
     <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
   </rect>
-
-  <!-- Title -->
   <text x="30" y="32" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#a855f7" letter-spacing="1">⚡ REPOSITORY LANGUAGE METRICS</text>
   <text x="465" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" text-anchor="end">Metrics: Dynamic Source</text>
-
-  <!-- Pawn (SA-MP) -->
   <g transform="translate(30, 48)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Pawn (SA-MP)</text>
     <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3b82f6">3.6 MB</text>
@@ -261,7 +200,6 @@
     </rect>
     <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3b82f6">89%</text>
   </g>
-  <!-- JavaScript -->
   <g transform="translate(30, 76)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">JavaScript</text>
     <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">205 KB</text>
@@ -271,7 +209,6 @@
     </rect>
     <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">5%</text>
   </g>
-  <!-- TypeScript -->
   <g transform="translate(30, 104)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">TypeScript</text>
     <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3178c6">150 KB</text>
@@ -281,7 +218,6 @@
     </rect>
     <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3178c6">4%</text>
   </g>
-  <!-- SQL/MySQL -->
   <g transform="translate(30, 132)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">SQL/MySQL</text>
     <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#00a3cc">80 KB</text>
@@ -291,7 +227,6 @@
     </rect>
     <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#00a3cc">2%</text>
   </g>
-  <!-- Python -->
   <g transform="translate(30, 160)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Python</text>
     <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3572A5">26 KB</text>
@@ -323,18 +258,18 @@
 ---
 
 <!-- ============================================================ -->
-<div align="center"><img src="sec-activity.svg" width="100%" alt="Contribution Activity Section" /></div>
+<div align="center"><img src="sec-activity.svg" width="100%" alt="Activity Section" /></div>
 
 <br/>
 
 <div align="center">
-  <img src="activity-radar-v2.svg" width="100%" alt="Contribution Activity Radar" />
+  <img src="activity-radar-v2.svg" width="100%" alt="Activity Radar" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="diagnostics-v2.svg" width="100%" alt="Diagnostics and Productive Time" />
+  <img src="diagnostics-v2.svg" width="100%" alt="Diagnostics" />
 </div>
 
 <br/>
@@ -379,61 +314,7 @@
 <br/>
 
 <div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 220" width="100%">
-  <defs>
-    <linearGradient id="globebg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#04060f"/><stop offset="100%" stop-color="#080d1c"/></linearGradient>
-    <radialGradient id="glowCenter" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#00f0ff" stop-opacity="0.08"/><stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/></radialGradient>
-    <filter id="dotGlow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <pattern id="globeGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0a1830" stroke-width="0.4"/>
-    </pattern>
-  </defs>
-  <rect width="860" height="220" rx="13" fill="url(#globebg)" stroke="#1e2d52" stroke-width="1"/>
-  <rect width="860" height="220" rx="13" fill="url(#globeGrid)" opacity="0.5"/>
-  <rect width="860" height="220" rx="13" fill="none" stroke="#4f46e5" stroke-width="1">
-    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4s" repeatCount="indefinite"/>
-  </rect>
-  <text x="430" y="28" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="bold" fill="#00f0ff" letter-spacing="3" opacity="0.85">// GLOBAL_REACH</text>
-  <circle cx="430" cy="125" r="82" fill="none" stroke="#1e3a5f" stroke-width="1" opacity="0.6"/>
-  <circle cx="430" cy="125" r="82" fill="url(#glowCenter)"/>
-  <ellipse cx="430" cy="125" rx="82" ry="20" fill="none" stroke="#1e3a5f" stroke-width="0.7" opacity="0.5"/>
-  <ellipse cx="430" cy="95" rx="70" ry="17" fill="none" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
-  <ellipse cx="430" cy="155" rx="70" ry="17" fill="none" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
-  <line x1="430" y1="43" x2="430" y2="207" stroke="#1e3a5f" stroke-width="0.7" opacity="0.5"/>
-  <line x1="348" y1="125" x2="512" y2="125" stroke="#1e3a5f" stroke-width="0.7" opacity="0.5"/>
-  <line x1="430" y1="125" x2="178" y2="125" stroke="#00f0ff" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
-  <line x1="430" y1="125" x2="310" y2="78" stroke="#a855f7" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
-  <line x1="430" y1="125" x2="580" y2="90" stroke="#ff007f" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
-  <line x1="430" y1="125" x2="720" y2="108" stroke="#fbbf24" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
-  <line x1="430" y1="125" x2="520" y2="165" stroke="#22c55e" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
-  <!-- India (home) -->
-  <circle cx="430" cy="125" r="8" fill="#00f0ff" filter="url(#dotGlow)">
-    <animate attributeName="r" values="7;11;7" dur="2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="430" cy="125" r="3" fill="#ffffff"/>
-  <text x="430" y="148" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#00f0ff">🏠 Kerala, India</text>
-  <circle cx="178" cy="125" r="5" fill="#a855f7" filter="url(#dotGlow)"><animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/></circle>
-  <text x="178" y="143" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#a855f7">USA</text>
-  <circle cx="310" cy="78" r="5" fill="#ff007f" filter="url(#dotGlow)"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/></circle>
-  <text x="310" y="70" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#ff007f">Europe</text>
-  <circle cx="580" cy="90" r="5" fill="#fbbf24" filter="url(#dotGlow)"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite"/></circle>
-  <text x="580" y="82" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#fbbf24">SE Asia</text>
-  <circle cx="520" cy="165" r="5" fill="#22c55e" filter="url(#dotGlow)"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite"/></circle>
-  <text x="520" y="182" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#22c55e">Middle East</text>
-  <circle cx="720" cy="108" r="5" fill="#38bdf8" filter="url(#dotGlow)"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.8s" repeatCount="indefinite"/></circle>
-  <text x="720" y="100" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#38bdf8">Australia</text>
-  <text x="90" y="200" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">Profile Visitors</text>
-  <text x="90" y="214" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="13" fill="#00f0ff" font-weight="bold">🌐 Global</text>
-  <text x="270" y="200" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">Regions Reached</text>
-  <text x="270" y="214" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="13" fill="#a855f7" font-weight="bold">6+ Regions</text>
-  <text x="590" y="200" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">Based In</text>
-  <text x="590" y="214" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="13" fill="#fbbf24" font-weight="bold">🇮🇳 Kerala, India</text>
-  <text x="770" y="200" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">Availability</text>
-  <text x="770" y="214" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="13" fill="#22c55e" font-weight="bold">🟢 Open</text>
-</svg>
-
+  <img src="global-reach.svg" width="100%" alt="Global Reach Map" />
 </div>
 
 ---
@@ -457,74 +338,7 @@
 <br/>
 
 <div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 165" width="100%">
-  <defs>
-    <linearGradient id="connbg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#060c1a"/>
-      <stop offset="100%" stop-color="#0e0a24"/>
-    </linearGradient>
-    <filter id="connGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <pattern id="connGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0a1830" stroke-width="0.4"/>
-    </pattern>
-    <linearGradient id="connBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366f1"/>
-      <stop offset="50%" stop-color="#00f0ff"/>
-      <stop offset="100%" stop-color="#a855f7"/>
-    </linearGradient>
-    <linearGradient id="connTopLine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
-      <stop offset="30%" stop-color="#6366f1" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#00f0ff" stop-opacity="1"/>
-      <stop offset="70%" stop-color="#a855f7" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <rect width="860" height="165" rx="14" fill="url(#connbg)" stroke="#1e2d52" stroke-width="1.2"/>
-  <rect width="860" height="165" rx="14" fill="url(#connGrid)" opacity="0.4"/>
-  <rect x="0" y="0" width="860" height="2.5" fill="url(#connTopLine)" rx="2"/>
-  <rect width="860" height="165" rx="14" fill="none" stroke="url(#connBorderGrad)" stroke-width="1.5">
-    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
-  </rect>
-  <text x="430" y="32" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="bold" fill="#00f0ff" letter-spacing="3" opacity="0.85">// FIND ME ON</text>
-
-  <!-- GitHub card -->
-  <rect x="18" y="50" width="188" height="96" rx="11" fill="#060a14" stroke="#30363d" stroke-width="1.3"/>
-  <rect x="18" y="50" width="188" height="4" rx="3" fill="#30363d" opacity="0.5"/>
-  <text x="112" y="92" text-anchor="middle" font-family="Arial" font-size="28">🐙</text>
-  <text x="112" y="116" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" fill="#e2e8f0" font-weight="bold">GitHub</text>
-  <text x="112" y="133" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#475569">@dmzrider</text>
-
-  <!-- Discord card -->
-  <rect x="222" y="50" width="188" height="96" rx="11" fill="#060a14" stroke="#5865f2" stroke-width="1.3"/>
-  <rect x="222" y="50" width="188" height="4" rx="3" fill="#5865f2" opacity="0.5"/>
-  <text x="316" y="92" text-anchor="middle" font-family="Arial" font-size="28">💬</text>
-  <text x="316" y="116" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" fill="#7289da" font-weight="bold">Discord</text>
-  <text x="316" y="133" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#475569">echo__dev</text>
-
-  <!-- Email card -->
-  <rect x="426" y="50" width="188" height="96" rx="11" fill="#060a14" stroke="#ff007f" stroke-width="1.3"/>
-  <rect x="426" y="50" width="188" height="4" rx="3" fill="#ff007f" opacity="0.5"/>
-  <text x="520" y="92" text-anchor="middle" font-family="Arial" font-size="28">📧</text>
-  <text x="520" y="116" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" fill="#ff007f" font-weight="bold">Email</text>
-  <text x="520" y="133" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#475569">DM for contact</text>
-
-  <!-- Availability card (wider) -->
-  <rect x="630" y="50" width="212" height="96" rx="11" fill="#060a14" stroke="#22c55e" stroke-width="1.3"/>
-  <rect x="630" y="50" width="212" height="4" rx="3" fill="#22c55e" opacity="0.5"/>
-  <rect x="630" y="50" width="212" height="96" rx="11" fill="none" stroke="#22c55e" stroke-width="1">
-    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
-  </rect>
-  <circle cx="660" cy="98" r="7" fill="#22c55e" filter="url(#connGlow)">
-    <animate attributeName="r" values="5;9;5" dur="1.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
-  </circle>
-  <text x="736" y="88" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="bold">Available for Work</text>
-  <text x="736" y="108" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#4ade80">Freelance &amp; Collaboration</text>
-  <text x="736" y="126" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#475569">Kerala, India 🇮🇳</text>
-</svg>
-
+  <img src="contact-cards.svg" width="100%" alt="Contact Cards" />
 </div>
 
 <br/>
@@ -533,48 +347,5 @@
 
 <!-- FOOTER -->
 <div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 76" width="100%">
-  <defs>
-    <linearGradient id="footbg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#03050d"/>
-      <stop offset="50%"  stop-color="#06091a"/>
-      <stop offset="100%" stop-color="#03050d"/>
-    </linearGradient>
-    <linearGradient id="footTop" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#00f0ff" stop-opacity="0"/>
-      <stop offset="25%"  stop-color="#00f0ff" stop-opacity="0.7"/>
-      <stop offset="50%"  stop-color="#a855f7" stop-opacity="1"/>
-      <stop offset="75%"  stop-color="#ff007f" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#ff007f" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="footBot" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#ff007f" stop-opacity="0"/>
-      <stop offset="30%"  stop-color="#ff007f" stop-opacity="0.5"/>
-      <stop offset="50%"  stop-color="#a855f7" stop-opacity="0.7"/>
-      <stop offset="70%"  stop-color="#00f0ff" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
-    </linearGradient>
-    <pattern id="footGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0a1830" stroke-width="0.3"/>
-    </pattern>
-  </defs>
-  <rect width="860" height="76" rx="10" fill="url(#footbg)" stroke="#1a2a4a" stroke-width="1"/>
-  <rect width="860" height="76" rx="10" fill="url(#footGrid)" opacity="0.4"/>
-  <rect x="0" y="0" width="860" height="2.5" rx="2" fill="url(#footTop)"/>
-  <rect x="0" y="73.5" width="860" height="2.5" rx="2" fill="url(#footBot)"/>
-  <text x="430" y="32" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#475569">Thanks for visiting! If you find my work useful,</text>
-  <text x="430" y="54" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11">
-    <tspan fill="#334155">drop a </tspan><tspan fill="#fbbf24">⭐</tspan>
-    <tspan fill="#334155"> on any repo — it means a lot!  Built with </tspan>
-    <tspan fill="#ff007f">♥</tspan>
-    <tspan fill="#334155"> by </tspan>
-    <tspan fill="#00f0ff" font-weight="bold">dmzrider</tspan>
-    <tspan fill="#334155">  |  </tspan>
-    <tspan fill="#1e2d52">v5.1 · cybernode</tspan>
-  </text>
-  <rect x="800" y="10" width="48" height="18" rx="5" fill="#070d1a" stroke="#1a2a4a" stroke-width="0.8"/>
-  <text x="824" y="23" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#252f42">v5.1.0</text>
-</svg>
-
+  <img src="footer-bar.svg" width="100%" alt="Footer" />
 </div>

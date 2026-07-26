@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 76" width="860">
+  <defs>
+    <linearGradient id="footbg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#03050d"/>
+      <stop offset="50%"  stop-color="#06091a"/>
+      <stop offset="100%" stop-color="#03050d"/>
+    </linearGradient>
+    <linearGradient id="footTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="25%"  stop-color="#00f0ff" stop-opacity="0.7"/>
+      <stop offset="50%"  stop-color="#a855f7" stop-opacity="1"/>
+      <stop offset="75%"  stop-color="#ff007f" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="footBot" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#ff007f" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#ff007f" stop-opacity="0.5"/>
+      <stop offset="50%"  stop-color="#a855f7" stop-opacity="0.7"/>
+      <stop offset="70%"  stop-color="#00f0ff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="footGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0a1830" stroke-width="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="860" height="76" rx="10" fill="url(#footbg)" stroke="#1a2a4a" stroke-width="1"/>
+  <rect width="860" height="76" rx="10" fill="url(#footGrid)" opacity="0.4"/>
+  <rect x="0" y="0"    width="860" height="2.5" rx="2" fill="url(#footTop)"/>
+  <rect x="0" y="73.5" width="860" height="2.5" rx="2" fill="url(#footBot)"/>
+  <text x="430" y="32" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#475569">Thanks for visiting! If you find my work useful,</text>
+  <text x="287" y="54" font-family="'Courier New',Courier,monospace" font-size="11" fill="#334155">drop a </text>
+  <text x="333" y="54" font-family="'Courier New',Courier,monospace" font-size="11" fill="#fbbf24">&#11088;</text>
+  <text x="350" y="54" font-family="'Courier New',Courier,monospace" font-size="11" fill="#334155"> on any repo &#8212; it means a lot!  Built with </text>
+  <text x="620" y="54" font-family="'Courier New',Courier,monospace" font-size="11" fill="#ff007f">&#9829;</text>
+  <text x="635" y="54" font-family="'Courier New',Courier,monospace" font-size="11" fill="#334155"> by </text>
+  <text x="660" y="54" font-family="'Courier New',Courier,monospace" font-size="12" fill="#00f0ff" font-weight="bold">dmzrider</text>
+  <rect x="800" y="10" width="48" height="18" rx="5" fill="#070d1a" stroke="#1a2a4a" stroke-width="0.8"/>
+  <text x="824" y="23" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#252f42">v5.1.0</text>
+</svg>

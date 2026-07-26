@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 235" width="860">
+  <defs>
+    <linearGradient id="globebg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04060f"/>
+      <stop offset="100%" stop-color="#080d1c"/>
+    </linearGradient>
+    <radialGradient id="glowCenter" cx="50%" cy="55%" r="40%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dotGlow">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="globeGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0a1830" stroke-width="0.4"/>
+    </pattern>
+  </defs>
+  <rect width="860" height="235" rx="13" fill="url(#globebg)" stroke="#1e2d52" stroke-width="1"/>
+  <rect width="860" height="235" rx="13" fill="url(#globeGrid)" opacity="0.5"/>
+  <rect width="860" height="235" rx="13" fill="none" stroke="#4f46e5" stroke-width="1">
+    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Title -->
+  <text x="430" y="30" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="bold" fill="#00f0ff" letter-spacing="3" opacity="0.85">// GLOBAL_REACH</text>
+
+  <!-- Globe outer ring -->
+  <circle cx="430" cy="130" r="85" fill="url(#glowCenter)" stroke="#1e3a5f" stroke-width="1" opacity="0.7"/>
+  <!-- Latitude lines -->
+  <ellipse cx="430" cy="130" rx="85" ry="22" fill="none" stroke="#1e3a5f" stroke-width="0.7" opacity="0.5"/>
+  <ellipse cx="430" cy="98"  rx="72" ry="18" fill="none" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
+  <ellipse cx="430" cy="162" rx="72" ry="18" fill="none" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
+  <!-- Meridian lines -->
+  <line x1="430" y1="45" x2="430" y2="215" stroke="#1e3a5f" stroke-width="0.7" opacity="0.5"/>
+  <line x1="345" y1="130" x2="515" y2="130" stroke="#1e3a5f" stroke-width="0.7" opacity="0.5"/>
+
+  <!-- Connection lines (dashed) -->
+  <line x1="430" y1="130" x2="170" y2="130" stroke="#00f0ff" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.35"/>
+  <line x1="430" y1="130" x2="305" y2="80"  stroke="#a855f7" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.35"/>
+  <line x1="430" y1="130" x2="585" y2="88"  stroke="#ff007f" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.35"/>
+  <line x1="430" y1="130" x2="725" y2="110" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.35"/>
+  <line x1="430" y1="130" x2="525" y2="168" stroke="#22c55e" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.35"/>
+
+  <!-- ── Location dots ── -->
+  <!-- Kerala, India (HOME) -->
+  <circle cx="430" cy="130" r="9" fill="#00f0ff" filter="url(#dotGlow)">
+    <animate attributeName="r" values="7;12;7" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="430" cy="130" r="3.5" fill="#ffffff"/>
+  <text x="430" y="153" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#00f0ff">&#127968; Kerala, India</text>
+
+  <!-- USA -->
+  <circle cx="170" cy="130" r="6" fill="#a855f7" filter="url(#dotGlow)">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="170" y="148" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#a855f7">USA</text>
+
+  <!-- Europe -->
+  <circle cx="305" cy="80" r="6" fill="#ff007f" filter="url(#dotGlow)">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="305" y="72" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#ff007f">Europe</text>
+
+  <!-- SE Asia -->
+  <circle cx="585" cy="88" r="6" fill="#fbbf24" filter="url(#dotGlow)">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="585" y="80" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#fbbf24">SE Asia</text>
+
+  <!-- Middle East -->
+  <circle cx="525" cy="168" r="6" fill="#22c55e" filter="url(#dotGlow)">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="525" y="185" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#22c55e">Middle East</text>
+
+  <!-- Australia -->
+  <circle cx="725" cy="110" r="6" fill="#38bdf8" filter="url(#dotGlow)">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <text x="725" y="102" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#38bdf8">Australia</text>
+
+  <!-- ── Stats footer row ── -->
+  <line x1="20" y1="208" x2="840" y2="208" stroke="#1a2a4a" stroke-width="1"/>
+  <text x="107" y="223" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#475569">Profile Visitors</text>
+  <text x="107" y="232" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" fill="#00f0ff" font-weight="bold">&#127760; Global</text>
+  <text x="322" y="223" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#475569">Regions Reached</text>
+  <text x="322" y="232" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" fill="#a855f7" font-weight="bold">6+ Regions</text>
+  <text x="538" y="223" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#475569">Based In</text>
+  <text x="538" y="232" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" fill="#fbbf24" font-weight="bold">Kerala, India</text>
+  <text x="753" y="223" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#475569">Availability</text>
+  <text x="753" y="232" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" fill="#22c55e" font-weight="bold">&#128994; Open</text>
+</svg>
