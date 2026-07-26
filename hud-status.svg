@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 76" width="860">
+  <defs>
+    <linearGradient id="hudbg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#030710"/>
+      <stop offset="50%"  stop-color="#070f1e"/>
+      <stop offset="100%" stop-color="#030710"/>
+    </linearGradient>
+    <linearGradient id="hudAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="25%"  stop-color="#00f0ff" stop-opacity="0.7"/>
+      <stop offset="50%"  stop-color="#a855f7" stop-opacity="1"/>
+      <stop offset="75%"  stop-color="#ff007f" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="dotGlow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="hudGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0a1830" stroke-width="0.3"/>
+    </pattern>
+  </defs>
+  <!-- Background -->
+  <rect width="860" height="76" rx="12" fill="url(#hudbg)" stroke="#1a2a4a" stroke-width="1.5"/>
+  <rect width="860" height="76" rx="12" fill="url(#hudGrid)" opacity="0.5"/>
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="860" height="2.5" rx="2" fill="url(#hudAccent)"/>
+  <!-- Animated border -->
+  <rect width="860" height="76" rx="12" fill="none" stroke="#22c55e" stroke-width="1">
+    <animate attributeName="opacity" values="0.15;0.6;0.15" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ── Pulsing availability dot ── -->
+  <circle cx="30" cy="38" r="8" fill="#22c55e" filter="url(#dotGlow)">
+    <animate attributeName="r" values="7;11;7" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="30" cy="38" r="3.8" fill="#ffffff"/>
+
+  <!-- ── Status column ── -->
+  <text x="53" y="28" font-family="'Courier New',Courier,monospace" font-size="9" fill="#22c55e" font-weight="bold" letter-spacing="3">AVAILABILITY STATUS</text>
+  <text x="53" y="54" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#f1f5f9" font-weight="700">🟢 Open for Freelance &amp; Bot Dev Projects</text>
+
+  <!-- ── Dividers ── -->
+  <line x1="340" y1="16" x2="340" y2="62" stroke="#1a2a4a" stroke-width="1.5"/>
+  <line x1="530" y1="16" x2="530" y2="62" stroke="#1a2a4a" stroke-width="1.5"/>
+
+  <!-- ── SYSTEM column ── -->
+  <text x="360" y="28" font-family="'Courier New',Courier,monospace" font-size="9" fill="#475569" letter-spacing="3">SYSTEM</text>
+  <text x="360" y="52" font-family="'Courier New',Courier,monospace" font-size="14" fill="#00f0ff" font-weight="bold" filter="url(#textGlow)">cybernode-01</text>
+  <circle cx="508" cy="50" r="5" fill="#22c55e" filter="url(#dotGlow)">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ── UPTIME column ── -->
+  <text x="548" y="28" font-family="'Courier New',Courier,monospace" font-size="9" fill="#475569" letter-spacing="3">UPTIME</text>
+  <text x="548" y="52" font-family="'Courier New',Courier,monospace" font-size="14" fill="#a855f7" font-weight="bold" filter="url(#textGlow)">99.9% secured</text>
+
+  <!-- ── CTA Button ── -->
+  <rect x="680" y="20" width="162" height="38" rx="9" fill="#061a10" stroke="#22c55e" stroke-width="1.5"/>
+  <rect x="680" y="20" width="162" height="38" rx="9" fill="none" stroke="#4ade80" stroke-width="1">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="761" y="43" font-family="'Courier New',Courier,monospace" font-size="10" fill="#4ade80" text-anchor="middle" font-weight="bold" letter-spacing="2">DM TO COLLABORATE</text>
+</svg>
