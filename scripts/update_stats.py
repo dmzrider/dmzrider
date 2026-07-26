@@ -518,25 +518,25 @@ def update_activity_radar(stats):
     # Commits
     svg_content = re.sub(
         r'(\s*)(\d+)%(\s*)(</text>\s*</g>\s*<!-- Row 2: Code Review -->)',
-        f'\\1{pct_commits}%\\3\\4',
+        f'\\g<1>{pct_commits}%\\g<3>\\g<4>',
         svg_content
     )
     # Reviews
     svg_content = re.sub(
         r'(\s*)(\d+)%(\s*)(</text>\s*</g>\s*<!-- Row 3: Pull Requests -->)',
-        f'\\1{pct_reviews}%\\3\\4',
+        f'\\g<1>{pct_reviews}%\\g<3>\\g<4>',
         svg_content
     )
     # PRs
     svg_content = re.sub(
         r'(\s*)(\d+)%(\s*)(</text>\s*</g>\s*<!-- Row 4: Issues -->)',
-        f'\\1{pct_prs}%\\3\\4',
+        f'\\g<1>{pct_prs}%\\g<3>\\g<4>',
         svg_content
     )
     # Issues
     svg_content = re.sub(
         r'(\s*)(\d+)%(\s*)(</text>\s*</g>\s*<!-- Row 5: Repositories -->)',
-        f'\\1{pct_issues}%\\3\\4',
+        f'\\g<1>{pct_issues}%\\g<3>\\g<4>',
         svg_content
     )
 
