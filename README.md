@@ -3,43 +3,67 @@
   <img src="banner.svg" width="100%" alt="Manu's Dynamic Cyber Banner" />
 </div>
 
-<!-- ⚡ MOVING TYPEWRITER WIDGET -->
+<!-- ⚡ TYPEWRITER WIDGET -->
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Outfit&size=24&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=800&lines=Discord+Bot+Developer;SA-MP+Pawn+Scripting;Custom+Activity+Trackers;DDoS+Alert+Systems;Freelance+Startup+Developer" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Outfit&size=24&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=800&lines=Discord+Bot+Developer;SA-MP+%2F+Open.MP+Pawn+Scripter;Systems+Security+Engineer;DDoS+Alert+%26+Packet+Shield+Dev;Freelance+Startup+Developer" alt="Typing SVG" />
 </div>
 
-<!-- 🟢 FREELANCE AVAILABILITY BADGE -->
+<br/>
+
+<!-- 🟢 HUD STATUS BAR — FULL WIDTH -->
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 54" width="520">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 68" width="100%">
   <defs>
-    <linearGradient id="avbg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0a1628"/>
-      <stop offset="100%" stop-color="#0d1f3c"/>
+    <linearGradient id="hudbg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#040810"/>
+      <stop offset="50%" stop-color="#080f1e"/>
+      <stop offset="100%" stop-color="#040810"/>
     </linearGradient>
-    <filter id="avGlow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="hudTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#00f0ff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#ff007f" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="hudGlow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="hudDotGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <rect width="520" height="54" rx="10" fill="url(#avbg)" stroke="#1a4a2e" stroke-width="1.5"/>
-  <rect width="520" height="54" rx="10" fill="none" stroke="#22c55e" stroke-width="1">
-    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+  <rect width="860" height="68" rx="12" fill="url(#hudbg)" stroke="#1a2a4a" stroke-width="1.5"/>
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="860" height="2.5" rx="2" fill="url(#hudTop)"/>
+  <!-- Animated border -->
+  <rect width="860" height="68" rx="12" fill="none" stroke="#22c55e" stroke-width="0.8">
+    <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3s" repeatCount="indefinite"/>
   </rect>
-  <!-- Pulsing dot -->
-  <circle cx="28" cy="27" r="7" fill="#22c55e" filter="url(#avGlow)">
+  <!-- Pulsing status dot -->
+  <circle cx="28" cy="34" r="7" fill="#22c55e" filter="url(#hudDotGlow)">
     <animate attributeName="r" values="6;9;6" dur="1.5s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="28" cy="27" r="3.5" fill="#ffffff"/>
+  <circle cx="28" cy="34" r="3.5" fill="#ffffff"/>
   <!-- Status text -->
-  <text x="48" y="20" font-family="'Courier New',Courier,monospace" font-size="10" fill="#22c55e" font-weight="bold" letter-spacing="2">AVAILABILITY STATUS</text>
-  <text x="48" y="38" font-family="Arial,sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">🟢 Open for Freelance &amp; Bot Dev Projects</text>
-  <!-- Right tag -->
-  <rect x="380" y="14" width="126" height="26" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
-  <text x="443" y="32" font-family="'Courier New',Courier,monospace" font-size="10" fill="#4ade80" text-anchor="middle" font-weight="bold">DM TO COLLABORATE</text>
+  <text x="48" y="26" font-family="'Courier New',Courier,monospace" font-size="9" fill="#22c55e" font-weight="bold" letter-spacing="2">AVAILABILITY STATUS</text>
+  <text x="48" y="48" font-family="Arial,sans-serif" font-size="15" fill="#f1f5f9" font-weight="700">🟢 Open for Freelance &amp; Bot Dev Projects</text>
+  <!-- Divider line -->
+  <line x1="310" y1="16" x2="310" y2="54" stroke="#1a2a4a" stroke-width="1"/>
+  <!-- Column 2: System -->
+  <text x="340" y="26" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" letter-spacing="2">SYSTEM</text>
+  <text x="340" y="46" font-family="'Courier New',Courier,monospace" font-size="11" fill="#00f0ff" font-weight="bold">cybernode-01 🟢</text>
+  <!-- Divider line 2 -->
+  <line x1="520" y1="16" x2="520" y2="54" stroke="#1a2a4a" stroke-width="1"/>
+  <!-- Column 3: Uptime -->
+  <text x="548" y="26" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" letter-spacing="2">UPTIME</text>
+  <text x="548" y="46" font-family="'Courier New',Courier,monospace" font-size="11" fill="#a855f7" font-weight="bold">99.9% secured</text>
+  <!-- Right CTA badge -->
+  <rect x="685" y="18" width="160" height="32" rx="8" fill="#0a2014" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="765" y="38" font-family="'Courier New',Courier,monospace" font-size="10" fill="#4ade80" text-anchor="middle" font-weight="bold" letter-spacing="1">DM TO COLLABORATE</text>
 </svg>
 
 </div>
 
-<!-- 📊 DYNAMIC LIVE COUNTERS & BADGES -->
+<!-- 📊 LIVE COUNTERS & BADGES -->
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=dmzrider&style=flat-square&color=00F0FF&label=PROFILE+VIEWS" alt="Profile Views" />
   &nbsp;&nbsp;
@@ -64,69 +88,97 @@
 
 ---
 
-### 👾 About Me
-
-<table>
-<tr>
-<td width="55%" valign="top">
-
-**`> whoami`**
-
-```yaml
-Name        : Manu
-Handle      : dmzrider / echo__dev
-Location    : Kerala, India 🌏
-Status      : Building 24/7 🚀
-```
-
-**`> cat roles.txt`**
-
-```diff
-+ Discord Bot Developer
-+ SA-MP Pawn Scripter
-+ Systems Security Engineer
-+ Freelance Startup Developer
-```
-
-</td>
-<td width="45%" valign="top">
-
-**`> cat skills.sh`**
-
-```bash
-#!/bin/bash
-# Current Focus Areas
-
-echo "🤖 Bot Automation & Pipelines"
-echo "🎮 SA-MP Pawn Custom Gamemodes"
-echo "🛡️ DDoS Detection & Alert Systems"
-echo "📡 High-Frequency Network Tickers"
-echo "🏗️ Startup API & Dashboard Tools"
-```
-
-</td>
-</tr>
-</table>
-
-
-<!-- 🏗️ CURRENTLY BUILDING -->
-
----
-
-### 🏗️ Currently Building
+<!-- ============================================================ -->
+<!--  SECTION: ABOUT ME                                           -->
+<!-- ============================================================ -->
 
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 110" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 38" width="100%">
+  <defs>
+    <linearGradient id="sh1bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04060e"/>
+      <stop offset="50%" stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#04060e"/>
+    </linearGradient>
+    <linearGradient id="sh1line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#00f0ff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#00f0ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="38" rx="8" fill="url(#sh1bg)" stroke="#0f1e3a" stroke-width="1"/>
+  <rect x="0" y="0" width="4" height="38" rx="3" fill="#00f0ff" opacity="0.8"/>
+  <text x="22" y="14" font-family="'Courier New',Courier,monospace" font-size="8" fill="#00f0ff" letter-spacing="3" opacity="0.6">// SECTION</text>
+  <text x="22" y="30" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold" fill="#00f0ff" letter-spacing="2">👾 ABOUT ME</text>
+  <!-- Right decorative brackets -->
+  <text x="780" y="28" font-family="'Courier New',Courier,monospace" font-size="16" fill="#0f2040" text-anchor="end">{ whoami }</text>
+  <rect x="0" y="36" width="860" height="1.5" fill="url(#sh1line)"/>
+</svg>
+
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="about-terminal.svg" width="100%" alt="About Me Terminal" />
+</div>
+
+<br/>
+
+---
+
+<!-- ============================================================ -->
+<!--  SECTION: CURRENTLY BUILDING                                 -->
+<!-- ============================================================ -->
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 38" width="100%">
+  <defs>
+    <linearGradient id="sh2bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04060e"/>
+      <stop offset="50%" stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#04060e"/>
+    </linearGradient>
+    <linearGradient id="sh2line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#fbbf24" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#fbbf24" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#fbbf24" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="38" rx="8" fill="url(#sh2bg)" stroke="#0f1e3a" stroke-width="1"/>
+  <rect x="0" y="0" width="4" height="38" rx="3" fill="#fbbf24" opacity="0.8"/>
+  <text x="22" y="14" font-family="'Courier New',Courier,monospace" font-size="8" fill="#fbbf24" letter-spacing="3" opacity="0.6">// SECTION</text>
+  <text x="22" y="30" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold" fill="#fbbf24" letter-spacing="2">🏗️ CURRENTLY BUILDING</text>
+  <text x="780" y="28" font-family="'Courier New',Courier,monospace" font-size="16" fill="#0f2040" text-anchor="end">{ git log }</text>
+  <rect x="0" y="36" width="860" height="1.5" fill="url(#sh2line)"/>
+</svg>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 150" width="100%">
   <defs>
     <linearGradient id="cbbg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#060c1a"/>
       <stop offset="100%" stop-color="#0c0e22"/>
     </linearGradient>
     <filter id="cbGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="cbGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0a1830" stroke-width="0.4"/>
+    </pattern>
   </defs>
-  <rect width="860" height="110" rx="12" fill="url(#cbbg)" stroke="#1e2d52" stroke-width="1.2"/>
-  <rect width="860" height="110" rx="12" fill="none" stroke="#fbbf24" stroke-width="1">
+  <rect width="860" height="150" rx="12" fill="url(#cbbg)" stroke="#1e2d52" stroke-width="1.2"/>
+  <rect width="860" height="150" rx="12" fill="url(#cbGrid)" opacity="0.5"/>
+  <rect width="860" height="150" rx="12" fill="none" stroke="#fbbf24" stroke-width="1">
     <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite"/>
   </rect>
   <!-- Terminal bar -->
@@ -135,107 +187,235 @@ echo "🏗️ Startup API & Dashboard Tools"
   <circle cx="20" cy="14" r="4.5" fill="#ff5f57"/>
   <circle cx="36" cy="14" r="4.5" fill="#febc2e"/>
   <circle cx="52" cy="14" r="4.5" fill="#28c840"/>
-  <text x="430" y="19" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b">build.log — dmzrider</text>
+  <text x="430" y="19" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#3a4a6a">build.log — dmzrider — active projects</text>
   <!-- Blinking build indicator -->
   <circle cx="820" cy="14" r="5" fill="#fbbf24" filter="url(#cbGlow)">
     <animate attributeName="opacity" values="1;0.2;1" dur="1s" repeatCount="indefinite"/>
   </circle>
   <text x="830" y="19" font-family="'Courier New',Courier,monospace" font-size="8" fill="#fbbf24">LIVE</text>
-  <!-- Content -->
-  <text x="24" y="52" font-family="'Courier New',Courier,monospace" font-size="11">
+  <!-- Prompt -->
+  <text x="24" y="50" font-family="'Courier New',Courier,monospace" font-size="11">
     <tspan fill="#6366f1">$</tspan>
-    <tspan fill="#94a3b8"> git log --oneline --current</tspan>
+    <tspan fill="#64748b"> git log --oneline --all --current</tspan>
   </text>
-  <text x="24" y="72" font-family="'Courier New',Courier,monospace" font-size="12">
+  <!-- Project 1: Discord Security Bot -->
+  <text x="24" y="74" font-family="'Courier New',Courier,monospace" font-size="12">
     <tspan fill="#fbbf24" font-weight="bold">▶</tspan>
     <tspan fill="#f1f5f9" dx="6">Discord Security Bot v2.0</tspan>
-    <tspan fill="#64748b" dx="8">— Advanced moderation + DDoS alert hooks</tspan>
+    <tspan fill="#64748b" font-size="10" dx="8">— Advanced moderation + DDoS alert hooks</tspan>
   </text>
-  <text x="24" y="92" font-family="'Courier New',Courier,monospace" font-size="12">
+  <rect x="786" y="62" width="62" height="18" rx="5" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="817" y="75" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#a5b4fc">BUILDING</text>
+  <!-- Project 2: AKRP-V5 -->
+  <text x="24" y="100" font-family="'Courier New',Courier,monospace" font-size="12">
     <tspan fill="#22c55e" font-weight="bold">▶</tspan>
-    <tspan fill="#f1f5f9" dx="6">SA-MP Roleplay Gamemode v3</tspan>
-    <tspan fill="#64748b" dx="8">— Tick-optimized MySQL threaded economy system</tspan>
+    <tspan fill="#f1f5f9" dx="6">AKRP-V5-MAIN — All Kerala Roleplay</tspan>
+    <tspan fill="#64748b" font-size="10" dx="8">— Open.MP modular Pawn gamemode, 3.6 MB</tspan>
   </text>
-  <!-- ETA badge -->
-  <rect x="730" y="56" width="110" height="22" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
-  <text x="785" y="72" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#a5b4fc" font-weight="bold">ETA: THIS WEEK 🚀</text>
+  <rect x="786" y="88" width="62" height="18" rx="5" fill="#0f2000" stroke="#22c55e" stroke-width="0.8"/>
+  <text x="817" y="101" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#4ade80">ACTIVE</text>
+  <!-- Project 3: NovaShield -->
+  <text x="24" y="126" font-family="'Courier New',Courier,monospace" font-size="12">
+    <tspan fill="#a855f7" font-weight="bold">▶</tspan>
+    <tspan fill="#f1f5f9" dx="6">NovaShield — Packet Defense Engine</tspan>
+    <tspan fill="#64748b" font-size="10" dx="8">— Real-time DDoS mitigation &amp; firewall filters</tspan>
+  </text>
+  <rect x="786" y="114" width="62" height="18" rx="5" fill="#1a002e" stroke="#a855f7" stroke-width="0.8"/>
+  <text x="817" y="127" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#c084fc">PUBLIC</text>
 </svg>
 
 </div>
 
----
-
-### 🏆 Achievements & Milestones
-
-<p align="center">
-  <a href="https://github.com/dmzrider">
-    <img src="https://img.shields.io/badge/Experience-3+%20Years-00F0FF?style=for-the-badge&logo=visualstudiocode&logoColor=00F0FF&labelColor=0d1117" alt="Experience" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/dmzrider">
-    <img src="https://img.shields.io/badge/Completed%20Projects-15+-a855f7?style=for-the-badge&logo=github&logoColor=a855f7&labelColor=0d1117" alt="Completed Projects" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/dmzrider">
-    <img src="https://img.shields.io/badge/Uptime%20Secured-99.9%25-ff007f?style=for-the-badge&logo=cloudflare&logoColor=ff007f&labelColor=0d1117" alt="Uptime Secured" />
-  </a>
-</p>
+<br/>
 
 ---
 
-### 💻 Skill Matrix & Tech Stack
+<!-- ============================================================ -->
+<!--  SECTION: ACHIEVEMENTS                                       -->
+<!-- ============================================================ -->
 
 <div align="center">
-  <table border="0">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 38" width="100%">
+  <defs>
+    <linearGradient id="sh3bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04060e"/>
+      <stop offset="50%" stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#04060e"/>
+    </linearGradient>
+    <linearGradient id="sh3line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff007f" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#ff007f" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ff007f" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#ff007f" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="38" rx="8" fill="url(#sh3bg)" stroke="#0f1e3a" stroke-width="1"/>
+  <rect x="0" y="0" width="4" height="38" rx="3" fill="#ff007f" opacity="0.8"/>
+  <text x="22" y="14" font-family="'Courier New',Courier,monospace" font-size="8" fill="#ff007f" letter-spacing="3" opacity="0.6">// SECTION</text>
+  <text x="22" y="30" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold" fill="#ff007f" letter-spacing="2">🏆 ACHIEVEMENTS &amp; MILESTONES</text>
+  <text x="780" y="28" font-family="'Courier New',Courier,monospace" font-size="16" fill="#0f2040" text-anchor="end">{ metrics }</text>
+  <rect x="0" y="36" width="860" height="1.5" fill="url(#sh3line)"/>
+</svg>
+
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="kpi-achievements.svg" width="100%" alt="Achievements KPI Dashboard" />
+</div>
+
+<br/>
+
+---
+
+<!-- ============================================================ -->
+<!--  SECTION: TECH STACK                                         -->
+<!-- ============================================================ -->
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 38" width="100%">
+  <defs>
+    <linearGradient id="sh4bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04060e"/>
+      <stop offset="50%" stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#04060e"/>
+    </linearGradient>
+    <linearGradient id="sh4line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#a855f7" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#a855f7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="38" rx="8" fill="url(#sh4bg)" stroke="#0f1e3a" stroke-width="1"/>
+  <rect x="0" y="0" width="4" height="38" rx="3" fill="#a855f7" opacity="0.8"/>
+  <text x="22" y="14" font-family="'Courier New',Courier,monospace" font-size="8" fill="#a855f7" letter-spacing="3" opacity="0.6">// SECTION</text>
+  <text x="22" y="30" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold" fill="#a855f7" letter-spacing="2">💻 SKILL MATRIX &amp; TECH STACK</text>
+  <text x="780" y="28" font-family="'Courier New',Courier,monospace" font-size="16" fill="#0f2040" text-anchor="end">{ stack }</text>
+  <rect x="0" y="36" width="860" height="1.5" fill="url(#sh4line)"/>
+</svg>
+
+</div>
+
+<br/>
+
+<div align="center">
+  <table border="0" cellspacing="0" cellpadding="8">
     <tr>
-      <td align="center" width="180"><b>Category</b></td>
-      <td align="center" width="280"><b>Tech Stack &amp; Core Tools</b></td>
-      <td align="center" width="340"><b>Core Focus &amp; Specialty</b></td>
-    </tr>
-    <tr>
-      <td><b>🤖 Automation &amp; Bots</b></td>
-      <td>
-        <img src="https://skillicons.dev/icons?i=js,ts,nodejs,express" alt="Languages" />
+      <td align="center" width="155"><b>🤖 Automation &amp; Bots</b></td>
+      <td align="center" width="280">
+        <img src="https://skillicons.dev/icons?i=js,ts,nodejs,express" alt="Bot Stack" />
       </td>
-      <td>Custom Discord bots, permission workflows, webhook piping, interactive buttons &amp; modals.</td>
+      <td width="380">Custom Discord bots, permission workflows, webhook piping, interactive buttons &amp; modals.</td>
     </tr>
     <tr>
-      <td><b>🎮 Game Development</b></td>
-      <td>
-        <img src="https://img.shields.io/badge/Pawn-SA--MP%20Scripting-FF8C00?style=for-the-badge&logo=cplusplus&logoColor=white" alt="Pawn Badge" />
+      <td align="center"><b>🎮 Game Development</b></td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Pawn-Open.MP%20%2F%20SA--MP-FF8C00?style=for-the-badge&logo=cplusplus&logoColor=white" alt="Pawn Badge" />
       </td>
-      <td>Custom game server scripting, MySQL query optimization, tick-based systems, and performance tuning.</td>
+      <td>Custom game server scripting, MySQL query optimization, tick-based systems, and modular gamemode design.</td>
     </tr>
     <tr>
-      <td><b>🗄️ Database &amp; Systems</b></td>
-      <td>
+      <td align="center"><b>🗄️ Database &amp; Systems</b></td>
+      <td align="center">
         <img src="https://skillicons.dev/icons?i=sqlite,mysql,linux,docker" alt="Databases &amp; OS" />
       </td>
       <td>Database normalization, secure pipeline configs, localized hosting setups, and containerization.</td>
     </tr>
     <tr>
-      <td><b>🛡️ Cloud &amp; Security</b></td>
-      <td>
+      <td align="center"><b>🛡️ Cloud &amp; Security</b></td>
+      <td align="center">
         <img src="https://skillicons.dev/icons?i=cloudflare,bash,git,vscode" alt="Tools" />
       </td>
-      <td>Network traffic shielding, DDoS alert automation via bash script triggers, version control, and IDE workflows.</td>
+      <td>Network traffic shielding, DDoS alert automation via bash script triggers, version control, IDE workflows.</td>
     </tr>
   </table>
 </div>
 
+<br/>
+
 ---
 
-### 📌 Pinned Project Showcase
+<!-- ============================================================ -->
+<!--  SECTION: PINNED PROJECTS                                    -->
+<!-- ============================================================ -->
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 38" width="100%">
+  <defs>
+    <linearGradient id="sh5bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04060e"/>
+      <stop offset="50%" stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#04060e"/>
+    </linearGradient>
+    <linearGradient id="sh5line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#22c55e" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#22c55e" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#22c55e" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="38" rx="8" fill="url(#sh5bg)" stroke="#0f1e3a" stroke-width="1"/>
+  <rect x="0" y="0" width="4" height="38" rx="3" fill="#22c55e" opacity="0.8"/>
+  <text x="22" y="14" font-family="'Courier New',Courier,monospace" font-size="8" fill="#22c55e" letter-spacing="3" opacity="0.6">// SECTION</text>
+  <text x="22" y="30" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold" fill="#22c55e" letter-spacing="2">📌 PINNED PROJECT SHOWCASE</text>
+  <text x="780" y="28" font-family="'Courier New',Courier,monospace" font-size="16" fill="#0f2040" text-anchor="end">{ arcade }</text>
+  <rect x="0" y="36" width="860" height="1.5" fill="url(#sh5line)"/>
+</svg>
+
+</div>
+
+<br/>
 
 <div align="center">
   <img src="arcade-projects-v5.svg" width="100%" alt="Arcade Project Showcase" />
 </div>
 
-> 💡 *All projects are currently in private repos — public releases coming soon!*
+> 💡 *AKRP-V5-MAIN and MazhaV1 are in private repos — public releases coming soon!*
+
+<br/>
 
 ---
 
-### 📊 GitHub Analytics & Diagnostics
+<!-- ============================================================ -->
+<!--  SECTION: GITHUB ANALYTICS                                   -->
+<!-- ============================================================ -->
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 38" width="100%">
+  <defs>
+    <linearGradient id="sh6bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04060e"/>
+      <stop offset="50%" stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#04060e"/>
+    </linearGradient>
+    <linearGradient id="sh6line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#00f0ff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#ff007f" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="38" rx="8" fill="url(#sh6bg)" stroke="#0f1e3a" stroke-width="1"/>
+  <rect x="0" y="0" width="4" height="38" rx="3" fill="#00f0ff" opacity="0.8"/>
+  <text x="22" y="14" font-family="'Courier New',Courier,monospace" font-size="8" fill="#00f0ff" letter-spacing="3" opacity="0.6">// SECTION</text>
+  <text x="22" y="30" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold" fill="#00f0ff" letter-spacing="2">📊 GITHUB ANALYTICS &amp; DIAGNOSTICS</text>
+  <text x="780" y="28" font-family="'Courier New',Courier,monospace" font-size="16" fill="#0f2040" text-anchor="end">{ telemetry }</text>
+  <rect x="0" y="36" width="860" height="1.5" fill="url(#sh6line)"/>
+</svg>
+
+</div>
+
+<br/>
 
 <div align="center">
   <table border="0">
@@ -252,7 +432,7 @@ echo "🏗️ Startup API & Dashboard Tools"
 
 <br/>
 
-<!-- ⚡ WAKATIME CODING STATS (Self-Contained Premium SVG) -->
+<!-- ⚡ REPOSITORY LANGUAGE TELEMETRY -->
 <div align="center">
 
 <!-- START_SECTION:languages -->
@@ -343,7 +523,6 @@ echo "🏗️ Startup API & Dashboard Tools"
 
 </div>
 
-
 <br/>
 
 <div align="center">
@@ -360,7 +539,38 @@ echo "🏗️ Startup API & Dashboard Tools"
 
 ---
 
-### 📡 Contribution Activity Overview
+<!-- ============================================================ -->
+<!--  SECTION: CONTRIBUTION ACTIVITY                              -->
+<!-- ============================================================ -->
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 38" width="100%">
+  <defs>
+    <linearGradient id="sh7bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04060e"/>
+      <stop offset="50%" stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#04060e"/>
+    </linearGradient>
+    <linearGradient id="sh7line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="38" rx="8" fill="url(#sh7bg)" stroke="#0f1e3a" stroke-width="1"/>
+  <rect x="0" y="0" width="4" height="38" rx="3" fill="#38bdf8" opacity="0.8"/>
+  <text x="22" y="14" font-family="'Courier New',Courier,monospace" font-size="8" fill="#38bdf8" letter-spacing="3" opacity="0.6">// SECTION</text>
+  <text x="22" y="30" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold" fill="#38bdf8" letter-spacing="2">📡 CONTRIBUTION ACTIVITY OVERVIEW</text>
+  <text x="780" y="28" font-family="'Courier New',Courier,monospace" font-size="16" fill="#0f2040" text-anchor="end">{ radar }</text>
+  <rect x="0" y="36" width="860" height="1.5" fill="url(#sh7line)"/>
+</svg>
+
+</div>
+
+<br/>
 
 <div align="center">
   <img src="activity-radar-v2.svg" width="100%" alt="Contribution Activity Overview" />
@@ -372,12 +582,41 @@ echo "🏗️ Startup API & Dashboard Tools"
   <img src="diagnostics-v2.svg" width="100%" alt="Diagnostics and Productive Time Overview" />
 </div>
 
+<br/>
 
 ---
 
-<!-- 🐍 ARCADE SNAKE CONTRIBUTION GAME (Updated every 12 hours) -->
+<!-- 🐍 ARCADE SNAKE CONTRIBUTION GAME -->
 <div align="center">
-  <h4>🎮 Contribution Arcade Snake Game</h4>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 38" width="100%">
+  <defs>
+    <linearGradient id="sh8bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04060e"/>
+      <stop offset="50%" stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#04060e"/>
+    </linearGradient>
+    <linearGradient id="sh8line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#28c840" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#28c840" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#28c840" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#28c840" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#28c840" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="38" rx="8" fill="url(#sh8bg)" stroke="#0f1e3a" stroke-width="1"/>
+  <rect x="0" y="0" width="4" height="38" rx="3" fill="#28c840" opacity="0.8"/>
+  <text x="22" y="14" font-family="'Courier New',Courier,monospace" font-size="8" fill="#28c840" letter-spacing="3" opacity="0.6">// SECTION</text>
+  <text x="22" y="30" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold" fill="#28c840" letter-spacing="2">🎮 CONTRIBUTION ARCADE SNAKE</text>
+  <text x="780" y="28" font-family="'Courier New',Courier,monospace" font-size="16" fill="#0f2040" text-anchor="end">{ game }</text>
+  <rect x="0" y="36" width="860" height="1.5" fill="url(#sh8line)"/>
+</svg>
+
+</div>
+
+<br/>
+
+<div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="github-contribution-grid-snake-dark-v2.svg">
     <source media="(prefers-color-scheme: light)" srcset="github-contribution-grid-snake-v2.svg">
@@ -385,19 +624,17 @@ echo "🏗️ Startup API & Dashboard Tools"
   </picture>
 </div>
 
-
 <br/>
 
 ---
 
-### 💡 Quote of the Day
+<!-- 💡 QUOTE & JOKE -->
 <div align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Developer Quote" />
 </div>
 
 <br/>
 
-<!-- 😂 RANDOM DEV JOKE -->
 <div align="center">
   <img src="https://readme-jokes.vercel.app/api?hideBorder&theme=tokyonight&bgColor=%23070a13&textColor=%23e2e8f0&aColor=%2300f0ff&qColor=%23a855f7" alt="Dev Joke of the Day" />
 </div>
@@ -406,7 +643,38 @@ echo "🏗️ Startup API & Dashboard Tools"
 
 ---
 
-### 🌍 Global Reach
+<!-- ============================================================ -->
+<!--  SECTION: GLOBAL REACH                                       -->
+<!-- ============================================================ -->
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 38" width="100%">
+  <defs>
+    <linearGradient id="sh9bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04060e"/>
+      <stop offset="50%" stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#04060e"/>
+    </linearGradient>
+    <linearGradient id="sh9line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#4f46e5" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#4f46e5" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#4f46e5" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="38" rx="8" fill="url(#sh9bg)" stroke="#0f1e3a" stroke-width="1"/>
+  <rect x="0" y="0" width="4" height="38" rx="3" fill="#4f46e5" opacity="0.8"/>
+  <text x="22" y="14" font-family="'Courier New',Courier,monospace" font-size="8" fill="#4f46e5" letter-spacing="3" opacity="0.6">// SECTION</text>
+  <text x="22" y="30" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold" fill="#4f46e5" letter-spacing="2">🌍 GLOBAL REACH</text>
+  <text x="780" y="28" font-family="'Courier New',Courier,monospace" font-size="16" fill="#0f2040" text-anchor="end">{ network }</text>
+  <rect x="0" y="36" width="860" height="1.5" fill="url(#sh9line)"/>
+</svg>
+
+</div>
+
+<br/>
 
 <div align="center">
 
@@ -415,9 +683,12 @@ echo "🏗️ Startup API & Dashboard Tools"
     <linearGradient id="globebg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#04060f"/><stop offset="100%" stop-color="#080d1c"/></linearGradient>
     <radialGradient id="glowCenter" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#00f0ff" stop-opacity="0.08"/><stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/></radialGradient>
     <filter id="dotGlow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="bigGlobe"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="globeGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0a1830" stroke-width="0.4"/>
+    </pattern>
   </defs>
   <rect width="860" height="220" rx="13" fill="url(#globebg)" stroke="#1e2d52" stroke-width="1"/>
+  <rect width="860" height="220" rx="13" fill="url(#globeGrid)" opacity="0.5"/>
   <rect width="860" height="220" rx="13" fill="none" stroke="#4f46e5" stroke-width="1">
     <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4s" repeatCount="indefinite"/>
   </rect>
@@ -430,7 +701,6 @@ echo "🏗️ Startup API & Dashboard Tools"
   <ellipse cx="430" cy="125" rx="82" ry="20" fill="none" stroke="#1e3a5f" stroke-width="0.7" opacity="0.5"/>
   <ellipse cx="430" cy="95" rx="70" ry="17" fill="none" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
   <ellipse cx="430" cy="155" rx="70" ry="17" fill="none" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
-  <!-- Vertical line -->
   <line x1="430" y1="43" x2="430" y2="207" stroke="#1e3a5f" stroke-width="0.7" opacity="0.5"/>
   <line x1="348" y1="125" x2="512" y2="125" stroke="#1e3a5f" stroke-width="0.7" opacity="0.5"/>
   <!-- Connection lines to dots -->
@@ -439,7 +709,6 @@ echo "🏗️ Startup API & Dashboard Tools"
   <line x1="430" y1="125" x2="580" y2="90" stroke="#ff007f" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
   <line x1="430" y1="125" x2="720" y2="108" stroke="#fbbf24" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
   <line x1="430" y1="125" x2="520" y2="165" stroke="#22c55e" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
-  <!-- Location dots with labels -->
   <!-- India (home) -->
   <circle cx="430" cy="125" r="8" fill="#00f0ff" filter="url(#dotGlow)">
     <animate attributeName="r" values="7;11;7" dur="2s" repeatCount="indefinite"/>
@@ -487,87 +756,132 @@ echo "🏗️ Startup API & Dashboard Tools"
 
 ---
 
-### 🛠️ Specialties & Focus Areas
-
-<details>
-<summary><b>🤖 Discord Bot Development</b></summary>
-<br/>
-
-- **Interactive Architecture**: Building buttons, slash commands, select menus, and modals using discord.js / discord.py.
-- **Synchronization**: Multi-guild role mirroring, sync pipelines, database integration, and OAuth2 setups.
-- **Security Audits**: Automated detection of server threats, antispam configurations, and rate-limiting handles.
-</details>
-
-<details>
-<summary><b>🎮 SA-MP Pawn Scripting</b></summary>
-<br/>
-
-- **Custom Gamemodes**: Modular script designs (y_less libraries like y_commands, y_inline), inventory systems, and business systems.
-- **Optimized Queries**: Threaded database processing to eliminate server lag.
-- **Low-level Tuning**: Code execution optimization for low tick-rate environments.
-</details>
-
-<details>
-<summary><b>🛡️ Security & DDoS Alerts</b></summary>
-<br/>
-
-- **Log Analysis**: Shell hooks that monitor web-server and game-server ingress spikes.
-- **Alert Hooks**: Integration with Discord webhooks to broadcast critical DDoS alarms/metrics in real time.
-- **Port Shielding**: Custom Cloudflare proxying and local packet filters.
-</details>
-
-<details>
-<summary><b>💼 Startup Freelancing</b></summary>
-<br/>
-
-- **Custom APIs**: Developing lightweight microservices using Express or Fastify.
-- **Operations Dashboard**: Tailored scripts that display vital server metrics, user counts, and system runtimes.
-</details>
-
----
-
-### 📬 Connect With Me
+<!-- ============================================================ -->
+<!--  SECTION: SPECIALTIES                                        -->
+<!-- ============================================================ -->
 
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 130" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 38" width="100%">
+  <defs>
+    <linearGradient id="sh10bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04060e"/>
+      <stop offset="50%" stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#04060e"/>
+    </linearGradient>
+    <linearGradient id="sh10line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#fbbf24" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#a855f7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="38" rx="8" fill="url(#sh10bg)" stroke="#0f1e3a" stroke-width="1"/>
+  <rect x="0" y="0" width="4" height="38" rx="3" fill="#fbbf24" opacity="0.8"/>
+  <text x="22" y="14" font-family="'Courier New',Courier,monospace" font-size="8" fill="#fbbf24" letter-spacing="3" opacity="0.6">// SECTION</text>
+  <text x="22" y="30" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold" fill="#fbbf24" letter-spacing="2">🛠️ SPECIALTIES &amp; FOCUS AREAS</text>
+  <text x="780" y="28" font-family="'Courier New',Courier,monospace" font-size="16" fill="#0f2040" text-anchor="end">{ focus }</text>
+  <rect x="0" y="36" width="860" height="1.5" fill="url(#sh10line)"/>
+</svg>
+
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="specialties-grid.svg" width="100%" alt="Specialties Grid" />
+</div>
+
+<br/>
+
+---
+
+<!-- ============================================================ -->
+<!--  SECTION: CONNECT                                            -->
+<!-- ============================================================ -->
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 38" width="100%">
+  <defs>
+    <linearGradient id="sh11bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#04060e"/>
+      <stop offset="50%" stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#04060e"/>
+    </linearGradient>
+    <linearGradient id="sh11line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5865f2" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#5865f2" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#5865f2" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#5865f2" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#5865f2" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="38" rx="8" fill="url(#sh11bg)" stroke="#0f1e3a" stroke-width="1"/>
+  <rect x="0" y="0" width="4" height="38" rx="3" fill="#5865f2" opacity="0.8"/>
+  <text x="22" y="14" font-family="'Courier New',Courier,monospace" font-size="8" fill="#5865f2" letter-spacing="3" opacity="0.6">// SECTION</text>
+  <text x="22" y="30" font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold" fill="#5865f2" letter-spacing="2">📬 CONNECT WITH ME</text>
+  <text x="780" y="28" font-family="'Courier New',Courier,monospace" font-size="16" fill="#0f2040" text-anchor="end">{ find me }</text>
+  <rect x="0" y="36" width="860" height="1.5" fill="url(#sh11line)"/>
+</svg>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 150" width="100%">
   <defs>
     <linearGradient id="connbg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#060c1a"/>
       <stop offset="100%" stop-color="#0e0a24"/>
     </linearGradient>
     <filter id="connGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="connGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0a1830" stroke-width="0.4"/>
+    </pattern>
+    <linearGradient id="connBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
   </defs>
-  <rect width="860" height="130" rx="14" fill="url(#connbg)" stroke="#1e2d52" stroke-width="1.2"/>
-  <rect width="860" height="130" rx="14" fill="none" stroke="#6366f1" stroke-width="1">
-    <animate attributeName="stroke" values="#6366f1;#00f0ff;#a855f7;#6366f1" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite"/>
+  <rect width="860" height="150" rx="14" fill="url(#connbg)" stroke="#1e2d52" stroke-width="1.2"/>
+  <rect width="860" height="150" rx="14" fill="url(#connGrid)" opacity="0.4"/>
+  <rect width="860" height="150" rx="14" fill="none" stroke="url(#connBorder)" stroke-width="1.5">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
   </rect>
-  <text x="430" y="30" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="bold" fill="#00f0ff" letter-spacing="3" opacity="0.85">// FIND ME ON</text>
-  <!-- GitHub -->
-  <rect x="30" y="48" width="168" height="62" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
-  <text x="114" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="22">🐙</text>
-  <text x="114" y="94" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#e2e8f0" font-weight="bold">GitHub</text>
-  <text x="114" y="106" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b">@dmzrider</text>
-  <!-- Discord -->
-  <rect x="220" y="48" width="168" height="62" rx="10" fill="#0d1117" stroke="#5865f2" stroke-width="1"/>
-  <text x="304" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="22">💬</text>
-  <text x="304" y="94" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#7289da" font-weight="bold">Discord</text>
-  <text x="304" y="106" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b">echo__dev</text>
-  <!-- Email -->
-  <rect x="410" y="48" width="168" height="62" rx="10" fill="#0d1117" stroke="#ff007f" stroke-width="1"/>
-  <text x="494" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="22">📧</text>
-  <text x="494" y="94" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#ff007f" font-weight="bold">Email</text>
-  <text x="494" y="106" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b">DM for contact</text>
-  <!-- Availability -->
-  <rect x="600" y="48" width="228" height="62" rx="10" fill="#0d1117" stroke="#22c55e" stroke-width="1"/>
-  <circle cx="626" cy="79" r="6" fill="#22c55e" filter="url(#connGlow)">
-    <animate attributeName="r" values="5;8;5" dur="1.5s" repeatCount="indefinite"/>
+  <text x="430" y="32" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" font-weight="bold" fill="#00f0ff" letter-spacing="3" opacity="0.85">// FIND ME ON</text>
+  <!-- GitHub card -->
+  <rect x="22" y="50" width="178" height="80" rx="10" fill="#080d1c" stroke="#30363d" stroke-width="1.2"/>
+  <rect x="22" y="50" width="178" height="3" rx="2" fill="#30363d" opacity="0.6"/>
+  <text x="111" y="84" text-anchor="middle" font-family="Arial" font-size="24">🐙</text>
+  <text x="111" y="105" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#e2e8f0" font-weight="bold">GitHub</text>
+  <text x="111" y="120" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#475569">@dmzrider</text>
+  <!-- Discord card -->
+  <rect x="216" y="50" width="178" height="80" rx="10" fill="#080d1c" stroke="#5865f2" stroke-width="1.2"/>
+  <rect x="216" y="50" width="178" height="3" rx="2" fill="#5865f2" opacity="0.6"/>
+  <text x="305" y="84" text-anchor="middle" font-family="Arial" font-size="24">💬</text>
+  <text x="305" y="105" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#7289da" font-weight="bold">Discord</text>
+  <text x="305" y="120" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#475569">echo__dev</text>
+  <!-- Email card -->
+  <rect x="410" y="50" width="178" height="80" rx="10" fill="#080d1c" stroke="#ff007f" stroke-width="1.2"/>
+  <rect x="410" y="50" width="178" height="3" rx="2" fill="#ff007f" opacity="0.6"/>
+  <text x="499" y="84" text-anchor="middle" font-family="Arial" font-size="24">📧</text>
+  <text x="499" y="105" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#ff007f" font-weight="bold">Email</text>
+  <text x="499" y="120" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#475569">DM for contact</text>
+  <!-- Availability card (wider) -->
+  <rect x="604" y="50" width="234" height="80" rx="10" fill="#080d1c" stroke="#22c55e" stroke-width="1.2"/>
+  <rect x="604" y="50" width="234" height="3" rx="2" fill="#22c55e" opacity="0.6"/>
+  <circle cx="633" cy="90" r="7" fill="#22c55e" filter="url(#connGlow)">
+    <animate attributeName="r" values="5;9;5" dur="1.5s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
   </circle>
-  <text x="714" y="72" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#f1f5f9" font-weight="bold">Available for Work</text>
-  <text x="714" y="90" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#4ade80">Freelance &amp; Collaboration</text>
-  <text x="714" y="106" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b">Kerala, India 🇮🇳</text>
+  <text x="721" y="82" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#f1f5f9" font-weight="bold">Available for Work</text>
+  <text x="721" y="100" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#4ade80">Freelance &amp; Collaboration</text>
+  <text x="721" y="117" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="9" fill="#475569">Kerala, India 🇮🇳</text>
 </svg>
 
 </div>
@@ -576,34 +890,52 @@ echo "🏗️ Startup API & Dashboard Tools"
 
 ---
 
+<!-- FOOTER -->
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 60" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 72" width="100%">
   <defs>
     <linearGradient id="footbg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#070a13"/>
-      <stop offset="50%"  stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#070a13"/>
+      <stop offset="0%"   stop-color="#04060e"/>
+      <stop offset="50%"  stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#04060e"/>
     </linearGradient>
     <linearGradient id="footLine" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%"   stop-color="#00f0ff" stop-opacity="0"/>
-      <stop offset="30%"  stop-color="#00f0ff" stop-opacity="0.6"/>
+      <stop offset="25%"  stop-color="#00f0ff" stop-opacity="0.6"/>
       <stop offset="50%"  stop-color="#a855f7" stop-opacity="0.8"/>
-      <stop offset="70%"  stop-color="#ff007f" stop-opacity="0.6"/>
+      <stop offset="75%"  stop-color="#ff007f" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#ff007f" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="footLineBottom" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#ff007f" stop-opacity="0"/>
+      <stop offset="25%"  stop-color="#ff007f" stop-opacity="0.4"/>
+      <stop offset="50%"  stop-color="#a855f7" stop-opacity="0.6"/>
+      <stop offset="75%"  stop-color="#00f0ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </linearGradient>
   </defs>
-  <rect width="860" height="60" fill="url(#footbg)" rx="8"/>
-  <rect x="0" y="0" width="860" height="1.5" fill="url(#footLine)"/>
-  <text x="430" y="26" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#94a3b8">Thanks for visiting! If you find my work useful,</text>
-  <text x="430" y="46" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11">
-    <tspan fill="#64748b">drop a </tspan>
+  <rect width="860" height="72" rx="10" fill="url(#footbg)" stroke="#1a2a4a" stroke-width="1"/>
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="860" height="2" rx="2" fill="url(#footLine)"/>
+  <!-- Bottom accent line -->
+  <rect x="0" y="70" width="860" height="2" rx="2" fill="url(#footLineBottom)"/>
+  <!-- Text row 1 -->
+  <text x="430" y="28" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11" fill="#64748b">Thanks for visiting! If you find my work useful,</text>
+  <!-- Text row 2 -->
+  <text x="430" y="50" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#475569">drop a </tspan>
     <tspan fill="#fbbf24">⭐</tspan>
-    <tspan fill="#64748b"> on any repo — it means a lot!  Built with </tspan>
+    <tspan fill="#475569"> on any repo — it means a lot! &nbsp; Built with </tspan>
     <tspan fill="#ff007f">♥</tspan>
-    <tspan fill="#64748b"> by </tspan>
+    <tspan fill="#475569"> by </tspan>
     <tspan fill="#00f0ff" font-weight="bold">dmzrider</tspan>
+    <tspan fill="#475569"> &nbsp;|&nbsp; </tspan>
+    <tspan fill="#334155">v5.0 · cybernode</tspan>
   </text>
+  <!-- Version tag top-right -->
+  <rect x="798" y="8" width="50" height="16" rx="5" fill="#0a1420" stroke="#1a2a4a" stroke-width="0.8"/>
+  <text x="823" y="20" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8" fill="#334155">v5.0.0</text>
 </svg>
 
 </div>

@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 265" width="860">
+  <defs>
+    <linearGradient id="atbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04060e"/>
+      <stop offset="100%" stop-color="#070c1a"/>
+    </linearGradient>
+    <linearGradient id="atHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#090f1e"/>
+      <stop offset="50%" stop-color="#0d1525"/>
+      <stop offset="100%" stop-color="#090f1e"/>
+    </linearGradient>
+    <linearGradient id="atDivider" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="atBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ff007f"/>
+    </linearGradient>
+    <filter id="atGlow">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="atSmallGlow">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="atScanlines" x="0" y="0" width="860" height="4" patternUnits="userSpaceOnUse">
+      <rect width="860" height="1.5" y="0" fill="#00f0ff" opacity="0.012"/>
+    </pattern>
+    <pattern id="atGrid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#0a1830" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="265" rx="13" fill="url(#atbg)"/>
+  <!-- Grid overlay -->
+  <rect width="860" height="265" rx="13" fill="url(#atGrid)" opacity="0.6"/>
+  <!-- Border -->
+  <rect width="860" height="265" rx="13" fill="none" stroke="url(#atBorderGrad)" stroke-width="1.5"/>
+  <!-- Animated border pulse -->
+  <rect width="860" height="265" rx="13" fill="none" stroke="#00f0ff" stroke-width="1">
+    <animate attributeName="opacity" values="0.1;0.4;0.1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Scanlines overlay -->
+  <rect width="860" height="265" rx="13" fill="url(#atScanlines)"/>
+
+  <!-- Top bar background -->
+  <rect x="0" y="0" width="860" height="36" rx="13" fill="url(#atHeader)"/>
+  <rect x="0" y="22" width="860" height="14" fill="url(#atHeader)"/>
+  <!-- Titlebar separator line -->
+  <line x1="0" y1="36" x2="860" y2="36" stroke="#0f1e3a" stroke-width="1.5"/>
+
+  <!-- Traffic light dots -->
+  <circle cx="22" cy="18" r="5.5" fill="#ff5f57"/>
+  <circle cx="40" cy="18" r="5.5" fill="#febc2e"/>
+  <circle cx="58" cy="18" r="5.5" fill="#28c840"/>
+
+  <!-- Window title -->
+  <text x="430" y="22" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3a4a6a" letter-spacing="2">terminal — dmzrider@cybernode:~ — bash</text>
+
+  <!-- LIVE indicator with glow -->
+  <circle cx="828" cy="18" r="4.5" fill="#22c55e" filter="url(#atGlow)">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="838" y="22" font-family="'Courier New',Courier,monospace" font-size="8" fill="#22c55e" font-weight="bold">LIVE</text>
+
+  <!-- Vertical divider line (gradient from top to bottom) -->
+  <line x1="430" y1="36" x2="430" y2="265" stroke="url(#atDivider)" stroke-width="1"/>
+
+  <!-- ===== LEFT PANEL: whoami ===== -->
+
+  <!-- Prompt 1 -->
+  <text x="18" y="60" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#22c55e" filter="url(#atSmallGlow)">dmzrider</tspan>
+    <tspan fill="#3a4a6a">@</tspan>
+    <tspan fill="#00f0ff">cybernode</tspan>
+    <tspan fill="#475569">:~$ </tspan>
+    <tspan fill="#e2e8f0">whoami</tspan>
+  </text>
+
+  <!-- Separator -->
+  <line x1="18" y1="66" x2="218" y2="66" stroke="#0f2040" stroke-width="1"/>
+
+  <!-- Info rows with ▸ separator -->
+  <!-- NAME -->
+  <text x="18" y="83" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#334155">  NAME    </tspan>
+    <tspan fill="#00f0ff" filter="url(#atSmallGlow)">▸</tspan>
+    <tspan fill="#f1f5f9" dx="5">Manu</tspan>
+  </text>
+  <!-- HANDLE -->
+  <text x="18" y="100" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#334155">  HANDLE  </tspan>
+    <tspan fill="#00f0ff" filter="url(#atSmallGlow)">▸</tspan>
+    <tspan fill="#a855f7" dx="5">dmzrider</tspan>
+  </text>
+  <!-- DISCORD -->
+  <text x="18" y="117" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#334155">  DISCORD </tspan>
+    <tspan fill="#00f0ff" filter="url(#atSmallGlow)">▸</tspan>
+    <tspan fill="#7289da" dx="5">echo__dev</tspan>
+  </text>
+  <!-- LOCATION -->
+  <text x="18" y="134" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#334155">  LOC     </tspan>
+    <tspan fill="#00f0ff" filter="url(#atSmallGlow)">▸</tspan>
+    <tspan fill="#fbbf24" dx="5">Kerala, India</tspan>
+  </text>
+  <!-- EXPERIENCE -->
+  <text x="18" y="151" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#334155">  EXP     </tspan>
+    <tspan fill="#00f0ff" filter="url(#atSmallGlow)">▸</tspan>
+    <tspan fill="#f1f5f9" dx="5">3+ Years Active Dev</tspan>
+  </text>
+  <!-- STATUS -->
+  <text x="18" y="168" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#334155">  STATUS  </tspan>
+    <tspan fill="#00f0ff" filter="url(#atSmallGlow)">▸</tspan>
+    <tspan fill="#22c55e" dx="5">Building 24/7</tspan>
+    <tspan fill="#fbbf24">  🚀</tspan>
+  </text>
+  <!-- FOCUS -->
+  <text x="18" y="185" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#334155">  FOCUS   </tspan>
+    <tspan fill="#00f0ff" filter="url(#atSmallGlow)">▸</tspan>
+    <tspan fill="#ff007f" dx="5">Bots · Pawn · Security</tspan>
+  </text>
+
+  <!-- Prompt 2 with blinking cursor -->
+  <text x="18" y="215" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#22c55e">dmzrider</tspan>
+    <tspan fill="#3a4a6a">@</tspan>
+    <tspan fill="#00f0ff">cybernode</tspan>
+    <tspan fill="#475569">:~$ </tspan>
+  </text>
+  <!-- Blinking cursor block -->
+  <rect x="155" y="204" width="7" height="13" fill="#00f0ff" rx="1">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Bottom info line -->
+  <text x="18" y="250" font-family="'Courier New',Courier,monospace" font-size="9" fill="#1e3050">
+    <tspan fill="#334155">// uptime: </tspan>
+    <tspan fill="#22c55e">99.9%</tspan>
+    <tspan fill="#334155">  // node: </tspan>
+    <tspan fill="#00f0ff">cybernode-01</tspan>
+    <tspan fill="#334155">  // kernel: </tspan>
+    <tspan fill="#a855f7">dmz-5.4.0</tspan>
+  </text>
+
+
+  <!-- ===== RIGHT PANEL: roles + skills ===== -->
+
+  <!-- Prompt 1 -->
+  <text x="448" y="60" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#22c55e">dmzrider</tspan>
+    <tspan fill="#3a4a6a">@</tspan>
+    <tspan fill="#00f0ff">cybernode</tspan>
+    <tspan fill="#475569">:~$ </tspan>
+    <tspan fill="#e2e8f0">cat roles.txt</tspan>
+  </text>
+
+  <!-- Separator -->
+  <line x1="448" y1="66" x2="648" y2="66" stroke="#0f2040" stroke-width="1"/>
+
+  <!-- Roles -->
+  <text x="448" y="83" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#22c55e" font-weight="bold">+</tspan>
+    <tspan fill="#f1f5f9" dx="7">Discord Bot Developer</tspan>
+  </text>
+  <text x="448" y="100" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#22c55e" font-weight="bold">+</tspan>
+    <tspan fill="#f1f5f9" dx="7">SA-MP / Open.MP Pawn Scripter</tspan>
+  </text>
+  <text x="448" y="117" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#22c55e" font-weight="bold">+</tspan>
+    <tspan fill="#f1f5f9" dx="7">Systems Security Engineer</tspan>
+  </text>
+  <text x="448" y="134" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#22c55e" font-weight="bold">+</tspan>
+    <tspan fill="#f1f5f9" dx="7">Freelance Startup Developer</tspan>
+  </text>
+
+  <!-- Prompt 2 -->
+  <text x="448" y="157" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#22c55e">dmzrider</tspan>
+    <tspan fill="#3a4a6a">@</tspan>
+    <tspan fill="#00f0ff">cybernode</tspan>
+    <tspan fill="#475569">:~$ </tspan>
+    <tspan fill="#e2e8f0">ls skills/</tspan>
+  </text>
+
+  <!-- Separator -->
+  <line x1="448" y1="163" x2="648" y2="163" stroke="#0f2040" stroke-width="1"/>
+
+  <!-- Skills in 2-col grid -->
+  <text x="448" y="179" font-family="'Courier New',Courier,monospace" font-size="10" fill="#a855f7">bot-automation/</text>
+  <text x="596" y="179" font-family="'Courier New',Courier,monospace" font-size="10" fill="#a855f7">ddos-detection/</text>
+  <text x="448" y="195" font-family="'Courier New',Courier,monospace" font-size="10" fill="#a855f7">pawn-scripting/</text>
+  <text x="596" y="195" font-family="'Courier New',Courier,monospace" font-size="10" fill="#a855f7">api-dashboards/</text>
+  <text x="448" y="211" font-family="'Courier New',Courier,monospace" font-size="10" fill="#a855f7">mysql-systems/</text>
+  <text x="596" y="211" font-family="'Courier New',Courier,monospace" font-size="10" fill="#a855f7">discord-modals/</text>
+
+  <!-- Prompt 3 + cursor -->
+  <text x="448" y="235" font-family="'Courier New',Courier,monospace" font-size="11">
+    <tspan fill="#22c55e">dmzrider</tspan>
+    <tspan fill="#3a4a6a">@</tspan>
+    <tspan fill="#00f0ff">cybernode</tspan>
+    <tspan fill="#475569">:~$ </tspan>
+  </text>
+  <!-- Blinking cursor block (right panel, offset) -->
+  <rect x="585" y="224" width="7" height="13" fill="#a855f7" rx="1">
+    <animate attributeName="opacity" values="1;0;1" dur="1.3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Bottom info line right -->
+  <text x="448" y="250" font-family="'Courier New',Courier,monospace" font-size="9">
+    <tspan fill="#334155">// lang: </tspan>
+    <tspan fill="#3b82f6">pawn</tspan>
+    <tspan fill="#334155">  js</tspan>
+    <tspan fill="#fbbf24">  ts</tspan>
+    <tspan fill="#3572A5">  py</tspan>
+    <tspan fill="#334155">  // open.mp: </tspan>
+    <tspan fill="#22c55e">AKRP-V5</tspan>
+  </text>
+
+</svg>
