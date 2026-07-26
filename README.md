@@ -54,6 +54,10 @@
   <a href="https://github.com/dmzrider">
     <img src="https://img.shields.io/badge/GitHub-dmzrider-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
   </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/dmzrider/dmzrider/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/dmzrider/dmzrider/update-profile-stats.yml?branch=main&style=flat-square&color=22c55e&label=PROFILE+ENGINE" alt="Profile Engine Status" />
+  </a>
 </div>
 
 <br/>
@@ -251,6 +255,7 @@ echo "🏗️ Startup API & Dashboard Tools"
 <!-- ⚡ WAKATIME CODING STATS (Self-Contained Premium SVG) -->
 <div align="center">
 
+<!-- START_SECTION:languages -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 220" width="495">
   <defs>
     <linearGradient id="wkbg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -349,6 +354,7 @@ echo "🏗️ Startup API & Dashboard Tools"
     <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">6%</text>
   </g>
 </svg>
+<!-- END_SECTION:languages -->
 
 </div>
 

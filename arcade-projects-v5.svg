@@ -166,8 +166,22 @@
       <text x="230" y="120" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#64748b" text-anchor="end">★ PUBLIC</text>
     </g>
 
-    <!-- Card 6: Duplicate of Card 1 for seamless wrap (x = 1140 + 280 = 1420) -->
+    <!-- Card 6: NovaShield (x = 1140 + 280 = 1420) -->
     <g transform="translate(1420, 55)">
+      <rect width="250" height="135" rx="8" fill="url(#cardBg)" stroke="#22c55e" stroke-width="1.2" filter="url(#neonGlow)"/>
+      <text x="20" y="30" font-family="Arial,sans-serif" font-size="20">🛡️</text>
+      <text x="52" y="27" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#22c55e">NovaShield</text>
+      <line x1="20" y1="42" x2="230" y2="42" stroke="#1c2742" stroke-width="1"/>
+      <text x="20" y="62" font-family="Arial,sans-serif" font-size="10.5" fill="#94a3b8">Public advanced security shield.</text>
+      <text x="20" y="78" font-family="Arial,sans-serif" font-size="10.5" fill="#94a3b8">Real-time DDoS mitigation, packet</text>
+      <text x="20" y="94" font-family="Arial,sans-serif" font-size="10.5" fill="#94a3b8">shielding, and firewall filters.</text>
+      <rect x="20" y="108" width="80" height="15" rx="3" fill="#064e3b"/>
+      <text x="60" y="119" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#6ee7b7" font-weight="bold">JavaScript / Node</text>
+      <text x="230" y="120" font-family="'Courier New',Courier,monospace" font-size="9.5" fill="#64748b" text-anchor="end">★ PUBLIC</text>
+    </g>
+
+    <!-- Card 7: Duplicate of Card 1 for seamless wrap (x = 1420 + 280 = 1700) -->
+    <g transform="translate(1700, 55)">
       <rect width="250" height="135" rx="8" fill="url(#cardBg)" stroke="#00f0ff" stroke-width="1.2" filter="url(#neonGlow)"/>
       <text x="20" y="30" font-family="Arial,sans-serif" font-size="20">🤖</text>
       <text x="52" y="27" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#00f0ff">discord-security-bot</text>

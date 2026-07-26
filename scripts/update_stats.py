@@ -30,8 +30,20 @@ query($username: String!) {
         }
       }
     }
-    repositories {
+    repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
       totalCount
+      nodes {
+        name
+        languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
+          edges {
+            size
+            node {
+              name
+              color
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -47,7 +59,15 @@ def fetch_stats():
             "issues": 12,
             "repos": 18,
             "daily_activity": [1, 2, 0, 4, 1, 0, 5, 2, 1, 3, 4, 0, 2, 1, 3, 5, 2, 0, 1, 4, 2, 1, 0, 3, 5, 2, 1, 4, 2, 3],
-            "productive_time": [20, 35, 30, 15]
+            "productive_time": [20, 35, 30, 15],
+            "languages": {
+                "Pawn (SA-MP)": 3800000,
+                "JavaScript": 3000000,
+                "TypeScript": 1200000,
+                "SQL/MySQL": 800000,
+                "Bash Shell": 600000,
+                "Other": 600000
+            }
         }
 
     headers = {"Authorization": f"Bearer {TOKEN}"}
@@ -118,6 +138,18 @@ def fetch_stats():
         total_p = sum(productive_time)
         productive_time = [round((val / total_p) * 100) for val in productive_time]
 
+    # Aggregate languages
+    languages = {}
+    repos_nodes = user_data.get("repositories", {}).get("nodes", [])
+    for repo in repos_nodes:
+        if repo.get("languages") and repo["languages"].get("edges"):
+            for edge in repo["languages"]["edges"]:
+                name = edge["node"]["name"]
+                size = edge["size"]
+                if name == "Pawn":
+                    name = "Pawn (SA-MP)"
+                languages[name] = languages.get(name, 0) + size
+
     return {
         "commits": contribs["totalCommitContributions"],
         "prs": contribs["totalPullRequestContributions"],
@@ -125,7 +157,8 @@ def fetch_stats():
         "issues": contribs["totalIssueContributions"],
         "repos": user_data["repositories"]["totalCount"],
         "daily_activity": last_30_days,
-        "productive_time": productive_time
+        "productive_time": productive_time,
+        "languages": languages
     }
 
 def update_activity_graph(stats):
@@ -536,6 +569,131 @@ def update_activity_radar(stats):
         f.write(svg_content)
     print("Updated activity-radar-v2.svg successfully.")
 
+def update_readme_languages(stats):
+    filepath = "README.md"
+    if not os.path.exists(filepath):
+        return
+
+    with open(filepath, "r", encoding="utf-8") as f:
+        readme_content = f.read()
+
+    # Predefined gradients mapping
+    gradients = {
+        "Pawn (SA-MP)": ("#3b82f6", "#60a5fa"),
+        "JavaScript": ("#f7df1e", "#f1e05a"),
+        "TypeScript": ("#3178c6", "#60a5fa"),
+        "SQL/MySQL": ("#00a3cc", "#00e5ff"),
+        "SQL": ("#00a3cc", "#00e5ff"),
+        "Python": ("#3572A5", "#4584b6"),
+        "Shell": ("#89e051", "#a7e089"),
+        "CSS": ("#563d7c", "#8558a8"),
+        "HTML": ("#e34c26", "#f06529"),
+        "Other": ("#64748b", "#94a3b8")
+    }
+
+    def format_size(bytes_val):
+        if bytes_val >= 1024 * 1024:
+            return f"{bytes_val / (1024*1024):.1f} MB"
+        elif bytes_val >= 1024:
+            return f"{bytes_val / 1024:.0f} KB"
+        return f"{bytes_val} B"
+
+    # Filter and sort languages
+    lang_items = list(stats.get("languages", {}).items())
+    lang_items = [(k, v) for k, v in lang_items if k and v > 0]
+    lang_items.sort(key=lambda x: x[1], reverse=True)
+
+    total_bytes = sum(v for _, v in lang_items)
+    if total_bytes == 0:
+        total_bytes = 1
+        lang_items = [("Pawn (SA-MP)", 1)]
+
+    # Take top 5 and group rest as Other
+    top_langs = lang_items[:5]
+    other_bytes = sum(v for _, v in lang_items[5:])
+    if other_bytes > 0:
+        top_langs.append(("Other", other_bytes))
+
+    lang_pcts = []
+    for name, size in top_langs:
+        pct = round((size / total_bytes) * 100)
+        if pct > 0:
+            lang_pcts.append((name, pct))
+
+    # Build SVG row elements
+    defs_gradients = []
+    svg_rows = []
+    y_start = 48
+    y_gap = 28
+
+    def sanitize_id(name):
+        return re.sub(r'[^a-zA-Z0-9]', '', name)
+
+    for i, (name, pct) in enumerate(lang_pcts):
+        y_pos = y_start + i * y_gap
+        c1, c2 = gradients.get(name, gradients.get("Other"))
+        grad_id = f"bar{sanitize_id(name)}"
+
+        # Define gradient
+        defs_gradients.append(
+            f'    <linearGradient id="{grad_id}" x1="0%" y1="0%" x2="100%" y2="0%">\n'
+            f'      <stop offset="0%" stop-color="{c1}"/><stop offset="100%" stop-color="{c2}"/>\n'
+            f'    </linearGradient>'
+        )
+
+        size_bytes = dict(lang_items).get(name, 0)
+        if name == "Other":
+            size_bytes = other_bytes
+        size_text = format_size(size_bytes)
+
+        # Max width 220px
+        bar_width = int(220 * pct / 100)
+
+        svg_rows.append(
+            f'  <!-- {name} -->\n'
+            f'  <g transform="translate(30, {y_pos})">\n'
+            f'    <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">{name}</text>\n'
+            f'    <text x="100" y="12" font-family="\'Courier New\',Courier,monospace" font-size="10" fill="{c1}">{size_text}</text>\n'
+            f'    <rect x="160" y="3" width="220" height="9" rx="4.5" fill="#161b22"/>\n'
+            f'    <rect x="160" y="3" width="0" height="9" rx="4.5" fill="url(#{grad_id})">\n'
+            f'      <animate attributeName="width" values="0;{bar_width};{bar_width}" dur="1.5s" fill="freeze" begin="{0.2 * (i+1):.1f}s"/>\n'
+            f'    </rect>\n'
+            f'    <text x="390" y="11" font-family="\'Courier New\',Courier,monospace" font-size="10" fill="{c1}">{pct}%</text>\n'
+            f'  </g>'
+        )
+
+    gradient_defs_str = "\n".join(defs_gradients)
+    rows_str = "\n".join(svg_rows)
+
+    svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 220" width="495">
+  <defs>
+    <linearGradient id="wkbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+{gradient_defs_str}
+    <filter id="wkGlow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="495" height="220" rx="10" fill="url(#wkbg)" stroke="#1a233a" stroke-width="1.2"/>
+  <rect width="495" height="220" rx="10" fill="none" stroke="#a855f7" stroke-width="1.2" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Title -->
+  <text x="30" y="32" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#a855f7" letter-spacing="1">⚡ REPOSITORY LANGUAGE METRICS</text>
+  <text x="465" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" text-anchor="end">Metrics: Dynamic Source</text>
+
+{rows_str}
+</svg>"""
+
+    pattern = r"<!-- START_SECTION:languages -->.*?<!-- END_SECTION:languages -->"
+    replacement = f"<!-- START_SECTION:languages -->\n{svg_content}\n<!-- END_SECTION:languages -->"
+    new_readme = re.sub(pattern, replacement, readme_content, flags=re.DOTALL)
+
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(new_readme)
+    print("Updated README languages section successfully.")
+
 if __name__ == "__main__":
     try:
         stats = fetch_stats()
@@ -543,6 +701,7 @@ if __name__ == "__main__":
         update_activity_graph(stats)
         update_diagnostics(stats)
         update_activity_radar(stats)
-        print("All SVGs updated successfully!")
+        update_readme_languages(stats)
+        print("All SVGs and README sections updated successfully!")
     except Exception as e:
         print(f"Error updating stats: {e}")
