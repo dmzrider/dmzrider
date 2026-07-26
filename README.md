@@ -262,20 +262,11 @@ echo "🏗️ Startup API & Dashboard Tools"
       <stop offset="0%" stop-color="#070a13"/>
       <stop offset="100%" stop-color="#0d1117"/>
     </linearGradient>
-    <linearGradient id="barJS" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="barJavaScript" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#f7df1e"/><stop offset="100%" stop-color="#f1e05a"/>
     </linearGradient>
-    <linearGradient id="barPawn" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#60a5fa"/>
-    </linearGradient>
-    <linearGradient id="barTS" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3178c6"/><stop offset="100%" stop-color="#60a5fa"/>
-    </linearGradient>
-    <linearGradient id="barSQL" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00a3cc"/><stop offset="100%" stop-color="#00e5ff"/>
-    </linearGradient>
-    <linearGradient id="barBash" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4eaa25"/><stop offset="100%" stop-color="#6ee7b7"/>
+    <linearGradient id="barPython" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3572A5"/><stop offset="100%" stop-color="#4584b6"/>
     </linearGradient>
     <filter id="wkGlow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
@@ -285,73 +276,28 @@ echo "🏗️ Startup API & Dashboard Tools"
   </rect>
 
   <!-- Title -->
-  <text x="30" y="32" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#a855f7" letter-spacing="1">⚡ WEEKLY CODING STATS</text>
-  <text x="465" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" text-anchor="end">Active: ~38 hrs/wk</text>
+  <text x="30" y="32" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#a855f7" letter-spacing="1">⚡ REPOSITORY LANGUAGE METRICS</text>
+  <text x="465" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" text-anchor="end">Metrics: Dynamic Source</text>
 
-  <!-- Pawn -->
+  <!-- JavaScript -->
   <g transform="translate(30, 48)">
-    <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Pawn (SA-MP)</text>
-    <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3b82f6">14h 24m</text>
-    <rect x="160" y="3" width="220" height="9" rx="4.5" fill="#161b22"/>
-    <rect x="160" y="3" width="0" height="9" rx="4.5" fill="url(#barPawn)">
-      <animate attributeName="width" values="0;84;84" dur="1.5s" fill="freeze" begin="0.2s"/>
-    </rect>
-    <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3b82f6">38%</text>
-  </g>
-
-  <!-- JS -->
-  <g transform="translate(30, 76)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">JavaScript</text>
-    <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">11h 10m</text>
+    <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">205 KB</text>
     <rect x="160" y="3" width="220" height="9" rx="4.5" fill="#161b22"/>
-    <rect x="160" y="3" width="0" height="9" rx="4.5" fill="url(#barJS)">
-      <animate attributeName="width" values="0;66;66" dur="1.5s" fill="freeze" begin="0.4s"/>
+    <rect x="160" y="3" width="0" height="9" rx="4.5" fill="url(#barJavaScript)">
+      <animate attributeName="width" values="0;195;195" dur="1.5s" fill="freeze" begin="0.2s"/>
     </rect>
-    <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">30%</text>
+    <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#f7df1e">89%</text>
   </g>
-
-  <!-- TS -->
-  <g transform="translate(30, 104)">
-    <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">TypeScript</text>
-    <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3178c6">4h 30m</text>
+  <!-- Python -->
+  <g transform="translate(30, 76)">
+    <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Python</text>
+    <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3572A5">26 KB</text>
     <rect x="160" y="3" width="220" height="9" rx="4.5" fill="#161b22"/>
-    <rect x="160" y="3" width="0" height="9" rx="4.5" fill="url(#barTS)">
-      <animate attributeName="width" values="0;26;26" dur="1.5s" fill="freeze" begin="0.6s"/>
+    <rect x="160" y="3" width="0" height="9" rx="4.5" fill="url(#barPython)">
+      <animate attributeName="width" values="0;24;24" dur="1.5s" fill="freeze" begin="0.4s"/>
     </rect>
-    <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3178c6">12%</text>
-  </g>
-
-  <!-- SQL -->
-  <g transform="translate(30, 132)">
-    <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">SQL/MySQL</text>
-    <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#00a3cc">3h 02m</text>
-    <rect x="160" y="3" width="220" height="9" rx="4.5" fill="#161b22"/>
-    <rect x="160" y="3" width="0" height="9" rx="4.5" fill="url(#barSQL)">
-      <animate attributeName="width" values="0;18;18" dur="1.5s" fill="freeze" begin="0.8s"/>
-    </rect>
-    <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#00a3cc">8%</text>
-  </g>
-
-  <!-- Bash -->
-  <g transform="translate(30, 160)">
-    <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Bash Shell</text>
-    <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#4eaa25">2h 18m</text>
-    <rect x="160" y="3" width="220" height="9" rx="4.5" fill="#161b22"/>
-    <rect x="160" y="3" width="0" height="9" rx="4.5" fill="url(#barBash)">
-      <animate attributeName="width" values="0;13;13" dur="1.5s" fill="freeze" begin="1.0s"/>
-    </rect>
-    <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#4eaa25">6%</text>
-  </g>
-
-  <!-- Other -->
-  <g transform="translate(30, 188)">
-    <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Other</text>
-    <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">2h 15m</text>
-    <rect x="160" y="3" width="220" height="9" rx="4.5" fill="#161b22"/>
-    <rect x="160" y="3" width="0" height="9" rx="4.5" fill="#64748b">
-      <animate attributeName="width" values="0;13;13" dur="1.5s" fill="freeze" begin="1.2s"/>
-    </rect>
-    <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#64748b">6%</text>
+    <text x="390" y="11" font-family="'Courier New',Courier,monospace" font-size="10" fill="#3572A5">11%</text>
   </g>
 </svg>
 <!-- END_SECTION:languages -->

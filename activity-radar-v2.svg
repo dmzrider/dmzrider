@@ -47,7 +47,7 @@
   <!-- Stat rows -->
   <!-- Row 1: Commits -->
   <g transform="translate(32, 78)">
-    <rect x="0" y="-16" width="8" height="20" rx="2" fill="#00f0ff">
+    <rect x="0" y="-16" width="350" height="20" rx="2" fill="#00f0ff">
       <animate attributeName="height" values="20;28;20" dur="2s" repeatCount="indefinite"/>
       <animate attributeName="y"      values="-16;-20;-16" dur="2s" repeatCount="indefinite"/>
     </rect>
@@ -58,12 +58,12 @@
     <rect x="0" y="24" width="0" height="6" rx="3" fill="#00f0ff">
       <animate attributeName="width" values="0;245;245" dur="1.5s" fill="freeze" begin="0.2s"/>
     </rect>
-    <text x="352" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#00f0ff" text-anchor="end">54%</text>
+    <text x="352" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#00f0ff" text-anchor="end">100%</text>
   </g>
 
   <!-- Row 2: Code Review -->
   <g transform="translate(32, 148)">
-    <rect x="0" y="-16" width="8" height="20" rx="2" fill="#a855f7">
+    <rect x="0" y="-16" width="0" height="20" rx="2" fill="#a855f7">
       <animate attributeName="height" values="20;28;20" dur="2.5s" repeatCount="indefinite"/>
       <animate attributeName="y"      values="-16;-20;-16" dur="2.5s" repeatCount="indefinite"/>
     </rect>
@@ -73,12 +73,12 @@
     <rect x="0" y="24" width="0" height="6" rx="3" fill="#a855f7">
       <animate attributeName="width" values="0;126;126" dur="1.5s" fill="freeze" begin="0.4s"/>
     </rect>
-    <text x="352" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#a855f7" text-anchor="end">27%</text>
+    <text x="352" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#a855f7" text-anchor="end">0%</text>
   </g>
 
   <!-- Row 3: Pull Requests -->
   <g transform="translate(32, 218)">
-    <rect x="0" y="-16" width="8" height="20" rx="2" fill="#ff007f">
+    <rect x="0" y="-16" width="0" height="20" rx="2" fill="#ff007f">
       <animate attributeName="height" values="20;28;20" dur="3s" repeatCount="indefinite"/>
       <animate attributeName="y"      values="-16;-20;-16" dur="3s" repeatCount="indefinite"/>
     </rect>
@@ -88,12 +88,12 @@
     <rect x="0" y="24" width="0" height="6" rx="3" fill="#ff007f">
       <animate attributeName="width" values="0;88;88" dur="1.5s" fill="freeze" begin="0.6s"/>
     </rect>
-    <text x="352" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#ff007f" text-anchor="end">19%</text>
+    <text x="352" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#ff007f" text-anchor="end">0%</text>
   </g>
 
   <!-- Row 4: Issues -->
   <g transform="translate(32, 288)">
-    <rect x="0" y="-16" width="8" height="20" rx="2" fill="#fbbf24">
+    <rect x="0" y="-16" width="0" height="20" rx="2" fill="#fbbf24">
       <animate attributeName="height" values="20;28;20" dur="3.5s" repeatCount="indefinite"/>
       <animate attributeName="y"      values="-16;-20;-16" dur="3.5s" repeatCount="indefinite"/>
     </rect>
@@ -127,38 +127,34 @@
   </g>
 
   <!-- Data polygon (Commits=54%, CodeReview=27%, Issues=15%, PRs=19%) -->
-  <polygon
-    points="645,130 661,160 645,181 586,160"
-    fill="url(#radarFill)" stroke="none" opacity="0.85"/>
-  <polygon
-    points="645,130 661,160 645,181 586,160"
-    fill="none" stroke="#00f0ff" stroke-width="2" opacity="1"/>
+  <polygon points="645,160 645,160 645,160 535,160" fill="url(#radarFill)" stroke="none" opacity="0.85"/>
+  <polygon points="645,160 645,160 645,160 535,160" fill="none" stroke="#00f0ff" stroke-width="2" opacity="1"/>
 
   <!-- Axis endpoint dots -->
-  <circle cx="645" cy="50" r="5" fill="#a855f7" filter="url(#rGlow)"/>
-  <circle cx="735" cy="160" r="5" fill="#fbbf24" filter="url(#rGlow)"/>
-  <circle cx="645" cy="270" r="5" fill="#ff007f" filter="url(#rGlow)"/>
-  <circle cx="555" cy="160" r="5" fill="#00f0ff" filter="url(#rGlow)"/>
+  <circle cx="645" cy="160" r="5" fill="#a855f7" filter="url(#rGlow)"/>
+  <circle cx="645" cy="160" r="5" fill="#fbbf24" filter="url(#rGlow)"/>
+  <circle cx="645" cy="160" r="5" fill="#ff007f" filter="url(#rGlow)"/>
+  <circle cx="535" cy="160" r="5" fill="#00f0ff" filter="url(#rGlow)"/>
 
   <!-- Data point dots on polygon -->
-  <circle cx="645" cy="130" r="5" fill="#a855f7" filter="url(#rGlow)"/>
-  <circle cx="661" cy="160" r="5" fill="#fbbf24" filter="url(#rGlow)"/>
-  <circle cx="645" cy="181" r="5" fill="#ff007f" filter="url(#rGlow)"/>
-  <circle cx="586" cy="160" r="5" fill="#00f0ff" filter="url(#rGlow)"/>
+  <circle cx="645" cy="160" r="5" fill="#a855f7" filter="url(#rGlow)"/>
+  <circle cx="645" cy="160" r="5" fill="#fbbf24" filter="url(#rGlow)"/>
+  <circle cx="645" cy="160" r="5" fill="#ff007f" filter="url(#rGlow)"/>
+  <circle cx="535" cy="160" r="5" fill="#00f0ff" filter="url(#rGlow)"/>
 
   <!-- Axis labels -->
   <g font-family="'Courier New',Courier,monospace" text-anchor="middle">
     <!-- Top: Code Review -->
-    <text x="645" y="38" font-size="10" font-weight="bold" fill="#a855f7">27%</text>
+    <text x="645" y="38" font-size="10" font-weight="bold" fill="#a855f7">0%</text>
     <text x="645" y="26" font-size="9" fill="#64748b">Code Review</text>
     <!-- Right: Issues -->
-    <text x="758" y="156" font-size="10" font-weight="bold" fill="#fbbf24" text-anchor="start">15%</text>
+    <text x="758" y="156" font-size="10" font-weight="bold" fill="#fbbf24" text-anchor="start">0%</text>
     <text x="758" y="168" font-size="9" fill="#64748b" text-anchor="start">Issues</text>
     <!-- Bottom: Pull Requests -->
-    <text x="645" y="288" font-size="10" font-weight="bold" fill="#ff007f">19%</text>
+    <text x="645" y="288" font-size="10" font-weight="bold" fill="#ff007f">0%</text>
     <text x="645" y="300" font-size="9" fill="#64748b">Pull Requests</text>
     <!-- Left: Commits -->
-    <text x="532" y="156" font-size="10" font-weight="bold" fill="#00f0ff" text-anchor="end">54%</text>
+    <text x="532" y="156" font-size="10" font-weight="bold" fill="#00f0ff" text-anchor="end">100%</text>
     <text x="532" y="168" font-size="9" fill="#64748b" text-anchor="end">Commits</text>
   </g>
 
