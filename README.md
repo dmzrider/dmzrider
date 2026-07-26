@@ -246,8 +246,11 @@
   <rect width="495" height="220" rx="10" fill="none" stroke="#a855f7" stroke-width="1.2" opacity="0.3">
     <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
   </rect>
+
+  <!-- Title -->
   <text x="30" y="32" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold" fill="#a855f7" letter-spacing="1">⚡ REPOSITORY LANGUAGE METRICS</text>
   <text x="465" y="31" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b" text-anchor="end">Metrics: Dynamic Source</text>
+
   <!-- Pawn (SA-MP) -->
   <g transform="translate(30, 48)">
     <text x="0" y="12" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Pawn (SA-MP)</text>
