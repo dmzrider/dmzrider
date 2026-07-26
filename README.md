@@ -139,7 +139,7 @@
 ---
 
 <!-- ============================================================ -->
-<div align="center"><img src="sec-analytics.svg" width="100%" alt="Analytics Section" /></div>
+<div align="center"><img src="sec-analytics-v2.svg" width="100%" alt="Analytics Section" /></div>
 
 <br/>
 

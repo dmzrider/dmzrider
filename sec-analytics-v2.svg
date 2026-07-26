@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 50" width="860">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#03050d"/>
+      <stop offset="50%"  stop-color="#06091a"/>
+      <stop offset="100%" stop-color="#03050d"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="20%"  stop-color="#00f0ff" stop-opacity="0.7"/>
+      <stop offset="50%"  stop-color="#00f0ff" stop-opacity="1"/>
+      <stop offset="80%"  stop-color="#00f0ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="860" height="50" rx="9" fill="url(#bg)" stroke="#0d1e3a" stroke-width="1.2"/>
+  <rect width="860" height="50" rx="9" fill="none" stroke="#00f0ff" stroke-width="0.8">
+    <animate attributeName="opacity" values="0.1;0.4;0.1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="0" width="5" height="50" rx="3" fill="#00f0ff" opacity="0.9"/>
+  <text x="15" y="15" font-family="'Courier New',Courier,monospace" font-size="7" fill="#00f0ff" opacity="0.4" letter-spacing="2">// SECTION</text>
+  <text x="15" y="36" font-family="'Courier New',Courier,monospace" font-size="15" font-weight="bold" fill="#00f0ff" letter-spacing="1" filter="url(#glow)">📊  GITHUB ANALYTICS &amp; DIAGNOSTICS</text>
+  <text x="848" y="34" font-family="'Courier New',Courier,monospace" font-size="13" fill="#152040" text-anchor="end">{ telemetry }</text>
+  <rect x="0" y="48" width="860" height="2" rx="1" fill="url(#line)"/>
+</svg>
