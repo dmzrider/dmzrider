@@ -41,9 +41,9 @@
     <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b">(12h - 18h)</text>
     <rect x="170" y="3" width="160" height="9" rx="4.5" fill="#161b22"/>
     <rect x="170" y="3" width="0" height="9" rx="4.5" fill="url(#barG)">
-      <animate attributeName="width" values="0;113;113" dur="1.2s" fill="freeze" begin="0.4s"/>
+      <animate attributeName="width" values="0;128;128" dur="1.2s" fill="freeze" begin="0.4s"/>
     </rect>
-    <text x="345" y="12" font-family="'Courier New',Courier,monospace" font-size="11" fill="#00f0ff" font-weight="bold">71%</text>
+    <text x="345" y="12" font-family="'Courier New',Courier,monospace" font-size="11" fill="#00f0ff" font-weight="bold">80%</text>
   </g>
 
   <!-- Evening -->
@@ -52,9 +52,9 @@
     <text x="100" y="12" font-family="'Courier New',Courier,monospace" font-size="9" fill="#64748b">(18h - 24h)</text>
     <rect x="170" y="3" width="160" height="9" rx="4.5" fill="#161b22"/>
     <rect x="170" y="3" width="0" height="9" rx="4.5" fill="url(#barG)">
-      <animate attributeName="width" values="0;46;46" dur="1.2s" fill="freeze" begin="0.6s"/>
+      <animate attributeName="width" values="0;32;32" dur="1.2s" fill="freeze" begin="0.6s"/>
     </rect>
-    <text x="345" y="12" font-family="'Courier New',Courier,monospace" font-size="11" fill="#00f0ff" font-weight="bold">29%</text>
+    <text x="345" y="12" font-family="'Courier New',Courier,monospace" font-size="11" fill="#00f0ff" font-weight="bold">20%</text>
   </g>
 
   <!-- Night -->
